@@ -1,0 +1,2 @@
+axadmin:OmanSail@1234
+malik:omansail@123

@@ -1,0 +1,46 @@
+nikhil.shastri:!All FortiToken SSLVPN MOC Users
+neil.wachowski:!All FortiToken SSLVPN Users
+jeff.robins:!All FortiToken SSLVPN Users
+michael.moran:!All FortiToken SSLVPN Users
+steven.avila:!All FortiToken SSLVPN Users
+anna.bui:!All FortiToken SSLVPN Users
+jesse.saunders:!All FortiToken SSLVPN Users
+alex.stuetz:!All FortiToken SSLVPN Users
+bonan.zhou:!All FortiToken SSLVPN Users
+tyler.wright:LDAP Server -1
+joseph.kim:LDAP Server -1
+lauren.fitzgibbon:!All FortiToken SSLVPN MOC Users
+abi.ryhajlo:!All FortiToken SSLVPN Users
+alexander.lang:!All FortiToken SSLVPN Users
+max.kiejdan:Predasar123!876471
+adam.thurn:LDAP Server -1
+luke.beaver:!All FortiToken SSLVPN Users
+christopher.shoe:!All FortiToken SSLVPN Users
+usman.majid:!All FortiToken SSLVPN Users
+quinn.mikelson:!All FortiToken SSLVPN Users
+everett.maness:!All FortiToken SSLVPN Users
+alexander.lambert:!All FortiToken SSLVPN Users
+kirby.dotson:!All FortiToken SSLVPN Users
+maria.bravo:!All FortiToken SSLVPN Users
+klaus.fosmark:!All FortiToken SSLVPN Users
+matthew.gann:!All FortiToken SSLVPN Users
+kyle.clarke:LDAP Server -1
+emily.krasch:!All FortiToken SSLVPN Users
+sean.fitzsimmons:!All FortiToken SSLVPN MOC Users
+craig.francis:!All FortiToken SSLVPN Users
+benjamin.spencer:!All FortiToken SSLVPN Users
+greta.zhong:!All FortiToken SSLVPN MOC Users
+chris.shaffer:!All FortiToken SSLVPN MOC Users
+tony.pham:!All FortiToken SSLVPN Users
+tristan.latchu:!All FortiToken SSLVPN Users
+bradley.williams:!All FortiToken SSLVPN Users
+phillip.allen:!All FortiToken SSLVPN Users
+amir.damansouz:!All FortiToken SSLVPN Users
+reza.tavassoli:!All FortiToken SSLVPN Users
+sam.dupas:!All FortiToken SSLVPN Users
+nathaniel.pust:!All FortiToken SSLVPN Users
+norbert.huber:!All FortiToken SSLVPN Users
+kyle.clarke:!All FortiToken SSLVPN Users
+david.caponio:!All FortiToken SSLVPN Users
+christopher.andre:!All FortiToken SSLVPN Users
+christopher.mcnamara:!All FortiToken SSLVPN Users

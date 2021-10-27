@@ -1,0 +1,2 @@
+tec-admin:EKs14004803
+tec-remote:ssl-vpn

@@ -1,0 +1,3 @@
+arequipa:arequipa
+arequipa taller:aqptaller
+huancayo:huancayo

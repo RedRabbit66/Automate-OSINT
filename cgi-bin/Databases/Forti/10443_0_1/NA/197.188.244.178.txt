@@ -1,0 +1,3 @@
+sheq.rossing:Windhoek1
+Pasteladmin:Windhoek1
+admin.rundu:Windhoek2

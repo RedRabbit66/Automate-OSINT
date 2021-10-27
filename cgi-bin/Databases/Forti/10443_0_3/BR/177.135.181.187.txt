@@ -1,0 +1,7 @@
+contas:contas1020
+sescontab:2019sescontab2019
+central:central1020
+financeiro:financeiro1020
+credenciamento:credenciamento1020
+fabio:fabinhonsouza
+domiciliar:domiciliar1020

@@ -1,0 +1,9 @@
+nanette:P@ssword01
+admin:Colourtech123@
+bluerooster:Bluerooster123@
+zylia:Colourtech123@
+Wilmari:P@ssword@BR123
+luke:Colourtech123@
+prudence:P@ssword01
+wilhelm:P@ssword01
+A:^

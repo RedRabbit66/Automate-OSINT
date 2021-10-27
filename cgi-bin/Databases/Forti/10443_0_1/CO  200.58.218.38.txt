@@ -1,0 +1,4 @@
+mc.troqueles:troqueles
+almacen.uno:almacen
+fidel.caceres:tp2020*
+coor.proyectos:proyectos

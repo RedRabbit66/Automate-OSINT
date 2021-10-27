@@ -1,0 +1,11 @@
+h:<
+rlucar:Rlucar2020
+ysoler:ysoler20
+mgaray:scotiabank20
+amontana:esmuniz20
+mgarcia:scotiabank20
+gdiaz:esmuniz20
+csevilla:Esmunizsevilla
+hchacon:Esmunizchacon
+bpereyra:scotiabank20
+evera:Esmunizvera

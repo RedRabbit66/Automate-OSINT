@@ -1,0 +1,6 @@
+lbeltran:smc.luis
+emontecino:smc.estrella
+mlagos:smc.lagos
+gvillegas:smc.guido
+egomez:smc.gomez
+mallende:smc.allende

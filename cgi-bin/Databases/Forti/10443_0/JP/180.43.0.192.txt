@@ -1,0 +1,5 @@
+rmtuser31:password
+hakamata:P@ssw0rdhakamata
+nozaki:P@ssw0rdnozaki
+hokoi:P@ssw0rdhokoi
+saigusa:P@ssw0rdsaigusa

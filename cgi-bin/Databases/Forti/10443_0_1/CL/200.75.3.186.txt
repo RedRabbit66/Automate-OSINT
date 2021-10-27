@@ -1,0 +1,15 @@
+lbeltran:smc.luis
+mzuanic:smc.zuanic
+crojas:mini998
+fmunoz:smc.fabiola
+ygonzalez:smc.gonzalez
+emontecino:smc.estrella
+jojeda:smc.ojeda
+efarias:smc.eduardo1
+mlagos:smc.lagos
+gvillegas:smc.guido
+cdiaz:nicolas14
+egomez:smc.gomez
+mallende:smc.allende
+fpuente:andres6
+dmaldonado:smc.daniel

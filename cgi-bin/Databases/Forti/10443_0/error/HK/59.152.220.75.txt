@@ -1,0 +1,6 @@
+Willa:password@willa
+Kimmi:password@kimmi
+mala:password@mala
+Sophie:password@sophie
+Luisa:password@luisa
+Ada:password@ada

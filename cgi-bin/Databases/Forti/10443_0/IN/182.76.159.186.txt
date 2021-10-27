@@ -1,0 +1,6 @@
+ramco1:ramcotunnel
+mepco-sales:domestic
+mepco-mpmp2:admin123
+mepco-delhi1:admin123
+30:mepco-delhi1
+mepco-kolkata:admin123

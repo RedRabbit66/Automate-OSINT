@@ -1,0 +1,14 @@
+CCTsc1:cctcct14
+CCTstaff:cctcct14
+CCTsx2:cctcct14
+CCTsc3:cctcct14
+CCTsx4:cctcct14
+kddi:kddiadmin
+CCTsc4:cctcct14
+CCTpur2:cctcct14
+CCTac1:cctcct14
+CCTac3:cctcct14
+CCTac2:cctcct14
+CCTpur1:cctcct14
+CCTsx5:cctcct14
+CCTsc5:cctcct14

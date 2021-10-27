@@ -1,0 +1,16 @@
+{
+    "keys":{
+      "whoxy": "Put-your-own-API",
+      "virustotal": "",
+      "leak_lookup": "",
+      "breachdirectory": "",
+      "google": "",
+      "google_cx": "",
+      "shodan": "Put-your-own-API",
+      "censys": "",
+      "censys_secret": "",
+      "psbdmp": "Put-your-own-API",
+      "bitcoin_abuse": "",
+      "bitcoinwhoswho": ""
+    }
+}

@@ -1,0 +1,4 @@
+kitac04:kitac-th
+kitac02:kitac-th
+kitac14:kitac-th
+kitac15:kitac-th

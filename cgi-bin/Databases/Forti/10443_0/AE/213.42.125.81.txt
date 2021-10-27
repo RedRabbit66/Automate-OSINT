@@ -1,0 +1,4 @@
+yateem:yateem
+omanstore2:omanstore2
+VARKEY-BAH:VARKEY-BAH
+ksa-acc01:yateem

@@ -1,0 +1,3 @@
+print:Printer2020
+eti:1qaz2wsx
+triplec:pf6cte

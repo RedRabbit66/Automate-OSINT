@@ -1,0 +1,4 @@
+PCARSO10:C@rs0.01
+User Carso:tunnel-access
+POSVENTA01:Ventas.01
+POSVENTA02:Ventas.01

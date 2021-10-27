@@ -1,0 +1,3 @@
+nakaya01:alphasos01
+nakaya02:alphasos02
+nakaya03:alphasos03

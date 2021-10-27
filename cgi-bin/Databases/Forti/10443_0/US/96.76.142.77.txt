@@ -1,0 +1,7 @@
+jim:ssl_VPN
+alan:ssl_VPN
+chuck:ssl_VPN
+daniel:ssl_VPN
+nick:ssl_VPN
+blake:ssl_VPN
+chip:ssl_VPN

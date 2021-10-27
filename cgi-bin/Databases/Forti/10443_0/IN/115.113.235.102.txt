@@ -1,0 +1,5 @@
+bcpuser:bcp123
+bcpuser:bcp123.kweindia
+93.199.196:bcpuser
+kweindia:kweindiakwe
+badal:Badal@123

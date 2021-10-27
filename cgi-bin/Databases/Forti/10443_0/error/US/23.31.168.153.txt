@@ -1,0 +1,12 @@
+dscruggs:SSL_VPN _USERS
+ostoray:SSL_VPN _USERS
+sstone:SSL_VPN _USERS
+mkirkwood:SSL_VPN _USERS
+wrichardson:SSL_VPN _USERS
+jthornton:SSL_VPN _USERS
+momalley:SSL_VPN _USERS
+vrobins:SSL_VPN _USERS
+autley:SSL_VPN _USERS
+dholmes:SSL_VPN _USERS
+naqwilliams:SSL_VPN _USERS
+lcowan:SSL_VPN _USERS

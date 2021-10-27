@@ -1,0 +1,4 @@
+oiscadmin:0tsuk@1t
+sagyo01:sagyo01pass
+user02:password2
+user01:password1

@@ -1,0 +1,2 @@
+wms_jnfq:jnfq@wms@123.0
+kmc_it:it@admin@123.10

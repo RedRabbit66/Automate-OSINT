@@ -1,0 +1,8 @@
+Director.Adtvo:LiDia2017*
+auxiliar2:A.22017*
+directoriesgo:Dir.2017*
+Seguros.Cubriendo:Ecu2017*
+Recepcion:Rpa2017*
+enrique.peralta:En.p*2017
+GerenteGeneral:Ger.General*2018
+abogadacartera:MaBr*2017

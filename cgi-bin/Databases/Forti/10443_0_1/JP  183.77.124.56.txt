@@ -1,0 +1,2 @@
+osaka01:password
+tokyo01:password

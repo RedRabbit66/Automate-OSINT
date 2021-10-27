@@ -1,0 +1,3 @@
+store1:654321
+ac1_idc:ac1234
+ac3_idc:ac1234

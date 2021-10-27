@@ -1,0 +1,11 @@
+yamaguchi:8336
+narumi:jadnarumi
+noda:jadnoda
+to_morita:4664
+o_inoue:4666
+F:1./MM
+yoshimura:4663
+miyake:4658
+kobayashi:4659
+tanaka:7730
+kamine:4660

@@ -1,0 +1,7 @@
+nguilbaud:SATMARCOM01
+util-stphilibert-01:STPH2015
+adm-gilles.mendes:@Gill3s!
+_:_
+util-marennes-04:satmar-2014
+martin:marina
+mdelacroix:Arielle2906

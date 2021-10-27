@@ -1,0 +1,5 @@
+satas_coordo:456789Ab
+direction:soleil
+suiviamos:123456
+suivi_at:olivia.Gr_SSL_VPN
+adminjl:%Master%

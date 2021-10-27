@@ -1,0 +1,6 @@
+kis-inada:kis-inada
+kis-shimizu:kis-shimizu
+kis-watanabe:kis-watanabe
+kis-nagaoka:kis-nagaoka
+kis-fujino:kis-fujino
+kis-uda:kis-uda

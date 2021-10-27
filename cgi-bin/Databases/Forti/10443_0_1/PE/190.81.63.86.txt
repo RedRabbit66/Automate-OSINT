@@ -1,0 +1,8 @@
+Plataforma1:R1m@cp209
+Logistica1:R1m@cp206
+Contabilidad2:R1m@cp201
+Contabilidad1:R1m@cp200
+Gerencia:R1m@cp202
+Integraci:n1
+hpaz:R1m@c
+lvega:R1m@c

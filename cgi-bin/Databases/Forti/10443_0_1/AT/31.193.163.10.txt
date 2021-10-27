@@ -1,0 +1,17 @@
+rcutler:full-access
+mpfaffen:full-access
+amueller:Admin Group
+swiesing:full-access
+vrensch:33elmet20
+psteinba:Steinb@uer1
+hluger:full-access
+ehaller:full-access
+jams:full-access
+csallabe:tunnel-access
+rdannenb:full-access
+creslhub:full-access
+dlesslhu:Inadissel96
+aangerer:Externe TS User
+kmitzka:Externe TS User
+chuemer:full-access
+hasco:Lieferantenportal2019!

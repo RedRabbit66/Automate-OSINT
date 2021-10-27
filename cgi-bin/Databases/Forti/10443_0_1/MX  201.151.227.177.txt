@@ -1,0 +1,12 @@
+cllamas:45080
+LauraN:Lau.2020
+cedis_tijuana:D1f.2020
+cedis_more:Mo74123
+Aguascalientes:Aguas.2020$
+cedis_vall:Vl5894
+cedis_mty:mty0717
+cedis_meri:Me74123
+Blanca:Blan.2020
+cedis_lapaz:Lp74123
+cedis_cdmx:Dif.2020$
+sistemas:10443

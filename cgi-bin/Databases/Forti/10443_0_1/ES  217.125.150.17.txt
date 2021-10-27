@@ -1,0 +1,2 @@
+barcelona:Barcelona!
+canarias:GSM@Canarias

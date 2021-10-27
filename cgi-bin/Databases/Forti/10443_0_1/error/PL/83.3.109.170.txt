@@ -1,0 +1,3 @@
+a.rybarczyk:trudnehaslo
+a.duma:odleglapraca*6
+a.ryske:trudnehaslo

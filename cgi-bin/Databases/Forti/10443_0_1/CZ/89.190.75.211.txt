@@ -1,0 +1,4 @@
+skolnikovad:N98c96.301
+VPN-Klienti:dc-1.spshronov.local
+jankovicj:T929c1.58
+voltroval:L26,8x22

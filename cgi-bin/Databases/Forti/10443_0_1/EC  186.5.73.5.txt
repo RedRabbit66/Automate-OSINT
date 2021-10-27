@@ -1,0 +1,2 @@
+sistemas:sistemasGHL2019*
+gerencia:gerenciaGHL2019*

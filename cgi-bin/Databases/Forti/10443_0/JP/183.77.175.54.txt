@@ -1,0 +1,2 @@
+rmtuser01:omuprint
+rmtuser02:omuprint

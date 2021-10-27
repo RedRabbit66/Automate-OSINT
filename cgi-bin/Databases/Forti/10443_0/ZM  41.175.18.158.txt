@@ -1,0 +1,2 @@
+agnes:admin1
+bcp1:bcp1admin

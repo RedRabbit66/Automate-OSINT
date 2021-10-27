@@ -1,0 +1,10 @@
+mmorales:morales,2020
+sae:sae
+oherrera:temporal,3
+sgarcia:garcia,2020
+hsantizo:santizo,2020
+lanleu:anleu,2020
+mvasquez:vasquez,2020
+syllescas:sergio
+cecheverria:echeverria
+halfaro:alfaro,2020

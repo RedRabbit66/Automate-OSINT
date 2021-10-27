@@ -1,0 +1,3 @@
+fcuser03:lumbervpn
+morioka:morioka_vpn
+saitovpn:saitovpn

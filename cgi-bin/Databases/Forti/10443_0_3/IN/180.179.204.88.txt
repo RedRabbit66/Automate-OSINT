@@ -1,0 +1,11 @@
+rosy5:rosy5
+aems4:aems4
+ctp6:ctp6
+itm12:itm12
+bgc3:bgc3
+itm31:itm31
+A:2._
+rosy18:rosy18
+rosy25:rosy25
+rosy8:rosy8
+itm17:itm17

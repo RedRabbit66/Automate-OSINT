@@ -1,0 +1,12 @@
+bem:Openit$22
+We:!.Tx
+hrs:007work4life$
+spr:sslvpn-user
+vea:sslvpn-user
+cja:sslvpn-user
+lli:LLI@ecb3000
+aeb:sslvpn-user
+mas:sslvpn-user
+mpi:sslvpn-user
+dei:sslvpn-user
+mko:Openit$11

@@ -1,0 +1,3 @@
+wms_jnfq:jnfq@wms@123.0
+gr11:full-access
+kmc_it:it@admin@123.10

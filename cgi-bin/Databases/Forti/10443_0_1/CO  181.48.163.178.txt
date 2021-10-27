@@ -1,0 +1,5 @@
+angie.losada:C0nexion_C@ll313
+luz.montana:C0nexion_C@ll313
+kelly.castro:C0nexion_C@ll313.*
+magdalena.clavijo:C0nexion_C@ll313
+hember.garzon:C0nexion_C@ll313

@@ -1,0 +1,9 @@
+contabilidad:CM_2019.03c
+c:Grupo SSL
+agurtzane:CM_2019.02a
+a:Grupo SSL
+cristinaz:CM_2019.09p
+p:Grupo SSL
+f':R
+cristinah:CM_2019.08t
+t:Grupo SSL

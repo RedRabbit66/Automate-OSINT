@@ -1,0 +1,14 @@
+jaquesada:2021.QuesadA
+enginyeria:2013.GamiDura
+jsoriano:riraotw.2005
+ssierra:2021.SierrA
+msanchez:2021.SancheZ
+xsanchez:2021.SancheZ
+consulsap:CoNSaP.2018
+dmartinez:2021.MartiN
+mdiaz:EasyC.2021
+jmarquez:Mortadelo2013
+cborras:CristinS.2021
+rcentelles:2021.CenteL
+aggity:aggity17
+mctorregrosa:2021.GrosA

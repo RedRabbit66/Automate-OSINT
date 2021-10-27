@@ -1,0 +1,5 @@
+as400-iso:Isolana2013
+dtecnico:Isolana2013
+nroig:Isolana2013
+dgrafico:Isolana2013
+jproducto:Isolana2013

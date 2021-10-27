@@ -1,0 +1,9 @@
+thomas:ddbMAY2@TP
+steve:ddbMAY2@SA
+marvin:ddbAPR2@MS
+pam:vpnSEP2@PB
+tammy:ddbMAY2@TH
+bryan:ddbAPR2@BC
+shalyn:ddbMAY2@SB
+eric:ddbMAR2@EB
+pattie:vpnSEP2@PM

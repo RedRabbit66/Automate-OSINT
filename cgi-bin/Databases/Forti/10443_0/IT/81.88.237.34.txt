@@ -1,0 +1,6 @@
+redazione:Redazione2020
+next:Next@2018
+sportello:Sportello2020
+amministrazione:Amministrazione2020
+Impaginazione:Impaginazione2020
+gbonali:Bonali-2018

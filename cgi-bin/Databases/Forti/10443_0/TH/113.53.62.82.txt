@@ -1,0 +1,4 @@
+ESCO02:esco10900
+Terra02:terra02VPNClientGroup
+Smartclick03:smartclick1234
+Smartclick02:smartclick1234

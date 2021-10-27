@@ -1,0 +1,2 @@
+nam1:namsung1
+nam2:namsung2

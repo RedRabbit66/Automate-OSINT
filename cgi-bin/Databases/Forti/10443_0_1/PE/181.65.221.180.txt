@@ -1,0 +1,4 @@
+remoto1:remoto1
+remoto2:remoto2
+remoto3:remoto3
+remoto6:remoto6

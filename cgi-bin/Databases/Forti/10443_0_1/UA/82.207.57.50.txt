@@ -1,0 +1,18 @@
+l.shvetsova:123321
+cn=hcj_press02:C = UA, ST = KIEV, O = HCJ, OU = HCJ, CN = hcj_press02, emailAddress = admin@hcj.gov.ua
+i.rekstinsh:DsbuhfTv2018
+\:^
+i.krasnoshchok:!vpn_hcj8905
+z0151:123321
+z0193:123321
+z0171:123321
+z0158:123321
+z0190:123321.ssl_vpn_group
+z0186:123321
+z0155:123321
+z0150:123321
+z0191:123321
+z0161:123321
+z0166:123321
+z0163:123321
+z0176:123321

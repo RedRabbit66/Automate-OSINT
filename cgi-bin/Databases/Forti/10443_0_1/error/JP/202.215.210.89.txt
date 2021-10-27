@@ -1,0 +1,3 @@
+ookubo-remote:ookubo
+ookubo2-remote:ookubo2
+kashihara-remote:kashihara

@@ -1,0 +1,17 @@
+ritesh.thakkar:vpn_users
+rajesh.pawar:vpn_users
+harishchandra.barai:vpn_users
+Prabhu:vpn_users
+yogesh.mahadik:vpn_users
+aradhana.sawant:abcd_1234
+chandrika.nair:vpn_users
+deepak.varpe:abcd_1234
+sylvester.lopes:vpn_users
+vijay.labhe:vpn_users
+Abhijit:abcd_1234
+N.konar:vpn_users
+kalpesh.jha:vpn_users
+owais.farooq:vpn_users
+Deepali.kanse:vpn_users
+satish.gowale:vpn_users
+Himali.gangurde:vpn_users

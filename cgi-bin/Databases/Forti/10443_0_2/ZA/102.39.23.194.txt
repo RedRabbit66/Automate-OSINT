@@ -1,0 +1,3 @@
+Shantal:password.1
+Elise:password.1
+Victor:password.1

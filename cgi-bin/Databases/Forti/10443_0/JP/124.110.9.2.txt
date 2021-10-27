@@ -1,0 +1,4 @@
+pc08:shinei7
+pc11:shinei7
+a2:alphasos?
+pc12:shinei7

@@ -1,0 +1,6 @@
+Contabilidad:Financiero.2020
+expinn:Financial.2019
+Barranquilla:Remoto.2019
+Zonasabana:1022368396
+zonanorte:Comercial.2019
+Contingencia3:Fonsodi3.2020

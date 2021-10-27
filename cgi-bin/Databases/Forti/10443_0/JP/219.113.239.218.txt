@@ -1,0 +1,11 @@
+yrk_itou_ko:SSL_Group-Vendor
+00104554:SSL_Group-HONBU
+00104688:SSL_Group-HONBU
+00100177:SSL_Group-HONBU
+00100083:SSL_Group-HONBU
+shinwart_stomioka:SSL_Group-Vendor
+00100488:SSL_Group-HONBU
+obic_hiramatsu:SSL_Group-Vendor
+00100116:SSL_Group-HONBU
+fca_mkamo:SSL_Group-Vendor
+00100107:SSL_Group-HONBU

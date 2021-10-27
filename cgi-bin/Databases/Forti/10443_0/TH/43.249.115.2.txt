@@ -1,0 +1,2 @@
+vpn02:123456
+kddi:KDDIsupport#

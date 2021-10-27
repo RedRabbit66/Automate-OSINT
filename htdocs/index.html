@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="styles/main_css.css">
+    <title>Automater OSINT</title>
+  </head>
+
+  <body>
+
+    <section class="dark">
+      <form action="../cgi-bin/upload.sh" method="POST" enctype="text/plain">
+
+      <h1>Select option to investigate</h1>
+
+        <label>
+          <input type="radio"  value="email" name="dark" checked>
+          <span class="design"></span>
+          <span class="text">Email</span>
+        </label>
+
+        <label>
+          <input type="radio" value="domain" name="dark">
+          <span class="design"></span>
+          <span class="text">Domain</span>
+        </label>
+
+        <label>
+          <input type="radio" value="username" name="dark">
+          <span class="design"></span>
+          <span class="text">Username</span>
+        </label>
+
+        <label>
+          <input type="radio" value="ip" name="dark">
+          <span class="design"></span>
+          <span class="text">IP Address</span>
+        </label>
+
+        <label>
+          <input type="radio" value="password" name="dark">
+          <span class="design"></span>
+          <span class="text">Password</span>
+        </label>
+
+        <label>
+          <input type="radio" value="wallet" name="dark">
+          <span class="design"></span>
+          <span class="text">BTC Wallet</span>
+        </label>
+
+        <label>
+          <input type="radio" value="term" name="dark">
+          <span class="design"></span>
+          <span class="text">Term</span>
+        </label>
+
+        </br>
+
+        <button type="submit">Submit</button>
+
+
+
+      </form>
+
+    </section>
+
+  </body>
+</html>

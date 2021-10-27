@@ -1,0 +1,2 @@
+lcuser:Pass*lc
+lcuser:Pass*lcVPNSSL

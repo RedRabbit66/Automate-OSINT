@@ -1,0 +1,11 @@
+mzuanic:smc.zuanic
+fduenas:smc.felipe
+mvalverde:smc.valverde
+lbeltran:smc.luis
+cdiaz:nicolas14
+gvillegas:smc.guido
+mbaeza:smc.baeza
+acortez:smc.ariel
+ygonzalez:smc.gonzalez
+dmaldonado:smc.daniel
+mallende:smc.allende

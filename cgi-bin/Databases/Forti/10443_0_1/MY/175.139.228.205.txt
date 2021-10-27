@@ -1,0 +1,10 @@
+trivpn_fatin:tri@set128
+trivpn_yuhana:tri@set128
+trivpn_adi:tri@set128
+trivpn_sri:tri@set128
+trivpn_satish:tri@set128
+trivpn_fauzan:tri@set128
+trivpn_sani:tri@set128
+trivpn_weilong:tri@set128
+trivpn_amira:tri@set128
+trivpn_farishakim:tri@set128

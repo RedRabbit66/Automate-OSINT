@@ -1,0 +1,10 @@
+k-kitajima:password
+a-miyaji:password
+i-masuda:password
+m-sadamatsu:password
+r-hatomura:password
+y-oonaka:password
+keigo-yoshioka:password
+y-iwamoto:password
+k-morisaki:password
+t-mori:password

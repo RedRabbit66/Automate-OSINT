@@ -1,0 +1,3 @@
+MSAHEL:@50cimCts
+cts-nomade:cts@50Rad
+cts-radio2:cts@K50Rad

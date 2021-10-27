@@ -1,0 +1,4 @@
+mradiu:DMD34
+elvire:0505
+mp:mpv,34
+lieuran:Li34Dmd*

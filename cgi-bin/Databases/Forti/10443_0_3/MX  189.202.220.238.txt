@@ -1,0 +1,4 @@
+pb.contabilidad05:Cmpbc05
+Aline:Cmpbco02
+pb.contabilidad03:Cmpbco03
+pb.contabilidad6:Cmpbco06

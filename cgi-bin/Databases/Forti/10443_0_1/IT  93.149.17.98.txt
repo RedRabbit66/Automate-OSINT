@@ -1,0 +1,2 @@
+operatore.uno:Arezzo1509!
+operatore.quattro:Expert2020!

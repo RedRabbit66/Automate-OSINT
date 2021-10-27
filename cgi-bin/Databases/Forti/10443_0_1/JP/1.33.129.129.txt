@@ -1,0 +1,10 @@
+NCP2068:vpnncp2068
+i_koitabashi2:379213913q
+NCP0483:vpnncp0483
+y_sekiguchi:sekiguchi
+h_yamasaki:abcdefgh3
+WNCP0375:vpnwncp0375
+NCP0875:vpnncp0875
+WNCP0141:vpnwncp0141
+k_misono:kmisono19
+NCP1400:vpnncp1400

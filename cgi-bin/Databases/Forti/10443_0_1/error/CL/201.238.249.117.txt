@@ -1,0 +1,9 @@
+contabilidad:daily2020
+comercial3:daily2020
+kfaundez:daily2020
+consultorVK1:daily2020
+comercial:daily2020
+cobranza2:daily2020
+callcenter6:daily2020
+lpoblete:daily2020
+comercial6:daily2020

@@ -1,0 +1,2 @@
+soc1:socsonda01
+son_lgamino:Sonda2017

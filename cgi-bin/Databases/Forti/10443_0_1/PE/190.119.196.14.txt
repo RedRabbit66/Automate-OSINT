@@ -1,0 +1,5 @@
+arequipa:arequipa
+arequipa taller:aqptaller
+rpalomino:full-access
+lcruz:NEW_GROUP
+huancayo:huancayo

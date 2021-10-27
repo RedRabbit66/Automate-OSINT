@@ -1,0 +1,9 @@
+estradigital:ESTRA2020***
+gcs:full-access
+snc:SNC2021***
+lsy:full-access
+ccc :CCC2021***
+mcy:MCY2020***
+sgc:SGC2020***
+jfa:JFA2020***
+dct:dct2019***

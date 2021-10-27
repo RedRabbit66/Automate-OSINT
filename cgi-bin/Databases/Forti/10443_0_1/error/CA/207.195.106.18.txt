@@ -1,0 +1,7 @@
+gmasson:SSL-VPN-Users
+jfriesen:SSL-VPN-Users
+mharbec:SSL-VPN-Users
+mmoro:Sask_20187
+jmccrea:SSL-VPN-Users
+sgauthier:Crestline49
+shoffrogge:SSL-VPN-Users

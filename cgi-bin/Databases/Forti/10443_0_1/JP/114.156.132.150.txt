@@ -1,0 +1,2 @@
+fujie:GRP-VPN01
+watanabe:GRP-VPN01

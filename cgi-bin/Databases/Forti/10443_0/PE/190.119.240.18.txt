@@ -1,0 +1,10 @@
+ecortez:B2020BAKELS
+chiclayo:CH2019
+jdios:jordan2019
+gvargas:B2020BAKELS
+integrum1:123456
+mgallardo:B2020BAKELS
+kbeingolea:logistica2019
+wechevarria:B2020BAKELS
+invitado:invitado2020
+admin:Bakels2018

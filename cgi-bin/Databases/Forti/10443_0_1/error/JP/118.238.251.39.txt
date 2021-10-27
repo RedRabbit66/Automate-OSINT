@@ -1,0 +1,1 @@
+cn=k-yamanashi:C = JP, ST = Tokyo, L = Shibuya, O = Intellex, CN = k-yamanashi, emailAddress = k-yamanashi@intellex.co.jp

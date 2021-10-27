@@ -1,0 +1,3 @@
+hashimoto:hashimoto
+kinoshita:kinoshita
+moriyama:moriyama

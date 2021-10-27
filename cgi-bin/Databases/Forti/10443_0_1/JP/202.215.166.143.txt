@@ -1,0 +1,2 @@
+user01:Password01
+kobe02:kobe02

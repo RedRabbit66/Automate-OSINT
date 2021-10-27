@@ -1,0 +1,3 @@
+LGA:LeGa8371*
+gsa:ACCES-VPNSSL
+full-access:root

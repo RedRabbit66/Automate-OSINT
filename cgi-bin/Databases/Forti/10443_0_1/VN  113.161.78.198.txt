@@ -1,0 +1,3 @@
+cadena:?WSnqP3W
+it.bigc.bi01:User@bi01
+it.bigc.bi02:User@bi02

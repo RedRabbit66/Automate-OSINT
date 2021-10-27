@@ -1,0 +1,3 @@
+tecnico:e3eBV-4J
+-15.4:full-access
+full-access:root

@@ -1,0 +1,3 @@
+osakassl03:osakassl03
+osakassl12:osakassl12
+osakassl01:osakassl01

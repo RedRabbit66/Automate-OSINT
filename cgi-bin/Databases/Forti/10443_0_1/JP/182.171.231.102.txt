@@ -1,0 +1,4 @@
+h.onishi:ssl-vpn_schedule
+kawashima:ssl-vpn_schedule
+umemoto:ssl-vpn_schedule
+yamaguchi:ssl-vpn_schedule

@@ -1,0 +1,3 @@
+cosmo08:cosmovpn08
+cosmo03:cosmovpn03
+cosmo16:cosmovpn16

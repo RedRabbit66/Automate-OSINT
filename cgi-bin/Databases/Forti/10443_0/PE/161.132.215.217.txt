@@ -1,0 +1,10 @@
+Calvarado:calvarado
+Mnaupe:mnaupe
+Aramal:aramal
+Pfernandez:pfernandez
+Wcuri:wcuri
+Kmedina:kmedina
+Frosales:frosales
+Csalsavilca:csalsavilca
+Lgonzales:lgonzales
+Kamedina:kamedina

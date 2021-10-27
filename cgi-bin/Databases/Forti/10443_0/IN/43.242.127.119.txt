@@ -1,0 +1,4 @@
+cloud-linux:cloudlinux@123
+N::^
+synadmin:Scl@$#$21
+synadmin:EZ8pkX2P

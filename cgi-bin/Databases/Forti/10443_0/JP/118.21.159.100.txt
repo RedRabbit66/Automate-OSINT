@@ -1,0 +1,4 @@
+hosaka-d1:hosaka-d1
+hosaka002:hosaka002
+hosaka005:hosaka005
+hosaka-d6:hosaka-d6

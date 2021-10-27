@@ -1,0 +1,7 @@
+ssluser7:tnishio
+ssluser6:knakaya
+ssluser21:mkaziwara
+ssluser25:hmizumoto
+ssluser1:saku12345
+ssluser2:yama12345
+ssluser20:ekanda.SSLVPN-UserGroup

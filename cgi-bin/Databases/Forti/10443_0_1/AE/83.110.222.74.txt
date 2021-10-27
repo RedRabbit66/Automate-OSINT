@@ -1,0 +1,3 @@
+charity:charity
+mokhtar:Passw0rd
+raiena:Passw0rd

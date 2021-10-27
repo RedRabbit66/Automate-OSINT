@@ -1,0 +1,3 @@
+gerencia:gerencia2020*
+alejandra:aleja2020*
+gerencia:Gerencia2020*

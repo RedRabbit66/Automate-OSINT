@@ -1,0 +1,2 @@
+c0s6vpnclient@c0s6.c.vtscloud.io:@Velocity123
+vpnclient@vjde.c.vtscloud.io:@Velocity123

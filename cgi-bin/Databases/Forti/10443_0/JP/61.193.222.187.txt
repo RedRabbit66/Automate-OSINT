@@ -1,0 +1,7 @@
+kimura:kimura
+matsushita:matsushita
+mochizuki:mochizuki
+kobayashin:kobayashin
+miyagawa:miyagawa
+kitagawa:kitagawa
+kondo:kondo

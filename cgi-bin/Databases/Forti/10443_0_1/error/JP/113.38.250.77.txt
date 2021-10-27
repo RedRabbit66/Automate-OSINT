@@ -1,0 +1,2 @@
+sn02:password
+sn01:password

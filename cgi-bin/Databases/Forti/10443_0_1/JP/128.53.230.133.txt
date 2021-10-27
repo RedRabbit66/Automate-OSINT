@@ -1,0 +1,3 @@
+nmaehama:mjs_remote
+akato:mjs_remote
+yhatagami:mjs_remote

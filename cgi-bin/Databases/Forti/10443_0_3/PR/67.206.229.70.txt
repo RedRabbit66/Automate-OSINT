@@ -1,0 +1,3 @@
+idis:fcs@idis
+ucamacho:fcs@camacho
+radiologo1:fcsAdmin1

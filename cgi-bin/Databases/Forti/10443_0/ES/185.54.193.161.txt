@@ -1,0 +1,9 @@
+cn=Jose Antonio Poso:CN = Jose Antonio Poso
+cn=Jonathan Gonz:lez Aguilar
+cn=Ivan Rodriguez:CN = Ivan Rodriguez
+cn=Carmen Gonzalez-Llanos Alvarez:CN = Carmen Gonzalez-Llanos Alvarez
+cn=Isabel Fernandez Rodriguez:CN = Isabel Fernandez Rodriguez
+cn=vpnssl:DC = LOCAL, DC = GRUPOCANTON, OU = GRUPO, OU = USUARIOS ESPECIALES, CN = vpnssl
+cn=Jose Luis Rubio Fernandez:CN = Jose Luis Rubio Fernandez
+cn=Ricardo Suarez:DC = LOCAL, DC = GRUPOCANTON, OU = GRUPO, OU = USUARIOS GENERALES, CN = Ricardo Suarez, emailAddress = ricardo.suarez@hierroscanton.com
+vmartinez@grupocanton.local:telenti2023!
