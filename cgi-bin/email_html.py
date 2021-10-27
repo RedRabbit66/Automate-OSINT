@@ -2,51 +2,12 @@ import sys
 import os
 import json
 import requests
-import re
 import hashlib
 from googleapiclient.discovery import build
-from shodan import Shodan
 from subprocess import PIPE, Popen
-import argparse
-from datetime import datetime
-import time
 import csv
 import subprocess
-
-
 import hashlib
-
-import trio
-import httpx
-
-import geoip2.webservice
-
-#from holehe.modules.social_media.snapchat import snapchat
-
-# pip install holehe
-
-# python3 setup.py install
-
-#from intelxapi import intelx
-
-#from os import listdir
-#from os.path import isfile, join
-
-#from requests.packages.urllib3.exceptions import InsecureRequestWarning
-# requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
-
-# pip3 install google-api-python-client
-# pip install shodan
-# pip install censys
-# pip install geoip2
-# $ censys config
-
-# pip install intelex
-
-# Censys API ID: XXX
-# Censys API Secret: XXX
-
-#os.system('open /Applications/TorBrowser.app')
 
 
 email_pattern = '(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)'

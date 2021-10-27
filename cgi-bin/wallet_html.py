@@ -2,15 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import sys
-import os
 import requests
-import re
-import hashlib
-import time
-import csv
-import subprocess
 import json
-from urllib.parse import urlencode
 
 
 def parseConfig():

@@ -2,24 +2,12 @@ import sys
 import os
 import json
 import requests
-import re
 import hashlib
 from googleapiclient.discovery import build
-from shodan import Shodan
 from subprocess import PIPE, Popen
-import argparse
-from datetime import datetime
-import time
 import csv
 import subprocess
-import inspect
-
 import hashlib
-
-import trio
-import httpx
-
-import geoip2.webservice
 
 
 __author__ = '@llure29 (Llorenç Garcia)'
@@ -68,19 +56,6 @@ def cmdline(command):
         shell=True
     )
     return process.communicate()[0].decode("utf-8")
-
-
-'''
-def Popen(*args, **kwargs):
-    sig = inspect.signature(real_popen)
-    bound_args = sig.bind(*args, **kwargs).arguments
-    bound_args['stdout'] = subprocess.DEVNULL
-    bound_args['stderr'] = subprocess.DEVNULL
-    return real_popen(**bound_args)
-
-real_popen = subprocess.Popen
-subprocess.Popen = Popen
-'''
 
 
 def yesNo(user_response):

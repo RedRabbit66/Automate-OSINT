@@ -5,11 +5,8 @@
 import geoip2.webservice
 #from mpl_toolkits.basemap import Basemap
 import json
-import requests
 import sys
-import socket
 from datetime import datetime
-import time
 from virus_total_apis import PublicApi as VirusTotalPublicApi
 from shodan import Shodan
 import os

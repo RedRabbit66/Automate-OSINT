@@ -27,11 +27,7 @@
 #                along with OSTrICa. If not, see <http://www.gnu.org/licenses/>.
 # -------------------------------------------------------------------------------
 ###############################################################################
-import sys
-import string
-import re
 from bs4 import BeautifulSoup
-
 import requests
 
 

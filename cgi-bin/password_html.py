@@ -2,19 +2,11 @@
 # -*- coding: utf-8 -*-
 
 import sys
-import os
 import json
 import requests
-import re
 import hashlib
 from googleapiclient.discovery import build
-from shodan import Shodan
 from subprocess import PIPE, Popen
-import argparse
-from datetime import datetime
-import time
-import csv
-import subprocess
 
 
 def parseConfig():

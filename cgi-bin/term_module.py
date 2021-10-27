@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 from subprocess import PIPE, Popen
-import hashlib
 
 
 def cmdline(command):

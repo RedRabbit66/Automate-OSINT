@@ -15,6 +15,8 @@ charset-normalizer==2.0.7
 click==8.0.3
 click-plugins==1.1.1
 colorama==0.4.4
+colors.py==0.2.2
+elasticsearch==7.15.1
 future==0.18.2
 geoip2==4.4.0
 google-api-core==2.2.0
@@ -32,6 +34,7 @@ idna==3.3
 install==1.3.4
 maxminddb==2.2.0
 multidict==5.2.0
+networkx==2.6.3
 outcome==1.1.0
 Pillow==8.4.0
 protobuf==3.19.0
@@ -60,6 +63,7 @@ uritemplate==4.1.1
 urllib3==1.26.7
 virustotal-api==1.1.11
 webencodings==0.5.1
+whois==0.9.13
 xhtml2pdf==0.2.5
 XlsxWriter==3.0.1
 yarl==1.7.0

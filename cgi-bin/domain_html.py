@@ -2,7 +2,6 @@ import json
 import requests
 import sys
 import socket
-from datetime import datetime
 import time
 from virus_total_apis import PublicApi as VirusTotalPublicApi
 import requests

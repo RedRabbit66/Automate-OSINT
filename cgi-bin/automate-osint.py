@@ -2,7 +2,6 @@ import sys
 import json
 import re
 import hashlib
-from googleapiclient.discovery import build
 import argparse
 from xhtml2pdf import pisa
 import username_module
@@ -154,7 +153,7 @@ def main():
     #os.system("touch ../htdocs/results/" + document_name + ".html")
     #os.system("/bin/chmod 777 ../htdocs/results/" + document_name + ".html")
     global f
-    f = open("../htdocs/results/" + document_name + ".html", 'w')
+    #f = open("../htdocs/results/" + document_name + ".html", 'w')
 
     global contingut_HTML
     #contingut_HTML = "Content-Type: text/html; charset=UTF-8\r\n"

@@ -1,15 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from mpl_toolkits.basemap import Basemap
+#from mpl_toolkits.basemap import Basemap
 import sys
 import email
 import os
 import requests
 from subprocess import PIPE, Popen
 import re
-import urllib.request
-import tarfile
 import whois
 from datetime import datetime
 import time
@@ -17,16 +15,11 @@ import json
 import hashlib
 from virus_total_apis import PublicApi as VirusTotalPublicApi
 import geoip2.webservice
-from email.parser import BytesParser, Parser
-from email.policy import default
-from email import policy
-from email.parser import BytesParser
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
+
 os.environ["PROJ_LIB"] = "C:\\Utilities\\Python\\Anaconda\\Library\\share"  # fixr
 #import yara
 
-
-# pip install geoip2
 apivoid_key2 = "39a9de59018068d9989ce9a307d1958d09703878"
 apivoid_key = "dd08fe53e3bb8e67a51231af51ef8326a89559a5"
 API_KEY = 'df343cda8c9487e24a6c9c002a99d1c5415c4cec6ad84fdec88d5ebb4783e77e'
@@ -665,8 +658,7 @@ def insertInteligencia():
 
 
 def insertMap():
-    text = """<img src="{0}" alt="Mapa mundi traçat" class="center">""".format(
-        image_path_html)
+    text = """<img src="{0}" alt="Mapa mundi traçat" class="center">""".format(image_path_html)
     return text
 
 
@@ -1466,46 +1458,42 @@ for mta_address in only_ips:
 
 
 # Printar tot al mapamundi
-fig = plt.figure(figsize=(14, 10))
-ax = fig.add_axes([0.1, 0.1, 0.8, 0.8])
+#fig = plt.figure(figsize=(14, 10))
+#ax = fig.add_axes([0.1, 0.1, 0.8, 0.8])
 
-m = Basemap(projection='merc', llcrnrlat=-80, urcrnrlat=80,
-            llcrnrlon=-180, urcrnrlon=180, lat_ts=20, resolution='c')
-m.drawcoastlines()
+#m = Basemap(projection='merc', llcrnrlat=-80, urcrnrlat=80,llcrnrlon=-180, urcrnrlon=180, lat_ts=20, resolution='c')
+#m.drawcoastlines()
 
 title = ""
 for i in range(len(city_names)):
     title = title + " --> " + city_names[i]
-    if i < (len(city_names)-1):
+    #if i < (len(city_names)-1):
 
         # Dibuixem linia entre ciutat i ciutat
-        m.drawgreatcircle(
-            longituds[i], latituds[i], longituds[i+1], latituds[i+1], linewidth=2, color='b')
-        m.drawcoastlines()
-        m.fillcontinents(color='tan', lake_color='lightblue')
-        m.drawmapboundary(fill_color='lightblue')
+        #m.drawgreatcircle(longituds[i], latituds[i], longituds[i+1], latituds[i+1], linewidth=2, color='b')
+        #m.drawcoastlines()
+        #m.fillcontinents(color='tan', lake_color='lightblue')
+        #m.drawmapboundary(fill_color='lightblue')
         # draw parallels
         # m.drawparallels(np.arange(10,90,20),labels=[1,1,0,1])
         # draw meridians
         # m.drawmeridians(np.arange(-180,180,30),labels=[1,1,0,1])
 
-        x, y = m(longituds[i+1], latituds[i+1])
-        plt.text(x, y, city_names[i+1], fontsize=12,
-                 fontweight='bold', ha='left', va='top', color='k')
+        #x, y = m(longituds[i+1], latituds[i+1])
+        #plt.text(x, y, city_names[i+1], fontsize=12,fontweight='bold', ha='left', va='top', color='k')
 
-        x, y = m(longituds[i], latituds[i])
-        plt.text(x, y, city_names[i], fontsize=12,
-                 fontweight='bold', ha='left', va='top', color='k')
+        #x, y = m(longituds[i], latituds[i])
+        #plt.text(x, y, city_names[i], fontsize=12,fontweight='bold', ha='left', va='top', color='k')
 
 # Assignem titol
-ax.set_title("Ruta del correu" + title)
+#ax.set_title("Ruta del correu" + title)
 
 # Guardem la imatge en format png amb el temps actual com a nom
-now = datetime.now()
-current_time = now.strftime("%H:%M:%S")
-image_path_html = "mapas/" + current_time + ".png"
-image_path = "../htdocs/mapas/" + current_time + ".png"
-plt.savefig(image_path)
+#now = datetime.now()
+#current_time = now.strftime("%H:%M:%S")
+#image_path_html = "mapas/" + current_time + ".png"
+#image_path = "../htdocs/mapas/" + current_time + ".png"
+#plt.savefig(image_path)
 
 
 def isRegistered(domain):
@@ -1516,7 +1504,6 @@ def isRegistered(domain):
     else:
         print("Esta registrat: " + domain)
         return bool(w.domain_name)
-
 
 def getCreationDate(domain):
     if isRegistered(domain):
