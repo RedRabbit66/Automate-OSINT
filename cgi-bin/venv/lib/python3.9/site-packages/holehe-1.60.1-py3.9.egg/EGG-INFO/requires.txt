@@ -1,7 +1,0 @@
-termcolor
-bs4
-httpx
-trio
-argparse
-tqdm
-colorama
