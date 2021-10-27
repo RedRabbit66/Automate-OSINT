@@ -9,7 +9,7 @@ option=`echo $dark | awk -F'=' '{print $2}' | sed 's/\r$//'`
 
 
 if [[ $dark == *"email"* || $dark == *"domain"* || $dark == *"username"* || $dark == *"ip"* || $dark == *"password"* || $dark == *"wallet"* || $dark == *"term"* ]]; then
-	echo -e "
+    echo -e "
 <html>
 	<head>
 		<meta http-equiv=\"Refresh\" content=\"0; url=/$option.html\" />
@@ -18,11 +18,11 @@ if [[ $dark == *"email"* || $dark == *"domain"* || $dark == *"username"* || $dar
 		<p>Opcio rebuda: $option</p>
 	</body>
 </html>
-	"
-
+    "
+    
 else
-
-	echo -e "
+    
+    echo -e "
 <html>
   <head>
     <meta http-equiv=\"Refresh\" content=\"5; url=/index.html\" />
@@ -34,7 +34,7 @@ else
     <p>Redirecting you to home page...</p>
   </body>
 </html>
-	"
-	
+    "
+    
 fi
 

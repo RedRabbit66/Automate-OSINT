@@ -4,7 +4,10 @@
 #activate_this = '/Applications/XAMPP/xamppfiles/cgi-bin/venv/bin/activate'
 #execfile(activate_this, dict(__file__=activate_this))
 
-import cgi, cgitb, os, sys
+import cgi
+import cgitb
+import os
+import sys
 import subprocess
 import hashlib
 
@@ -20,6 +23,7 @@ ip = None
 password = None
 wallet = None
 term = None
+
 
 def printOutput(redirect_page):
     print("Content-Type: text/html; charset=UTF-8\r\n")
@@ -39,22 +43,23 @@ def printOutput(redirect_page):
 </html>
 """).format(redirect_page)
 
+
 #print("  <p>CGI FieldStorage: </p>")
 form = cgi.FieldStorage()
-#print(form)
+# print(form)
 
-#form.fp.seek(0) # we reset fp because FieldStorage exhausted it
+# form.fp.seek(0) # we reset fp because FieldStorage exhausted it
 # if f.fp.seek(0) fails we can also do this:
 # f.fp = f.file
 form.fp = form.file
 form.read_urlencoded()
 
-#print form["email"] # 10
-#print "Keys: ", form.keys() # ["age", "name"]
+# print form["email"] # 10
+# print "Keys: ", form.keys() # ["age", "name"]
 
-#print "Correu rebut: ", form["email"].value
+# print "Correu rebut: ", form["email"].value
 
-#print "Correu nomes: ", form["email"].value.split('\r\n', 1)[0]
+# print "Correu nomes: ", form["email"].value.split('\r\n', 1)[0]
 try:
     email = form["email"].value.split('\r\n', 1)[0]
     #print("  <p>Email: " + email + "</p>")
@@ -93,63 +98,62 @@ except:
 
 
 if email is not None:
-    process = subprocess.Popen(['sudo' , '/opt/anaconda3/bin/python3' , 'automate-osint.py' , '-html' , '-e' , email], 
-                           stdout=subprocess.PIPE,
-                           universal_newlines=True)
+    process = subprocess.Popen(['sudo', '/opt/anaconda3/bin/python3', 'automate-osint.py', '-html', '-e', email],
+                               stdout=subprocess.PIPE,
+                               universal_newlines=True)
     (output, err) = process.communicate()
-    #The following line makes the waitting possible
+    # The following line makes the waitting possible
     p_status = process.wait()
     printOutput(hashlib.sha1(email.encode('utf-8')).hexdigest())
 if domain is not None:
-    process = subprocess.Popen(['sudo' , '/opt/anaconda3/bin/python3' , 'automate-osint.py' , '-html' , '-d' , domain], 
-                           stdout=subprocess.PIPE,
-                           universal_newlines=True)
+    process = subprocess.Popen(['sudo', '/opt/anaconda3/bin/python3', 'automate-osint.py', '-html', '-d', domain],
+                               stdout=subprocess.PIPE,
+                               universal_newlines=True)
     (output, err) = process.communicate()
-    #The following line makes the waitting possible
+    # The following line makes the waitting possible
     p_status = process.wait()
     printOutput(hashlib.sha1(domain.encode('utf-8')).hexdigest())
 if username is not None:
-    process = subprocess.Popen(['sudo' , '/opt/anaconda3/bin/python3' , 'automate-osint.py' , '-html' , '-u' , username], 
-                           stdout=subprocess.PIPE,
-                           universal_newlines=True)
+    process = subprocess.Popen(['sudo', '/opt/anaconda3/bin/python3', 'automate-osint.py', '-html', '-u', username],
+                               stdout=subprocess.PIPE,
+                               universal_newlines=True)
     (output, err) = process.communicate()
-    #The following line makes the waitting possible
+    # The following line makes the waitting possible
     p_status = process.wait()
     printOutput(hashlib.sha1(username.encode('utf-8')).hexdigest())
 
 if ip is not None:
-    process = subprocess.Popen(['sudo' , '/opt/anaconda3/bin/python3' , 'automate-osint.py' , '-html' , '-i' , ip], 
-                           stdout=subprocess.PIPE,
-                           universal_newlines=True)
+    process = subprocess.Popen(['sudo', '/opt/anaconda3/bin/python3', 'automate-osint.py', '-html', '-i', ip],
+                               stdout=subprocess.PIPE,
+                               universal_newlines=True)
     (output, err) = process.communicate()
-    #The following line makes the waitting possible
+    # The following line makes the waitting possible
     p_status = process.wait()
     printOutput(hashlib.sha1(ip.encode('utf-8')).hexdigest())
 
 if password is not None:
-    process = subprocess.Popen(['sudo' , '/opt/anaconda3/bin/python3' , 'automate-osint.py' , '-html' , '-p' , password], 
-                           stdout=subprocess.PIPE,
-                           universal_newlines=True)
+    process = subprocess.Popen(['sudo', '/opt/anaconda3/bin/python3', 'automate-osint.py', '-html', '-p', password],
+                               stdout=subprocess.PIPE,
+                               universal_newlines=True)
     (output, err) = process.communicate()
-    #The following line makes the waitting possible
+    # The following line makes the waitting possible
     p_status = process.wait()
     printOutput(hashlib.sha1(password.encode('utf-8')).hexdigest())
 
 if wallet is not None:
-    process = subprocess.Popen(['sudo' , '/opt/anaconda3/bin/python3' , 'automate-osint.py' , '-html' , '-w' , wallet], 
-                           stdout=subprocess.PIPE,
-                           universal_newlines=True)
+    process = subprocess.Popen(['sudo', '/opt/anaconda3/bin/python3', 'automate-osint.py', '-html', '-w', wallet],
+                               stdout=subprocess.PIPE,
+                               universal_newlines=True)
     (output, err) = process.communicate()
-    #The following line makes the waitting possible
+    # The following line makes the waitting possible
     p_status = process.wait()
     printOutput(hashlib.sha1(wallet.encode('utf-8')).hexdigest())
 
 if term is not None:
-    process = subprocess.Popen(['sudo' , '/opt/anaconda3/bin/python3' , 'automate-osint.py' , '-html' , '-t' , term], 
-                           stdout=subprocess.PIPE,
-                           universal_newlines=True)
+    process = subprocess.Popen(['sudo', '/opt/anaconda3/bin/python3', 'automate-osint.py', '-html', '-t', term],
+                               stdout=subprocess.PIPE,
+                               universal_newlines=True)
     (output, err) = process.communicate()
-    #The following line makes the waitting possible
+    # The following line makes the waitting possible
     p_status = process.wait()
     printOutput(hashlib.sha1(term.encode('utf-8')).hexdigest())
-

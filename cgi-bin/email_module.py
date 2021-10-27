@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import sys
 import os
 import json
@@ -25,11 +22,11 @@ import httpx
 import geoip2.webservice
 
 
-
 __author__ = '@llure29 (Llorenç Garcia)'
 
 email_pattern = '(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)'
 domain_pattern = '^((?!-))(xn--)?[a-z0-9][a-z0-9-_]{0,61}[a-z0-9]{0,1}\.(xn--)?([a-z0-9\-]{1,61}|[a-z0-9-]{1,30}\.[a-z]{2,})$'
+
 
 def parseConfig():
     conf_file = "config.json"
@@ -72,6 +69,7 @@ def cmdline(command):
     )
     return process.communicate()[0].decode("utf-8")
 
+
 '''
 def Popen(*args, **kwargs):
     sig = inspect.signature(real_popen)
@@ -84,20 +82,23 @@ real_popen = subprocess.Popen
 subprocess.Popen = Popen
 '''
 
+
 def yesNo(user_response):
     if user_response == "y":
         return True
     else:
         return False
 
+
 def comprova_leaks(email):
-    response = requests.post('https://leak-lookup.com/api/search', data={'key':leak_lookup_API, 'type': 'email_address', 'query': email})
+    response = requests.post('https://leak-lookup.com/api/search',
+                             data={'key': leak_lookup_API, 'type': 'email_address', 'query': email})
     json_response = response.json()
     try:
         if (json_response["error"] == "false"):
 
             print("[+] User information has been exposed in the following databases:")
-            
+
             for leak in json_response["message"]:
                 print("  -> " + leak)
         else:
@@ -108,30 +109,33 @@ def comprova_leaks(email):
 
 
 def get_gravatar_info(email):
-    email_hash=hashlib.md5(email.encode('utf-8')).hexdigest()
+    email_hash = hashlib.md5(email.encode('utf-8')).hexdigest()
 
     #print("Email Hash: ", email_hash)
 
     accounts = []
 
     try:
-        response=requests.get("https://www.gravatar.com/" + email_hash)
-        
-        if response.status_code==200:
+        response = requests.get("https://www.gravatar.com/" + email_hash)
+
+        if response.status_code == 200:
             #print("URL: ", response.url)
             accounts.append(response.url)
-            response=requests.get(response.url + '.json')
+            response = requests.get(response.url + '.json')
             #print("Response: ", response.json())
             json_response = response.json()
             print("[+] Gravatar info:")
-            print(" -> Gravatar profile: ", json_response["entry"][0]["profileUrl"])
-            print(" -> Full name (gravatar.com): ", json_response["entry"][0]["name"]["formatted"])
-            print(" -> Possible username: ", json_response["entry"][0]["preferredUsername"])
+            print(" -> Gravatar profile: ",
+                  json_response["entry"][0]["profileUrl"])
+            print(" -> Full name (gravatar.com): ",
+                  json_response["entry"][0]["name"]["formatted"])
+            print(" -> Possible username: ",
+                  json_response["entry"][0]["preferredUsername"])
             print(" -> Gravatar photos: ")
             for photo in json_response["entry"][0]["photos"]:
                 print("  --> " + photo["value"])
-            
-            urls=json_response['entry'][0]['urls']
+
+            urls = json_response['entry'][0]['urls']
             for url in urls:
                 accounts.append(url['value'])
                 print("URL linked to Gravatar profile: ", url['value'])
@@ -141,33 +145,36 @@ def get_gravatar_info(email):
     except:
         pass
 
+
 def get_breachdirectory(email):
     url = "https://breachdirectory.p.rapidapi.com/"
 
-    querystring = {"func":"auto","term":email}
+    querystring = {"func": "auto", "term": email}
 
     headers = {
         'x-rapidapi-key': breachdirectory_API_2,
         'x-rapidapi-host': "breachdirectory.p.rapidapi.com"
-        }
+    }
     try:
-        response = requests.request("GET", url, headers=headers, params=querystring)
+        response = requests.request(
+            "GET", url, headers=headers, params=querystring)
 
-        #print(response.text)
+        # print(response.text)
 
         json_response = response.json()
 
-        #if (json_response["error"] and (json_response["error"] == "Not found")):
+        # if (json_response["error"] and (json_response["error"] == "Not found")):
         #	print("[-] This email hasn\'t been leaked!")
-        #else:
+        # else:
         if json_response["result"] != "":
             for result in json_response["result"]:
                 print("[+] Leaked sources: ")
                 for source in result["sources"]:
                     print(" - ", source)
                 try:
-                    print(" --> Password from above sources: ", result["password"])
-                    print(" ---> Password Hash: ",result["sha1"])
+                    print(" --> Password from above sources: ",
+                          result["password"])
+                    print(" ---> Password Hash: ", result["sha1"])
                     print(" --- ")
                 except:
                     pass
@@ -180,10 +187,10 @@ def get_breachdirectory(email):
         else:
             print("[-] Error extracting leaked info. Try it later.")
         #("Response: ", json_response)
-        #print(error)
+        # print(error)
 
 
-#Google CUstom Search Engine
+# Google CUstom Search Engine
 def pastes_search(search):
     # Build a service object for interacting with the API. Visit
     # the Google APIs Console <http://code.google.com/apis/console>
@@ -198,9 +205,9 @@ def pastes_search(search):
             q=search,
             cx=google_cx,
         ).execute()
-        #print(res)
-        #print("---------")
-        #print(res["items"])
+        # print(res)
+        # print("---------")
+        # print(res["items"])
 
         if (int(res["searchInformation"]["totalResults"]) > 0):
             print("[+] Founds in Pastes:")
@@ -230,17 +237,18 @@ def psbdmp_search(target):
             print("[+] Dump Tags: ", dump["tags"])
             print("[+] Dump Date: ", dump["time"])
             print("[+] Dump preview: ", dump["text"])
-            user_response = str(input(" ---> Do you want to save the full content of the dump? [y/n]"))
+            user_response = str(
+                input(" ---> Do you want to save the full content of the dump? [y/n]"))
             if yesNo(user_response):
-                #This functionality spends API credits
+                # This functionality spends API credits
                 dump_id = dump["id"]
                 url_dump = "https://psbdmp.ws/api/v3/dump/" + dump_id + "?key=" + psbdmp_API
                 print("URLDUMP: " + url_dump)
                 response = requests.request("GET", url_dump)
                 dump_json = response.json()
                 print("[+] Dumping content in " + dump_id + ".txt")
-                #print(dump_json["content"])
-                f_dump = open("../htdocs/results/" + dump_id + ".txt",'w')
+                # print(dump_json["content"])
+                f_dump = open("../htdocs/results/" + dump_id + ".txt", 'w')
                 f_dump.write(dump_json["content"])
                 f_dump.close()
 
@@ -255,20 +263,20 @@ def leaksDBs(email):
     if command:
         print("[+] Found on leaked databases:")
         leaks = command.split()
-        #print(leak)
+        # print(leak)
         for leak in leaks:
             try:
-                #print(leak.split(":"))
+                # print(leak.split(":"))
                 if (leak.split(":")[1] == email):
-                    print(" -> Leak found on: ", leak.split(":")[0].split("[")[2].split("]")[0])
-                    print("  - Origin country: ", leak.split(":")[0].split("[")[3].split("]")[0])
+                    print(" -> Leak found on: ", leak.split(":")
+                          [0].split("[")[2].split("]")[0])
+                    print("  - Origin country: ", leak.split(":")
+                          [0].split("[")[3].split("]")[0])
                     print("  - Password: ", leak.split(":")[2])
             except:
                 pass
     else:
         print("[-] Not found on downloaded databases.")
-
-
 
 
 def get_darknet_leak(email):
@@ -277,22 +285,25 @@ def get_darknet_leak(email):
     proxy = "127.0.0.1:9150"
     raw_node = []
     session = requests.session()
-    session.proxies = {'http': 'socks5h://{}'.format(proxy), 'https': 'socks5h://{}'.format(proxy)}
+    session.proxies = {
+        'http': 'socks5h://{}'.format(proxy), 'https': 'socks5h://{}'.format(proxy)}
     url = "http://pwndb2am4tzkvold.onion/"
 
     username = email.split("@")[0]
     domain = email.split("@")[1]
-    #print(username)
-    #print(domain)
+    # print(username)
+    # print(domain)
     if not username:
         username = '%'
 
-    request_data = {'luser': username, 'domain': domain, 'luseropr': 1, 'domainopr': 1, 'submitform': 'em'}
+    request_data = {'luser': username, 'domain': domain,
+                    'luseropr': 1, 'domainopr': 1, 'submitform': 'em'}
 
     try:
-        req = session.post(url, data=request_data, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'})
+        req = session.post(url, data=request_data, headers={
+                           'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'})
     except Exception as error:
-        raw_node = { 'status': 'No TOR', 'desc': str(type(error))}
+        raw_node = {'status': 'No TOR', 'desc': str(type(error))}
 
     if (raw_node == []):
         if ("Array" in req.text):
@@ -303,22 +314,25 @@ def get_darknet_leak(email):
                 domain = ''
                 password = ''
                 try:
-                    leaked_email = leak.split("[luser] =>")[1].split("[")[0].strip()
+                    leaked_email = leak.split("[luser] =>")[
+                        1].split("[")[0].strip()
                     domain = leak.split("[domain] =>")[1].split("[")[0].strip()
-                    password = leak.split("[password] =>")[1].split(")")[0].strip()
+                    password = leak.split("[password] =>")[
+                        1].split(")")[0].strip()
                 except:
                     pass
                 if leaked_email and leaked_email != 'donate':
-                    emails.append({'username': leaked_email, 'domain': domain, 'password': password})
+                    emails.append({'username': leaked_email,
+                                  'domain': domain, 'password': password})
 
             if (len(emails) > 0):
                 raw_node = {'pass': emails}
             else:
-                raw_node = { 'status': 'No password leaked'}
+                raw_node = {'status': 'No password leaked'}
         else:
-            raw_node = { 'status': 'No password leaked'}
+            raw_node = {'status': 'No password leaked'}
 
-    #print(raw_node)
+    # print(raw_node)
     try:
         if raw_node["pass"] != "":
             print("[+] Darknet results:")
@@ -328,31 +342,33 @@ def get_darknet_leak(email):
                 print("  -> Username: ", leak["username"])
                 print("  -> Domain: ", leak["domain"])
                 print("  --> Password: ", leak["password"])
-                count +=1
+                count += 1
     except:
         print("[-] Not exposed in darknet.")
-    
+
 
 def newest(path):
     files = os.listdir(path)
     paths = [os.path.join(path, basename) for basename in files]
     return max(paths, key=os.path.getctime)
 
+
 def sitesUsedByTarget(email):
-    process = subprocess.Popen([ 'holehe' , '--only-used' , '-C' , email , '>/dev/null' , '2>&1'], 
-                        stdout=subprocess.PIPE,
-                        universal_newlines=True)
+    process = subprocess.Popen(['holehe', '--only-used', '-C', email, '>/dev/null', '2>&1'],
+                               stdout=subprocess.PIPE,
+                               universal_newlines=True)
 
     (output, err) = process.communicate()
-    #The following line makes the waitting possible
+    # The following line makes the waitting possible
     p_status = process.wait()
-    #print(newest('/Applications/XAMPP/xamppfiles/cgi-bin/'))
+    # print(newest('/Applications/XAMPP/xamppfiles/cgi-bin/'))
     try:
-        with open(newest('/Applications/XAMPP/xamppfiles/cgi-bin/'),'r') as f:
+        with open(newest('/Applications/XAMPP/xamppfiles/cgi-bin/'), 'r') as f:
             rowReader = csv.reader(f, delimiter=',')
-            next(rowReader)  #-use this if your txt file has a header strings as column names
+            # -use this if your txt file has a header strings as column names
+            next(rowReader)
             print("[+] Discovered sites used by target:")
-            
+
             for values in rowReader:
                 if values[5] == "True":
                     print(" -> Name: " + values[0])
@@ -361,8 +377,6 @@ def sitesUsedByTarget(email):
                     print("  --> Email recovery: " + values[6])
                     print("  --> phoneNumber: " + values[7])
                     print("  --> others: " + values[8])
-                
+
     except:
         print("It's not able to discover sites used by target.")
-
-

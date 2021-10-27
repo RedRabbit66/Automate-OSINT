@@ -11,5 +11,3 @@ if "email" not in form:
     print("Please fill in the name and addr fields.")
     return
 print("<p>Email:", form["email"].value)
-
-

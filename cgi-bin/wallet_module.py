@@ -28,15 +28,16 @@ def parseConfig():
 
     return conf
 
+
 def wallet_report(address):
 
     try:
         config = parseConfig()
 
-        #print(response.text)
+        # print(response.text)
 
-        req_address = requests.get("https://www.bitcoinabuse.com/api/reports/check?address=" + address + "&api_token=" + bitcoin_abuse_API)
-
+        req_address = requests.get(
+            "https://www.bitcoinabuse.com/api/reports/check?address=" + address + "&api_token=" + bitcoin_abuse_API)
 
         json_adress = json.loads(req_address.content)
 
@@ -63,10 +64,10 @@ def btc_info(wallet):
         bitcoin_abuse_API = config["keys"]["bitcoin_abuse"]
         bitcoinwhoswho_API_KEY = config["keys"]["bitcoinwhoswho"]
 
-        #print(response.text)
+        # print(response.text)
 
-        req_address = requests.get("https://chain.api.btc.com/v3/address/" + wallet)
-
+        req_address = requests.get(
+            "https://chain.api.btc.com/v3/address/" + wallet)
 
         json_adress = json.loads(req_address.content)
 
@@ -75,7 +76,7 @@ def btc_info(wallet):
         #json_response = response.json()
 
         if json_adress["status"] == "success":
-            
+
             print("[+] BTC info:")
             print(" -> Satoshis receibed: ", json_adress["data"]["received"])
             print(" -> Satoshis sent: ", json_adress["data"]["sent"])
@@ -84,9 +85,9 @@ def btc_info(wallet):
             print(" -> First transaction: ", json_adress["data"]["first_tx"])
             print(" -> Last Transaction: ", json_adress["data"]["last_tx"])
 
-
     except:
         print("[-] BTC API Error!")
+
 
 def url_wallet_info(address):
 
@@ -95,15 +96,15 @@ def url_wallet_info(address):
         bitcoin_abuse_API = config["keys"]["bitcoin_abuse"]
         bitcoinwhoswho_API_KEY = config["keys"]["bitcoinwhoswho"]
 
-        #print(response.text)
+        # print(response.text)
 
-        req_address = requests.get("https://bitcoinwhoswho.com/api/url/" + bitcoinwhoswho_API_KEY + "?address=" + address)
-
+        req_address = requests.get(
+            "https://bitcoinwhoswho.com/api/url/" + bitcoinwhoswho_API_KEY + "?address=" + address)
 
         json_response = json.loads(req_address.content)
 
         #print("JSON: ", json_response)
-        
+
         if json_response["status"] == "success":
             print("[+] Bitcoinwhoswho: URL appearances")
             for url in json_response["urls"]:
@@ -111,8 +112,6 @@ def url_wallet_info(address):
                 print("  -> URL: ", url["url"])
                 print("  --> Page title: ", url["page_title"])
                 print("  --> Meta description: ", url["meta_description"])
-    
+
     except:
         print("[-] API BitcoinWhoiswho Error")
-        
-

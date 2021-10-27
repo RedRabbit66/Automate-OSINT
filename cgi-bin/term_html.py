@@ -3,6 +3,7 @@
 
 from subprocess import PIPE, Popen
 
+
 def cmdline(command):
     process = Popen(
         args=command,
@@ -21,7 +22,8 @@ def databaseCheck(term):
             </div>
         </div>
     </div>"""
-    command = cmdline("/usr/bin/grep -R " + term + " ./Databases/ 2> /dev/null")
+    command = cmdline("/usr/bin/grep -R " + term +
+                      " ./Databases/ 2> /dev/null")
     if command:
         print("[+] Found on a database:")
         leaks = command.split("\n")
@@ -39,8 +41,8 @@ def databaseCheck(term):
                                 <table class="table table-bordered table-dark table-hover">
                                     <tbody>"""
 
-        #Creem la taula amb les capçaleres corresponents
-        header = ['Database' , 'Result (Line)']
+        # Creem la taula amb les capçaleres corresponents
+        header = ['Database', 'Result (Line)']
         table += "<thead>\n"
         for column in header:
             table += "    <th>{0}</th>\n".format(column.strip())
@@ -48,16 +50,19 @@ def databaseCheck(term):
         for leak in leaks:
             if leak != '':
                 try:
-                    #NOVA FILA
+                    # NOVA FILA
                     table += "  <tr>\n"
-                    #NOU CAMP (COLUMNA) a la FILA
-                    table += """<th scope="row">{0}</th>""".format(leak.split(":")[0])
-                    table += """<td>{0}</td>\n""".format(str(':'.join(leak.split(":")[1:])))
+                    # NOU CAMP (COLUMNA) a la FILA
+                    table += """<th scope="row">{0}</th>""".format(
+                        leak.split(":")[0])
+                    table += """<td>{0}</td>\n""".format(
+                        str(':'.join(leak.split(":")[1:])))
 
-                    #TANCO FILA
+                    # TANCO FILA
                     table += "  </tr>\n"
                     print("[+]  Term found on: " + leak.split(":")[0])
-                    print("[+]    Line of result: " + str(':'.join(leak.split(":")[1:]).encode('ascii', 'ignore')))
+                    print("[+]    Line of result: " +
+                          str(':'.join(leak.split(":")[1:]).encode('ascii', 'ignore')))
                 except:
                     pass
         table += """    </tbody>
@@ -68,5 +73,3 @@ def databaseCheck(term):
 		</div>
 	</section>"""
     return table
-
-

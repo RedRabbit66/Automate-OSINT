@@ -6,14 +6,17 @@
 #activate_this = '/Applications/XAMPP/xamppfiles/cgi-bin/venv/bin/activate'
 #execfile(activate_this, dict(__file__=activate_this))
 
-import cgi, cgitb, os, sys
+import cgi
+import cgitb
+import os
+import sys
 import subprocess
 import json
 
 try:
     from urllib.parse import urlencode
 except ImportError:
-     from urlparse import urlencode
+    from urlparse import urlencode
 
 #from urllib.parse import urlencode
 from urllib.request import Request, urlopen
@@ -44,6 +47,7 @@ def printOutput(redirect_page):
 </body>
 </html>
 """).format(redirect_page)
+
 
 '''
 #print("  <p>CGI FieldStorage: </p>")
@@ -87,20 +91,15 @@ if paste is not None:
         except json.JSONDecodeError:
             jsonbody = ""
 
-    print(jsonbody) 
+    print(jsonbody)
     print("URLDUMP: " + url_dump)
     dump_json = jsonbody
     print("[+] Dumping content in " + paste + ".txt")
-    #print(dump_json["content"])
-    f_dump = open("../htdocs/pastes/" + paste + ".txt",'w')
+    # print(dump_json["content"])
+    f_dump = open("../htdocs/pastes/" + paste + ".txt", 'w')
     f_dump.write(dump_json["content"])
     f_dump.close()
-    #printOutput(paste)
-
-
-
-
+    # printOutput(paste)
 
 
 url = "https://jsonplaceholder.typicode.com/posts?_limit=3"
-

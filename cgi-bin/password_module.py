@@ -39,7 +39,8 @@ def cmdline(command):
 
 def commonPasswordChecker(password):
     common = True
-    command = cmdline("/usr/bin/grep -R " + password + " ./Passwords/ 2> /dev/null")
+    command = cmdline("/usr/bin/grep -R " + password +
+                      " ./Passwords/ 2> /dev/null")
     if command:
         print("[+] Found on common passwords:")
         leaks = command.split()
@@ -47,7 +48,8 @@ def commonPasswordChecker(password):
             try:
                 passwd = leak.split(":")[1]
                 if passwd == password:
-                    print("  -> Password found on: ", str(leak.split(":")[0].split("//")[1].split(".")[0]))
+                    print("  -> Password found on: ",
+                          str(leak.split(":")[0].split("//")[1].split(".")[0]))
                     common = False
             except:
                 pass
@@ -56,10 +58,12 @@ def commonPasswordChecker(password):
     else:
         print("[+] It's a common password!")
 
+
 def leakedPasswordChecker(password):
     leaked = False
     password_hash = hashlib.sha1(password.encode('utf-8')).hexdigest()
-    command = cmdline("/usr/bin/grep -i " + password_hash + " ./Passwords/pwned-passwords-sha1.txt 2> /dev/null")
+    command = cmdline("/usr/bin/grep -i " + password_hash +
+                      " ./Passwords/pwned-passwords-sha1.txt 2> /dev/null")
     if command:
         print("[+] Found on leaked databases:")
         leaks = command.split()
@@ -68,7 +72,7 @@ def leakedPasswordChecker(password):
             try:
                 #passwd = leak.split(":")[0]
                 #print("Passwd: ", passwd)
-                #if passwd == password_hash:
+                # if passwd == password_hash:
                 print("  -> Hash: ", password_hash)
                 print("  --> Times founded: ", str(leak.split(":")[1]))
                 leaked = True
@@ -77,7 +81,9 @@ def leakedPasswordChecker(password):
     if not leaked:
         print("[-] Safe password! It hasn't been leaked yet")
 
-#Google CUstom Search Engine
+# Google CUstom Search Engine
+
+
 def pastes_search(search):
     # Build a service object for interacting with the API. Visit
     # the Google APIs Console <http://code.google.com/apis/console>
@@ -92,9 +98,9 @@ def pastes_search(search):
             q=search,
             cx=google_cx,
         ).execute()
-        #print(res)
-        #print("---------")
-        #print(res["items"])
+        # print(res)
+        # print("---------")
+        # print(res["items"])
 
         if (int(res["searchInformation"]["totalResults"]) > 0):
             print("[+] Founds in Pastes:")
@@ -110,11 +116,13 @@ def pastes_search(search):
     except:
         print("[-] Error searching in internet pastes.")
 
+
 def yesNo(user_response):
     if user_response == "y":
         return True
     else:
         return False
+
 
 def psbdmp_search(target):
     url = "https://psbdmp.ws/api/v3/search/" + target
@@ -131,17 +139,19 @@ def psbdmp_search(target):
             print(" -> Dump Tags: ", dump["tags"])
             print(" -> Dump Date: ", dump["time"])
             print(" -> Dump preview: ", dump["text"])
-            user_response = str(input(" ---> Do you want to save the full content of the dump? [y/n]"))
+            user_response = str(
+                input(" ---> Do you want to save the full content of the dump? [y/n]"))
             if yesNo(user_response):
-                #This functionality spends API credits
+                # This functionality spends API credits
                 dump_id = dump["id"]
                 url_dump = "https://psbdmp.ws/api/v3/dump/" + dump_id + "?key=" + psbdmp_API
                 #print("URLDUMP: " + url_dump)
                 response = requests.request("GET", url_dump)
                 dump_json = response.json()
-                print("[+] Dumping content in ../htdocs/results/" + dump_id + ".txt")
-                #print(dump_json["content"])
-                f_dump = open("../htdocs/results/" + dump_id + ".txt",'w')
+                print("[+] Dumping content in ../htdocs/results/" +
+                      dump_id + ".txt")
+                # print(dump_json["content"])
+                f_dump = open("../htdocs/results/" + dump_id + ".txt", 'w')
                 f_dump.write(dump_json["content"])
                 f_dump.close()
 
@@ -158,15 +168,17 @@ def get_darknet_leak(password):
     proxy = "127.0.0.1:9150"
     raw_node = []
     session = requests.session()
-    session.proxies = {'http': 'socks5h://{}'.format(proxy), 'https': 'socks5h://{}'.format(proxy)}
+    session.proxies = {
+        'http': 'socks5h://{}'.format(proxy), 'https': 'socks5h://{}'.format(proxy)}
     url = "http://pwndb2am4tzkvold.onion/"
 
     request_data = {'password': password, 'submitform': 'pw'}
 
     try:
-        req = session.post(url, data=request_data, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'})
+        req = session.post(url, data=request_data, headers={
+                           'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'})
     except Exception as error:
-        raw_node = { 'status': 'No TOR', 'desc': str(type(error))}
+        raw_node = {'status': 'No TOR', 'desc': str(type(error))}
 
     #print("RAW: ", raw_node)
     if (raw_node == []):
@@ -175,27 +187,30 @@ def get_darknet_leak(password):
             emails = []
             for leak in leaks:
                 #print("Leak: ", leak)
-                
+
                 leaked_email = ''
                 domain = ''
                 password = ''
                 try:
-                    leaked_email = leak.split("[luser] =>")[1].split("[")[0].strip()
+                    leaked_email = leak.split("[luser] =>")[
+                        1].split("[")[0].strip()
                     domain = leak.split("[domain] =>")[1].split("[")[0].strip()
-                    password = leak.split("[password] =>")[1].split(")")[0].strip()
+                    password = leak.split("[password] =>")[
+                        1].split(")")[0].strip()
                 except:
                     pass
                 if leaked_email and leaked_email != 'donate':
-                    emails.append({'username': leaked_email, 'domain': domain, 'password': password})
-                
+                    emails.append({'username': leaked_email,
+                                  'domain': domain, 'password': password})
+
             if (len(emails) > 0):
                 raw_node = {'pass': emails}
             else:
-                raw_node = { 'status': 'No password leaked'}
+                raw_node = {'status': 'No password leaked'}
         else:
-            raw_node = { 'status': 'No password leaked'}
+            raw_node = {'status': 'No password leaked'}
 
-    #print(raw_node)
+    # print(raw_node)
     try:
         if raw_node["pass"] != "":
             print("[+] Darknet results:")
@@ -205,8 +220,6 @@ def get_darknet_leak(password):
                 print("   -> Username: ", leak["username"])
                 print("   -> Domain: ", leak["domain"])
                 print("   --> Password: ", leak["password"])
-                count +=1
+                count += 1
     except:
         print("[-] Not exposed in darknet")
-    
-

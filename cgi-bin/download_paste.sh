@@ -4,22 +4,22 @@ echo -e "Content-Type: text/html; charset=UTF-8\r\n"
 
 read Download
 
-function readJson {  
-  UNAMESTR=`uname`
-  if [[ "$UNAMESTR" == 'Linux' ]]; then
-    SED_EXTENDED='-r'
-  elif [[ "$UNAMESTR" == 'Darwin' ]]; then
-    SED_EXTENDED='-E'
-  fi; 
-
-  VALUE=`grep -m 1 "\"${2}\"" ${1} | sed ${SED_EXTENDED} 's/^ *//;s/.*: *"//;s/",?//'`
-
-  if [ ! "$VALUE" ]; then
-    echo "Error: Cannot find \"${2}\" in ${1}" >&2;
-    exit 1;
-  else
-    echo $VALUE ;
-  fi; 
+function readJson {
+    UNAMESTR=`uname`
+    if [[ "$UNAMESTR" == 'Linux' ]]; then
+        SED_EXTENDED='-r'
+        elif [[ "$UNAMESTR" == 'Darwin' ]]; then
+        SED_EXTENDED='-E'
+    fi;
+    
+    VALUE=`grep -m 1 "\"${2}\"" ${1} | sed ${SED_EXTENDED} 's/^ *//;s/.*: *"//;s/",?//'`
+    
+    if [ ! "$VALUE" ]; then
+        echo "Error: Cannot find \"${2}\" in ${1}" >&2;
+        exit 1;
+    else
+        echo $VALUE ;
+    fi;
 }
 
 paste=`echo $Download | awk -F'=' '{print $2}' | sed s/+/\ /g`
@@ -55,5 +55,5 @@ echo -e "
 		<p>Parse ID: $paste</p>
 	</body>
 </html>
-	"
+"
 

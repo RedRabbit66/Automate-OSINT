@@ -23,7 +23,8 @@ def parse_config():
 def test_connection():
     config = parse_config()
     try:
-        es = Elasticsearch(host=config['elastic']['host'], port=config['elastic']['port'])
+        es = Elasticsearch(host=config['elastic']
+                           ['host'], port=config['elastic']['port'])
         print "Succesfully connected to ElasticSearch"
         return es
     except:
@@ -33,7 +34,8 @@ def test_connection():
 
 def elast(index, doc_type, body):
     config = parse_config()
-    es = Elasticsearch(host=config['elastic']['host'], port=config['elastic']['port'])
+    es = Elasticsearch(host=config['elastic']
+                       ['host'], port=config['elastic']['port'])
     # es = Elasticsearch([{'host': 'localhost', 'port': 9200}])
     ids = []
     print "[*] Saving output to Elasticsearch"

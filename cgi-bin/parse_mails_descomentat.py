@@ -1,39 +1,32 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+from mpl_toolkits.basemap import Basemap
 import sys
 import email
 import os
 import requests
 from subprocess import PIPE, Popen
-
-
 import re
 import urllib.request
 import tarfile
-
 import whois
 from datetime import datetime
 import time
 import json
 import hashlib
 from virus_total_apis import PublicApi as VirusTotalPublicApi
-
 import geoip2.webservice
-
 from email.parser import BytesParser, Parser
 from email.policy import default
 from email import policy
 from email.parser import BytesParser
-
 import matplotlib.pyplot as plt
-os.environ["PROJ_LIB"] = "C:\\Utilities\\Python\\Anaconda\\Library\\share"; #fixr
-from mpl_toolkits.basemap import Basemap
+os.environ["PROJ_LIB"] = "C:\\Utilities\\Python\\Anaconda\\Library\\share"  # fixr
 #import yara
 
 
-
-#pip install geoip2
+# pip install geoip2
 apivoid_key2 = "39a9de59018068d9989ce9a307d1958d09703878"
 apivoid_key = "dd08fe53e3bb8e67a51231af51ef8326a89559a5"
 API_KEY = 'df343cda8c9487e24a6c9c002a99d1c5415c4cec6ad84fdec88d5ebb4783e77e'
@@ -45,8 +38,7 @@ domain_pattern = '(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)'
 regex_domain = "^((?!-))(xn--)?[a-z0-9][a-z0-9-_]{0,61}[a-z0-9]{0,1}\.(xn--)?([a-z0-9\-]{1,61}|[a-z0-9-]{1,30}\.[a-z]{2,})$"
 
 
-
-puntuacio = 100 #Nem restant fins arribar a 0
+puntuacio = 100  # Nem restant fins arribar a 0
 #spf_pass = False
 links_to_analyze = []
 
@@ -82,13 +74,13 @@ dkim_arc_pass = ''
 dmarc_pass = ''
 dmarc_arc_pass = ''
 
-longituds =[]
-latituds = [] 
+longituds = []
+latituds = []
 city_names = []
 
 if (len(sys.argv) != 2):
-        print("Usage: python3 script.py <email_to_test.eml>")
-        exit()
+    print("Usage: python3 script.py <email_to_test.eml>")
+    exit()
 
 
 def FileCheck(fn):
@@ -102,6 +94,7 @@ def FileCheck(fn):
         exit()
         return 0
 
+
 msg = FileCheck(sys.argv[1])
 if(msg == 0):
     print("Can't open the file.")
@@ -110,7 +103,7 @@ if(msg == 0):
 parser = email.parser.HeaderParser()
 headers = parser.parsestr(msg.as_string())
 
-#Printar les capçaleres
+# Printar les capçaleres
 '''
 for header in headers.items():
     print(header)
@@ -123,17 +116,17 @@ def generateTableMesuresSeguretat():
     global spf_arc_pass
     table = "<h3>Resultats dels protocols d'autenticació</h3>"
     table += "<table id=\"MesuresSeguretat\">\n"
-    
-    #Creem la taula amb les capçaleres corresponents
-    header = ['Paràmetre' , 'Resultat' , 'Prioritat' , 'Informació']
+
+    # Creem la taula amb les capçaleres corresponents
+    header = ['Paràmetre', 'Resultat', 'Prioritat', 'Informació']
     table += "  <tr>\n"
     for column in header:
         table += "    <th>{0}</th>\n".format(column.strip())
     table += "  </tr>\n"
-    
-    #NOVA FILA
+
+    # NOVA FILA
     table += "  <tr>\n"
-    #NOU CAMP (COLUMNA) a la FILA
+    # NOU CAMP (COLUMNA) a la FILA
     table += "    <td>{0}".format("SPF")
     table += """
 <div class="col-md-12">
@@ -149,12 +142,14 @@ def generateTableMesuresSeguretat():
         if spf_pass == True:
             table += "    <td>{0}</td>\n".format("Correcte")
             table += "    <td>{0}</td>\n".format("Alta")
-            table += "    <td>{0}</td>\n".format("No hi ha hagut suplantació d'identitat!")
+            table += "    <td>{0}</td>\n".format(
+                "No hi ha hagut suplantació d'identitat!")
             #puntuacio  = puntuacio
         else:
             table += "    <td>{0}</td>\n".format("Fallit")
             table += "    <td>{0}</td>\n".format("Alta")
-            table += "    <td>{0}</td>\n".format("Es pot tractar d'una suplantació d'identitat!")
+            table += "    <td>{0}</td>\n".format(
+                "Es pot tractar d'una suplantació d'identitat!")
             puntuacio -= 10
     else:
         table += "    <td>{0}</td>\n".format("Inexistent")
@@ -162,12 +157,12 @@ def generateTableMesuresSeguretat():
         table += "    <td>{0}</td>\n".format("No es disposa del registre SPF")
         puntuacio -= 5
 
-    #TANCO FILA
+    # TANCO FILA
     table += "  </tr>\n"
-    
-    #NOVA FILA
+
+    # NOVA FILA
     table += "  <tr>\n"
-    #NOU CAMP (COLUMNA) a la FILA
+    # NOU CAMP (COLUMNA) a la FILA
     table += "    <td>{0}".format("ARC-SPF")
     table += """
 <div class="col-md-12">
@@ -182,26 +177,29 @@ def generateTableMesuresSeguretat():
         if spf_arc_pass == True:
             table += "    <td>{0}</td>\n".format("Correcte")
             table += "    <td>{0}</td>\n".format("Mitjana")
-            table += "    <td>{0}</td>\n".format("No hi ha hagut suplantació d'identitat!")
-            puntuacio  = puntuacio
+            table += "    <td>{0}</td>\n".format(
+                "No hi ha hagut suplantació d'identitat!")
+            puntuacio = puntuacio
         else:
             table += "    <td>{0}</td>\n".format("Fallit")
             table += "    <td>{0}</td>\n".format("Alta")
-            table += "    <td>{0}</td>\n".format("Es pot tractar d'una suplantació d'identitat!")
+            table += "    <td>{0}</td>\n".format(
+                "Es pot tractar d'una suplantació d'identitat!")
             if spf_pass == True:
-                puntuacio -= 10 #Algu ha modificat el spf original i realment és fallit
+                puntuacio -= 10  # Algu ha modificat el spf original i realment és fallit
     else:
         table += "    <td>{0}</td>\n".format("Inexistent")
         table += "    <td>{0}</td>\n".format("Baixa")
-        table += "    <td>{0}</td>\n".format("No es disposa del registre SPF dins del ARC Protocol")
-        puntuacio  = puntuacio
+        table += "    <td>{0}</td>\n".format(
+            "No es disposa del registre SPF dins del ARC Protocol")
+        puntuacio = puntuacio
 
-    #TANCO FILA
+    # TANCO FILA
     table += "  </tr>\n"
-    
-    #NOVA FILA
+
+    # NOVA FILA
     table += "  <tr>\n"
-    #NOU CAMP (COLUMNA) a la FILA
+    # NOU CAMP (COLUMNA) a la FILA
     table += "    <td>{0}".format("DKIM")
     table += """
 <div class="col-md-12">
@@ -216,26 +214,28 @@ def generateTableMesuresSeguretat():
         if dkim_pass == True:
             table += "    <td>{0}</td>\n".format("Correcte")
             table += "    <td>{0}</td>\n".format("Alta")
-            table += "    <td>{0}</td>\n".format("El correu porta una firma digital signada pel remitent!")
-            puntuacio  = puntuacio
+            table += "    <td>{0}</td>\n".format(
+                "El correu porta una firma digital signada pel remitent!")
+            puntuacio = puntuacio
         else:
             table += "    <td>{0}</td>\n".format("Fallit")
             table += "    <td>{0}</td>\n".format("Alta")
-            table += "    <td>{0}</td>\n".format("Es pot tractar d'spoofing del missatge, la firma digital no coincideix!")
-            puntuacio  -= 5
+            table += "    <td>{0}</td>\n".format(
+                "Es pot tractar d'spoofing del missatge, la firma digital no coincideix!")
+            puntuacio -= 5
     else:
         table += "    <td>{0}</td>\n".format("Inexistent")
         table += "    <td>{0}</td>\n".format("Mitjana")
-        table += "    <td>{0}</td>\n".format("El remitent no ha firmat digitalment el missatge!")
-        puntuacio  -= 3
+        table += "    <td>{0}</td>\n".format(
+            "El remitent no ha firmat digitalment el missatge!")
+        puntuacio -= 3
 
-
-    #TANCO FILA
+    # TANCO FILA
     table += "  </tr>\n"
-    
-    #NOVA FILA
+
+    # NOVA FILA
     table += "  <tr>\n"
-    #NOU CAMP (COLUMNA) a la FILA
+    # NOU CAMP (COLUMNA) a la FILA
     table += "    <td>{0}".format("ARC-DKIM")
     table += """
 <div class="col-md-12">
@@ -251,26 +251,29 @@ def generateTableMesuresSeguretat():
         if dkim_arc_pass == True:
             table += "    <td>{0}</td>\n".format("Correcte")
             table += "    <td>{0}</td>\n".format("Mitjana")
-            table += "    <td>{0}</td>\n".format("El correu porta una firma digital signada pel remitent!")
-            puntuacio  = puntuacio
+            table += "    <td>{0}</td>\n".format(
+                "El correu porta una firma digital signada pel remitent!")
+            puntuacio = puntuacio
         else:
             table += "    <td>{0}</td>\n".format("Fallit")
             table += "    <td>{0}</td>\n".format("Alta")
-            table += "    <td>{0}</td>\n".format("Es pot tractar d'spoofing del missatge, la firma digital no coincideix!")
+            table += "    <td>{0}</td>\n".format(
+                "Es pot tractar d'spoofing del missatge, la firma digital no coincideix!")
             if dkim_pass == True:
-                puntuacio  -= 5
+                puntuacio -= 5
     else:
         table += "    <td>{0}</td>\n".format("Inexistent")
         table += "    <td>{0}</td>\n".format("Baixa")
-        table += "    <td>{0}</td>\n".format("El remitent no ha firmat digitalment el missatge!")
-        puntuacio  = puntuacio
+        table += "    <td>{0}</td>\n".format(
+            "El remitent no ha firmat digitalment el missatge!")
+        puntuacio = puntuacio
 
-    #TANCO FILA
+    # TANCO FILA
     table += "  </tr>\n"
-    
-    #NOVA FILA
+
+    # NOVA FILA
     table += "  <tr>\n"
-    #NOU CAMP (COLUMNA) a la FILA
+    # NOU CAMP (COLUMNA) a la FILA
     table += "    <td>{0}".format("DMARC")
     table += """
 <div class="col-md-12">
@@ -285,25 +288,28 @@ def generateTableMesuresSeguretat():
         if dmarc_pass == True:
             table += "    <td>{0}</td>\n".format("Correcte")
             table += "    <td>{0}</td>\n".format("Alta")
-            table += "    <td>{0}</td>\n".format("El DMARC ha donat com a vàlid el correu segons els resultats del SPF i DKIM!")
-            puntuacio  = puntuacio
+            table += "    <td>{0}</td>\n".format(
+                "El DMARC ha donat com a vàlid el correu segons els resultats del SPF i DKIM!")
+            puntuacio = puntuacio
         else:
             table += "    <td>{0}</td>\n".format("Fallit")
             table += "    <td>{0}</td>\n".format("Alta")
-            table += "    <td>{0}</td>\n".format("El DMARC ha donat com a invàlid el correu segons els resultats del SPF i DKIM!")
-            puntuacio  -= 5
+            table += "    <td>{0}</td>\n".format(
+                "El DMARC ha donat com a invàlid el correu segons els resultats del SPF i DKIM!")
+            puntuacio -= 5
     else:
         table += "    <td>{0}</td>\n".format("Inexistent")
         table += "    <td>{0}</td>\n".format("Mitjana")
-        table += "    <td>{0}</td>\n".format("El servidor de correu no ha aplicat cap política segons les dades rebudes!")
+        table += "    <td>{0}</td>\n".format(
+            "El servidor de correu no ha aplicat cap política segons les dades rebudes!")
         puntuacio = puntuacio
 
-    #TANCO FILA
+    # TANCO FILA
     table += "  </tr>\n"
-    
-    #NOVA FILA
+
+    # NOVA FILA
     table += "  <tr>\n"
-    #NOU CAMP (COLUMNA) a la FILA
+    # NOU CAMP (COLUMNA) a la FILA
     table += "    <td>{0}".format("ARC-DMARC")
     table += """
 <div class="col-md-12">
@@ -318,26 +324,30 @@ def generateTableMesuresSeguretat():
         if dmarc_arc_pass == True:
             table += "    <td>{0}</td>\n".format("Correcte")
             table += "    <td>{0}</td>\n".format("Mitjana")
-            table += "    <td>{0}</td>\n".format("El DMARC ha donat com a vàlid el correu segons els resultats del SPF i DKIM!")
-            puntuacio  = puntuacio
+            table += "    <td>{0}</td>\n".format(
+                "El DMARC ha donat com a vàlid el correu segons els resultats del SPF i DKIM!")
+            puntuacio = puntuacio
         else:
             table += "    <td>{0}</td>\n".format("Fallit")
             table += "    <td>{0}</td>\n".format("Alta")
-            table += "    <td>{0}</td>\n".format("El DMARC ha donat com a invàlid el correu segons els resultats del SPF i DKIM!")
+            table += "    <td>{0}</td>\n".format(
+                "El DMARC ha donat com a invàlid el correu segons els resultats del SPF i DKIM!")
             if dmarc_pass == True:
-                puntuacio  -= 5
+                puntuacio -= 5
     else:
         table += "    <td>{0}</td>\n".format("Inexistent")
         table += "    <td>{0}</td>\n".format("Baixa")
-        table += "    <td>{0}</td>\n".format("El servidor de correu no ha aplicat cap política segons les dades rebudes!")
-        puntuacio  = puntuacio
+        table += "    <td>{0}</td>\n".format(
+            "El servidor de correu no ha aplicat cap política segons les dades rebudes!")
+        puntuacio = puntuacio
 
-    #TANCO FILA
+    # TANCO FILA
     table += "  </tr>\n"
-    
-    #TANCO TAULA
+
+    # TANCO TAULA
     table += "</table></br>"
     return table
+
 
 def dadesMissatge():
     global puntuacio
@@ -347,109 +357,116 @@ def dadesMissatge():
     table = "<h3>Resultats de les capçaleres del missatge:</h3>"
     table += "<table id=\"MesuresSeguretat\">\n"
 
-    #Creem la taula amb les capçaleres corresponents
-    header = ['Dada' , 'Contingut' , 'Anàlisi' , 'Informació']
+    # Creem la taula amb les capçaleres corresponents
+    header = ['Dada', 'Contingut', 'Anàlisi', 'Informació']
     table += "  <tr>\n"
     for column in header:
         table += "    <th>{0}</th>\n".format(column.strip())
     table += "  </tr>\n"
-    
 
-    #NOVA FILA
+    # NOVA FILA
     table += "  <tr>\n"
-    #NOU CAMP (COLUMNA) a la FILA
+    # NOU CAMP (COLUMNA) a la FILA
     table += "    <td>{0}</td>\n".format("Remitent")
     table += "    <td>{0}</td>\n".format(remitent_correu)
     try:
         if recent_creation_date:
             table += "    <td>{0}</td>\n".format("Perillós")
-            table += "    <td>{0}</td>\n".format("El domini s'ha creat recentment, es pot tractar d'un atac de phishing selectiu!")
+            table += "    <td>{0}</td>\n".format(
+                "El domini s'ha creat recentment, es pot tractar d'un atac de phishing selectiu!")
             puntuacio -= 10
         else:
             if not domain_public_provider and same_company:
                 table += "    <td>{0}</td>\n".format("Aprovat")
-                table += "    <td>{0}</td>\n".format("El domini no s'ha creat recentment i prové de la mateixa organització!")
+                table += "    <td>{0}</td>\n".format(
+                    "El domini no s'ha creat recentment i prové de la mateixa organització!")
             else:
                 table += "    <td>{0}</td>\n".format("Aprovat")
-                table += "    <td>{0}</td>\n".format("El domini no s'ha creat recentment!")
-        
+                table += "    <td>{0}</td>\n".format(
+                    "El domini no s'ha creat recentment!")
+
     except:
         if domain_public_provider:
             table += "    <td>{0}</td>\n".format("Neutral")
-            table += "    <td>{0}</td>\n".format("El domini no te una data de registre pública\r\nPrové d'un proveidor públic de correu.")
+            table += "    <td>{0}</td>\n".format(
+                "El domini no te una data de registre pública\r\nPrové d'un proveidor públic de correu.")
             puntuacio -= 5
         else:
             if same_company:
                 table += "    <td>{0}</td>\n".format("Positiu")
-                table += "    <td>{0}</td>\n".format("El domini no te una data de registre pública\r\nPrové de la mateixa organització.")
+                table += "    <td>{0}</td>\n".format(
+                    "El domini no te una data de registre pública\r\nPrové de la mateixa organització.")
             else:
                 table += "    <td>{0}</td>\n".format("Neutral")
-                table += "    <td>{0}</td>\n".format("El domini no te una data de registre pública!")
+                table += "    <td>{0}</td>\n".format(
+                    "El domini no te una data de registre pública!")
                 puntuacio -= 5
 
-    #TANCO FILA
+    # TANCO FILA
     table += "  </tr>\n"
 
-    #NOVA FILA
+    # NOVA FILA
     table += "  <tr>\n"
-    #NOU CAMP (COLUMNA) a la FILA
+    # NOU CAMP (COLUMNA) a la FILA
     table += "    <td>{0}</td>\n".format("Domini provinent")
     table += "    <td>{0}</td>\n".format(from_domain)
-    
+
     if from_domini_malicios:
         table += "    <td>{0}</td>\n".format("Perillós")
         table += "    <td>{0}</td>\n".format(info_from_domain)
         puntuacio -= 20
     else:
         table += "    <td>{0}</td>\n".format("Aprovat")
-        table += "    <td>{0}</td>\n".format("El domini no està en cap llista negra!")
-    
+        table += "    <td>{0}</td>\n".format(
+            "El domini no està en cap llista negra!")
 
-    #TANCO FILA
+    # TANCO FILA
     table += "  </tr>\n"
-    
-    #NOVA FILA
+
+    # NOVA FILA
     table += "  <tr>\n"
-    #NOU CAMP (COLUMNA) a la FILA
+    # NOU CAMP (COLUMNA) a la FILA
     table += "    <td>{0}</td>\n".format("Data")
     table += "    <td>{0}</td>\n".format(data_correu)
     table += "    <td>{0}</td>\n".format("Personal")
-    table += "    <td>{0}</td>\n".format("Segons la zona horària, analitzar si es comprèn dins de l'hora de treball")
+    table += "    <td>{0}</td>\n".format(
+        "Segons la zona horària, analitzar si es comprèn dins de l'hora de treball")
 
-    #TANCO FILA
+    # TANCO FILA
     table += "  </tr>\n"
-    
+
     if ip_remitent != "-":
-        #NOVA FILA
+        # NOVA FILA
         table += "  <tr>\n"
-        #NOU CAMP (COLUMNA) a la FILA
+        # NOU CAMP (COLUMNA) a la FILA
         table += "    <td>{0}</td>\n".format("IP-Remitent")
         table += "    <td>{0}</td>\n".format(ip_remitent)
         if analizeIP(ip_remitent):
             table += "    <td>{0}</td>\n".format("Maliciosa")
-            table += "    <td>{0}</td>\n".format("La IP del client des del qual s'ha enviat el correu és maliciosa!")
+            table += "    <td>{0}</td>\n".format(
+                "La IP del client des del qual s'ha enviat el correu és maliciosa!")
         else:
             table += "    <td>{0}</td>\n".format("Bona")
-            table += "    <td>{0}</td>\n".format("La IP del client des del qual s'ha enviat el correu no té mala reputació!")
-        #TANCO FILA
+            table += "    <td>{0}</td>\n".format(
+                "La IP del client des del qual s'ha enviat el correu no té mala reputació!")
+        # TANCO FILA
         table += "  </tr>\n"
-        
+
     else:
-        #NOVA FILA
+        # NOVA FILA
         table += "  <tr>\n"
-        #NOU CAMP (COLUMNA) a la FILA
+        # NOU CAMP (COLUMNA) a la FILA
         table += "    <td>{0}</td>\n".format("IP-Remitent")
         table += "    <td>{0}</td>\n".format("Desconeguda")
         table += "    <td>{0}</td>\n".format("-")
         table += "    <td>{0}</td>\n".format("-")
-        
-        #TANCO FILA
+
+        # TANCO FILA
         table += "  </tr>\n"
-        
-    
-    #NOVA FILA
+
+    # NOVA FILA
     table += "  <tr>\n"
-    #NOU CAMP (COLUMNA) a la FILA
+    # NOU CAMP (COLUMNA) a la FILA
     table += "    <td>{0}</td>\n".format("Reply-To")
     table += "    <td>{0}</td>\n".format(reply_to)
     if reply_to_domini_malicios:
@@ -458,21 +475,22 @@ def dadesMissatge():
         if from_domini_malicios:
             puntuacio -= 10
         else:
-            puntuacio -=20
+            puntuacio -= 20
     else:
         if (reply_to and (re.match(domain_pattern, reply_to))):
             table += "    <td>{0}</td>\n".format("Aprovat")
-            table += "    <td>{0}</td>\n".format("El domini no està en cap llista negra!")
+            table += "    <td>{0}</td>\n".format(
+                "El domini no està en cap llista negra!")
         else:
             table += "    <td>{0}</td>\n".format("-")
             table += "    <td>{0}</td>\n".format("-")
 
-    #TANCO FILA
+    # TANCO FILA
     table += "  </tr>\n"
-    
-    #NOVA FILA
+
+    # NOVA FILA
     table += "  <tr>\n"
-    #NOU CAMP (COLUMNA) a la FILA
+    # NOU CAMP (COLUMNA) a la FILA
     table += "    <td>{0}</td>\n".format("Return-Path")
     table += "    <td>{0}</td>\n".format(return_path)
     if return_path_domini_malicios:
@@ -485,17 +503,19 @@ def dadesMissatge():
     else:
         if (reply_to and (re.match(domain_pattern, return_path))):
             table += "    <td>{0}</td>\n".format("Aprovat")
-            table += "    <td>{0}</td>\n".format("El domini no està en cap llista negra!")
+            table += "    <td>{0}</td>\n".format(
+                "El domini no està en cap llista negra!")
         else:
             table += "    <td>{0}</td>\n".format("-")
             table += "    <td>{0}</td>\n".format("-")
 
-    #TANCO FILA
+    # TANCO FILA
     table += "  </tr>\n"
-    
-    #TANCO TAULA
+
+    # TANCO TAULA
     table += "</table></br>"
     return table
+
 
 def generateTablefitxersAdjunts():
     global puntuacio
@@ -503,16 +523,17 @@ def generateTablefitxersAdjunts():
     table += "<table id=\"MesuresSeguretat\">\n"
 
     # Create the table's column headers
-    header = ['Nom del fitxer' , 'Hash' , 'Anàlisi' , 'Porta Macros' , 'Porta execució de codi' , 'Autoopen Macro' , 'PDF sospitós']
+    header = ['Nom del fitxer', 'Hash', 'Anàlisi', 'Porta Macros',
+              'Porta execució de codi', 'Autoopen Macro', 'PDF sospitós']
     table += "  <tr>\n"
     for column in header:
         table += "    <th>{0}</th>\n".format(column.strip())
     table += "  </tr>\n"
-    
+
     for i in range(len(noms_fitxers_adjunts)):
-        #NOVA FILA
+        # NOVA FILA
         table += "  <tr>\n"
-        #NOU CAMP (COLUMNA) a la FILA
+        # NOU CAMP (COLUMNA) a la FILA
         table += "    <td>{0}</td>\n".format(noms_fitxers_adjunts[i])
         table += "    <td>{0}</td>\n".format(hash_fitxers_adjunts[i])
         if infectats_fitxers_adjunts[i] == True:
@@ -521,37 +542,42 @@ def generateTablefitxersAdjunts():
         else:
             table += "    <td>{0}</td>\n".format("Net!")
         if yara_macro_adjunts[i]:
-            table += "    <td>{0}</td>\n".format("Porta macros en el fitxer adjunt!")
+            table += "    <td>{0}</td>\n".format(
+                "Porta macros en el fitxer adjunt!")
             puntuacio -= 10
         else:
             table += "    <td>{0}</td>\n".format("No porta macros.")
         if yara_autoopen_adjunts[i]:
-            table += "    <td>{0}</td>\n".format("Porta codi que s'autoexecuta")
+            table += "    <td>{0}</td>\n".format(
+                "Porta codi que s'autoexecuta")
             puntuacio -= 10
         else:
-            table += "    <td>{0}</td>\n".format("no porta codi que s'autoexecuta")
+            table += "    <td>{0}</td>\n".format(
+                "no porta codi que s'autoexecuta")
         if yara_execution_adjunts[i]:
-            table += "    <td>{0}</td>\n".format("Conté peces de codi executable!")
+            table += "    <td>{0}</td>\n".format(
+                "Conté peces de codi executable!")
             puntuacio -= 10
         else:
-            table += "    <td>{0}</td>\n".format("No conté peces de codi executable")
+            table += "    <td>{0}</td>\n".format(
+                "No conté peces de codi executable")
         if yara_execution_adjunts[i]:
-            table += "    <td>{0}</td>\n".format("És un document pdf suspitós a portar malware")
+            table += "    <td>{0}</td>\n".format(
+                "És un document pdf suspitós a portar malware")
             puntuacio -= 10
         else:
             table += "    <td>{0}</td>\n".format("No")
-    
-        #TANCO FILA
+
+        # TANCO FILA
         table += "  </tr>\n"
 
-    #TANCO TAULA
+    # TANCO TAULA
     table += "</table></br>"
     return table
 
 
-
 def insertInteligencia():
-    #Resultats Yaras Phishing
+    # Resultats Yaras Phishing
     global puntuacio
     global intel_phishing_result
     global intel_phishing2_result
@@ -562,76 +588,87 @@ def insertInteligencia():
     table += "<table id=\"MesuresSeguretat\">\n"
 
     # Create the table's column headers
-    header = ['Inteligència' , 'Estat' , 'Informació']
+    header = ['Inteligència', 'Estat', 'Informació']
     table += "  <tr>\n"
     for column in header:
         table += "    <th>{0}</th>\n".format(column.strip())
     table += "  </tr>\n"
 
-    #NOVA FILA
+    # NOVA FILA
     table += "  <tr>\n"
-    #NOU CAMP (COLUMNA) a la FILA
+    # NOU CAMP (COLUMNA) a la FILA
     table += "    <td>{0}</td>\n".format("Correu de phishing selectiu?")
     if intel_phishing_result:
         table += "    <td>{0}</td>\n".format("Potencialment sí!")
-        table += "    <td>{0}</td>\n".format("Té el perfil d'un correu de phishing selectiu")
-        puntuacio -=10
+        table += "    <td>{0}</td>\n".format(
+            "Té el perfil d'un correu de phishing selectiu")
+        puntuacio -= 10
     else:
         table += "    <td>{0}</td>\n".format("No")
-        table += "    <td>{0}</td>\n".format("No sembla un correu de phishing selectiu")
+        table += "    <td>{0}</td>\n".format(
+            "No sembla un correu de phishing selectiu")
 
-    #TANCO FILA
+    # TANCO FILA
     table += "  </tr>\n"
 
-    #NOVA FILA
+    # NOVA FILA
     table += "  <tr>\n"
-    #NOU CAMP (COLUMNA) a la FILA
+    # NOU CAMP (COLUMNA) a la FILA
     table += "    <td>{0}</td>\n".format("Correu típic de phishing?")
     if intel_phishing2_result:
         table += "    <td>{0}</td>\n".format("Potencialment sí!")
-        table += "    <td>{0}</td>\n".format("Té el perfil d'un correu típic de phishing!")
+        table += "    <td>{0}</td>\n".format(
+            "Té el perfil d'un correu típic de phishing!")
         puntuacio -= 15
     else:
         table += "    <td>{0}</td>\n".format("No")
-        table += "    <td>{0}</td>\n".format("No sembla un correu típic de phishing")
-    #TANCO FILA
+        table += "    <td>{0}</td>\n".format(
+            "No sembla un correu típic de phishing")
+    # TANCO FILA
     table += "  </tr>\n"
-    
-    #NOVA FILA
+
+    # NOVA FILA
     table += "  <tr>\n"
-    #NOU CAMP (COLUMNA) a la FILA
+    # NOU CAMP (COLUMNA) a la FILA
     table += "    <td>{0}</td>\n".format("Correu no desitjat?")
     if scl_yara_result:
         table += "    <td>{0}</td>\n".format("Sí!")
-        table += "    <td>{0}</td>\n".format("El missatge genera poca confiança, el maquem com a no desitjat.")
+        table += "    <td>{0}</td>\n".format(
+            "El missatge genera poca confiança, el maquem com a no desitjat.")
         puntuacio -= 7
     else:
         table += "    <td>{0}</td>\n".format("No")
-        table += "    <td>{0}</td>\n".format("S'ha determinat que el missatge no era correu no desitjat.")
-    #TANCO FILA
+        table += "    <td>{0}</td>\n".format(
+            "S'ha determinat que el missatge no era correu no desitjat.")
+    # TANCO FILA
     table += "  </tr>\n"
-    
-    #NOVA FILA
+
+    # NOVA FILA
     table += "  <tr>\n"
-    #NOU CAMP (COLUMNA) a la FILA
+    # NOU CAMP (COLUMNA) a la FILA
     table += "    <td>{0}</td>\n".format("Genera queixes?")
     if bcl_yara_result:
         table += "    <td>{0}</td>\n".format("Sí!")
-        table += "    <td>{0}</td>\n".format("El missatge prové d'un remitent de correu massiu que genera un número queixes.")
-        puntuacio -=5
+        table += "    <td>{0}</td>\n".format(
+            "El missatge prové d'un remitent de correu massiu que genera un número queixes.")
+        puntuacio -= 5
     else:
         table += "    <td>{0}</td>\n".format("No")
-        table += "    <td>{0}</td>\n".format("El missatge prové d'un remitent de correo massiu que no genera queixes massives.")
-    #TANCO FILA
+        table += "    <td>{0}</td>\n".format(
+            "El missatge prové d'un remitent de correo massiu que no genera queixes massives.")
+    # TANCO FILA
     table += "  </tr>\n"
-    
-    #TANCO TAULA
+
+    # TANCO TAULA
     table += "</table></br>"
     return table
-    
+
+
 def insertMap():
-    text = """<img src="{0}" alt="Mapa mundi traçat" class="center">""".format(image_path_html)
+    text = """<img src="{0}" alt="Mapa mundi traçat" class="center">""".format(
+        image_path_html)
     return text
+
 
 def puntuacioFinal():
     global puntuacio
@@ -639,7 +676,7 @@ def puntuacioFinal():
     print("Output: ", output)
     os.system("touch ../htdocs/" + output + ".html")
     os.system("/bin/chmod 777 ../htdocs/" + output + ".html")
-    f = open("../htdocs/" + output + ".html",'w')
+    f = open("../htdocs/" + output + ".html", 'w')
 
     contingut_HTML = """<html>
     <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -861,13 +898,14 @@ body {
 }
 
 """
-    contingut_HTML = contingut_HTML + ".html {width: " + str(puntuacio) + "%; background-color: #04AA6D;}"
-    contingut_HTML = contingut_HTML + ".css {width: " + str(puntuacio) + "%; background-color: #2196F3;}"
-    contingut_HTML = contingut_HTML + ".js {width: " + str(puntuacio) + "%; background-color: #f44336;}"
-    contingut_HTML = contingut_HTML + ".php {width: " + str(puntuacio) + "%; background-color: #808080;}"
-
-
-
+    contingut_HTML = contingut_HTML + \
+        ".html {width: " + str(puntuacio) + "%; background-color: #04AA6D;}"
+    contingut_HTML = contingut_HTML + \
+        ".css {width: " + str(puntuacio) + "%; background-color: #2196F3;}"
+    contingut_HTML = contingut_HTML + \
+        ".js {width: " + str(puntuacio) + "%; background-color: #f44336;}"
+    contingut_HTML = contingut_HTML + \
+        ".php {width: " + str(puntuacio) + "%; background-color: #808080;}"
 
     contingut_HTML = contingut_HTML + """
     </style>
@@ -879,33 +917,35 @@ body {
     contingut_HTML = contingut_HTML + output + """</title></head>
     <body>
      <h1>Informe del correu introduït: """ + output + """</h1></br>"""
-     
+
     contingut_HTML = contingut_HTML + generateTableMesuresSeguretat()
-    
+
     contingut_HTML = contingut_HTML + dadesMissatge()
-    
+
     contingut_HTML = contingut_HTML + generateTablefitxersAdjunts()
-    
+
     contingut_HTML = contingut_HTML + generateTableURLs()
-    
+
     contingut_HTML = contingut_HTML + print_route2()
-    
+
     contingut_HTML = contingut_HTML + insertMap()
-    
+
     contingut_HTML = contingut_HTML + insertInteligencia()
-    
+
     contingut_HTML = contingut_HTML + generateProgressBar()
-    
-    contingut_HTML = contingut_HTML +"""<footer><a href="../uploadEmail.html">Tornar a la pàgina de pujades</a></footer>"""
-    
+
+    contingut_HTML = contingut_HTML + \
+        """<footer><a href="../uploadEmail.html">Tornar a la pàgina de pujades</a></footer>"""
+
     contingut_HTML = contingut_HTML + """</body>
 </html>"""
     f.write(contingut_HTML)
     f.close()
-    
+
+
 noms_fitxers_adjunts = []
 infectats_fitxers_adjunts = []
-hash_fitxers_adjunts = [] 
+hash_fitxers_adjunts = []
 yara_macro_adjunts = []
 yara_autoopen_adjunts = []
 yara_execution_adjunts = []
@@ -917,36 +957,39 @@ def generaInteligencia():
     global intel_phishing2_result
     global scl_yara_result
     global bcl_yara_result
-    command = cmdline("/usr/local/bin/yara " + intel_phishing + " " + sys.argv[1] + " 2> /dev/null")
+    command = cmdline("/usr/local/bin/yara " + intel_phishing +
+                      " " + sys.argv[1] + " 2> /dev/null")
     if command:
         print("Match amb: " + intel_phishing)
         intel_phishing_result = True
     else:
         print("No ha fet match amb " + intel_phishing)
         intel_phishing_result = False
-    command = cmdline("/usr/local/bin/yara " + intel_phishing + " " + sys.argv[1] + " 2> /dev/null")
+    command = cmdline("/usr/local/bin/yara " + intel_phishing +
+                      " " + sys.argv[1] + " 2> /dev/null")
     if command:
         print("Match amb: " + intel_phishing2)
         intel_phishing2_result = True
     else:
         print("No ha fet match amb " + intel_phishing2)
         intel_phishing2_result = False
-    command = cmdline("/usr/local/bin/yara " + scl_yara + " " + sys.argv[1] + " 2> /dev/null")
+    command = cmdline("/usr/local/bin/yara " + scl_yara +
+                      " " + sys.argv[1] + " 2> /dev/null")
     if command:
         print("Match amb: " + scl_yara)
         scl_yara_result = True
     else:
         print("No ha fet match amb " + scl_yara)
         scl_yara_result = False
-    command = cmdline("/usr/local/bin/yara " + bcl_yara + " " + sys.argv[1] + " 2> /dev/null")
+    command = cmdline("/usr/local/bin/yara " + bcl_yara +
+                      " " + sys.argv[1] + " 2> /dev/null")
     if command:
         print("Match amb: " + bcl_yara)
         bcl_yara_result = True
     else:
         print("No ha fet match amb " + bcl_yara)
         bcl_yara_result = False
-        
-        
+
 
 def cmdline(command):
     process = Popen(
@@ -957,7 +1000,6 @@ def cmdline(command):
     return process.communicate()[0].decode("utf-8")
 
 
-
 def md5(fname):
     hash_md5 = hashlib.md5()
     with open(fname, "rb") as f:
@@ -966,26 +1008,26 @@ def md5(fname):
     return hash_md5.hexdigest()
 
 
-#Per cada attachment, el llegim i el volquem
+# Per cada attachment, el llegim i el volquem
 mail = email.message_from_string(msg.as_string())
 for part in mail.walk():
     if part.get_content_maintype() == 'multipart':
-        #print(part.as_string())
+        # print(part.as_string())
         continue
     if part.get('Content-Disposition') is None:
-        #print(part.as_string())
+        # print(part.as_string())
         continue
     fileName = part.get_filename()
-    
+
     if bool(fileName):
-        filePath = os.path.join(fileName) 
-        #Afegir davant la carpeta dels fitxers adjunts
-        #Eliminar els fitxers adjunts despres d'un anàlisi
-        #if not os.path.isfile(filePath):
+        filePath = os.path.join(fileName)
+        # Afegir davant la carpeta dels fitxers adjunts
+        # Eliminar els fitxers adjunts despres d'un anàlisi
+        # if not os.path.isfile(filePath):
         noms_fitxers_adjunts.append(fileName)
         print("Nom del fitxer adjunt: " + fileName)
         fp = open(filePath, 'wb')
-        
+
         fp.write(part.get_payload(decode=True))
         fp.close()
         command = cmdline("sudo /bin/chmod 777 " + filePath)
@@ -995,38 +1037,42 @@ for part in mail.walk():
         print("MD5: " + md5(fileName))
         md5_hash = md5(fileName)
         hash_fitxers_adjunts.append(md5_hash)
-        command = cmdline("/usr/local/bin/yara " + office_macro_yara + " " + fileName + " 2> /dev/null")
+        command = cmdline("/usr/local/bin/yara " +
+                          office_macro_yara + " " + fileName + " 2> /dev/null")
         if command:
             print("Ha fet match")
             yara_macro_adjunts.append(True)
         else:
             print("No ha fet match")
             yara_macro_adjunts.append(False)
-        #office_autoopen_yara
-        command = cmdline("/usr/local/bin/yara " + office_autoopen_yara + " " + fileName + " 2> /dev/null")
+        # office_autoopen_yara
+        command = cmdline("/usr/local/bin/yara " +
+                          office_autoopen_yara + " " + fileName + " 2> /dev/null")
         if command:
             print("Ha fet match")
             yara_autoopen_adjunts.append(True)
         else:
             print("No ha fet match")
             yara_autoopen_adjunts.append(False)
-        #office_code_execution_yara
-        command = cmdline("/usr/local/bin/yara " + office_code_execution_yara + " " + fileName + " 2> /dev/null")
+        # office_code_execution_yara
+        command = cmdline("/usr/local/bin/yara " +
+                          office_code_execution_yara + " " + fileName + " 2> /dev/null")
         if command:
             print("Ha fet match")
             yara_execution_adjunts.append(True)
         else:
             print("No ha fet match")
             yara_execution_adjunts.append(False)
-        #malicious_pdf_yara
-        command = cmdline("/usr/local/bin/yara " + malicious_pdf_yara + " " + fileName + " 2> /dev/null")
+        # malicious_pdf_yara
+        command = cmdline("/usr/local/bin/yara " +
+                          malicious_pdf_yara + " " + fileName + " 2> /dev/null")
         if command:
             print("Ha fet match")
             yara_pdf_adjunts.append(True)
         else:
             print("No ha fet match")
             yara_pdf_adjunts.append(False)
-        #Analitzem amb virustotal el hash del arxiu total
+        # Analitzem amb virustotal el hash del arxiu total
         try:
             #vt = VirusTotalPublicApi(API_KEY)
             response = vt.get_file_report(md5_hash)
@@ -1045,7 +1091,7 @@ for part in mail.walk():
             infectats_fitxers_adjunts.append(False)
 
 
-#Printar per consola els headers seguents:
+# Printar per consola els headers seguents:
 print('To:', msg['to'])
 remitent_correu = msg['from']
 print('From:', msg['from'])
@@ -1076,9 +1122,9 @@ if not result:
     print("New IP Remitent: " + ip_remitent)
 
 
-#Check SPF
+# Check SPF
 if msg['Received-SPF']:
-    #Hi ha registre SPF
+    # Hi ha registre SPF
     print("SPF validat")
     spf = str(msg['Received-SPF']).split()
     print(spf)
@@ -1086,7 +1132,8 @@ if msg['Received-SPF']:
         spf_pass = True
         print("SPF pass")
         print("No hi ha hagut suplantació d'identitat!")
-        spf_result = str(msg['Received-SPF']).split("(")[1] + str(msg['Received-SPF']).split(")")[0]
+        spf_result = str(msg['Received-SPF']).split("(")[1] + \
+            str(msg['Received-SPF']).split(")")[0]
         print("Resultat SPF: ")
         print(spf_result)
     else:
@@ -1094,7 +1141,7 @@ if msg['Received-SPF']:
         print("SPF failed!")
         print("El correu pot haver patit un atac de suplantació d'identitat!")
 else:
-    #No hi ha registre SPF
+    # No hi ha registre SPF
     print("No conte el veredicte de si ha passat el control SPF o no")
 
 
@@ -1105,7 +1152,7 @@ if msg['Authentication-Results']:
         if line:
             #print("Result: ", line)
             #print ("DKIM: " + line[0])
-            #print(line[0].split('=')[1])
+            # print(line[0].split('=')[1])
             if (line[0].split('=')[1] == "pass"):
                 print("DKIM PASS")
                 dkim_pass = True
@@ -1114,8 +1161,8 @@ if msg['Authentication-Results']:
                 print("DKIM DENIED")
                 dkim_pass = False
                 break
-                
-#Dmarc
+
+# Dmarc
 if msg['Authentication-Results']:
     authentication_results = msg['Authentication-Results'].splitlines()
     for result in authentication_results:
@@ -1136,22 +1183,22 @@ if msg['ARC-Authentication-Results']:
     for result in authentication_results:
         line = re.findall(r'arc=[a-z]+', result)
         if line:
-            #ARC exists
+            # ARC exists
             if (line[0].split('=')[1] == "pass"):
                 print("ARC PASS")
                 arc_pass = True
                 spf_check = re.findall(r'spf=pass', result)
-                #print(spf_check)
+                # print(spf_check)
                 if spf_check:
                     spf_arc_pass = True
                     print("SPF ARC PASSED!")
                 dkim_check = re.findall(r'dkim=pass', result)
-                #print(dkim_check)
+                # print(dkim_check)
                 if dkim_check:
                     dkim_arc_pass = True
                     print("DKIM ARC PASSED!")
                 dmarc_check = re.findall(r'dmarc=pass', result)
-                #print(dmarc_check)
+                # print(dmarc_check)
                 if dmarc_check:
                     dmarc_arc_pass = True
                     print("DMARC ARC PASSED!")
@@ -1160,25 +1207,23 @@ if msg['ARC-Authentication-Results']:
                 print("ARC DENIED")
                 arc_pass = False
                 break
-        
 
-#Deixem una linea de separació
+
+# Deixem una linea de separació
 print()
 
 
 # Ara llegim el correu d'una altra manera per poder-lo parsejar millor
 with open(sys.argv[1], 'rb') as fp:
     msg2 = email.parser.BytesParser(policy=email.policy.default).parse(fp)
-        
-#Printar el cos del email
+
+# Printar el cos del email
 print("Cos del correu, el missatge:")
 body = msg2.get_body(preferencelist=('plain', 'html'))
 print(''.join(body.get_content().splitlines(keepends=True)))
 
 
-
-
-#Retorna el contingut que hi ha entre parentesis o corchetes
+# Retorna el contingut que hi ha entre parentesis o corchetes
 def extract_meta(line):
     ip = re.search("\[(.*?)\]", line)
     if ip:
@@ -1195,12 +1240,13 @@ def extract_meta(line):
 #  @param filename the filename of an email (with header) saved as plaintext
 #  @returns a list of all fields found
 #
-#Retorna un array amb els camps de les capçaleres del correu
+# Retorna un array amb els camps de les capçaleres del correu
 def get_fields():
     fields = []
     # First find all the fields present in the email headers
     with open(sys.argv[1], "rb") as fp:
-        headers = email.parser.BytesParser(policy=email.policy.default).parse(fp)
+        headers = email.parser.BytesParser(
+            policy=email.policy.default).parse(fp)
 
     # Add each field to a list
     for j in headers:
@@ -1209,7 +1255,9 @@ def get_fields():
     print("Fields: ", fields)
     return fields
 
-#Guardem totes les linees (headers) de Received:
+# Guardem totes les linees (headers) de Received:
+
+
 def get_received():
     rt = []
     rec = []
@@ -1245,12 +1293,13 @@ def get_received():
 
     return rec
 
-#Defin im les variables ips i names dels servidors smtp (MTAs) com a variables públiques
+
+# Defin im les variables ips i names dels servidors smtp (MTAs) com a variables públiques
 names = []
 ips = []
 
 
-#Printem la ruta (els salts que fa):
+# Printem la ruta (els salts que fa):
 def print_route():
     text = """<div class="timeline">"""
     j = 1
@@ -1280,8 +1329,8 @@ def print_route():
         print("Hop {0}: {1} {2} --> {3} {4}" .format(j, names[k - 1],
                                                      ips[k - 1], names[k],
                                                      ips[k]))
-        
-        if j%2 == 0:
+
+        if j % 2 == 0:
             text += """ <div class="container right\">\n"""
             text += """  <div class="content">
    <h2>Hop {0}</h2>
@@ -1293,21 +1342,20 @@ def print_route():
    <h2>Hop {0}</h2>\n
     <p>{1} {2} --> {3} {4}</p>\n
    </div>\n""".format(j, names[k - 1], ips[k - 1], names[k], ips[k])
-            
+
         j += 1
 
-  
     text += """  </div>
- </div>"""    
-    return text  
-       
+ </div>"""
+    return text
+
+
 print("La ruta del correu, els servidors (MTAs) pels quals passa:")
 print_route()
 
 
-
 def print_route2():
-    
+
     text = """<br><h3>Ruta que ha realitzat el correu:</h3>"""
     text += """<div class="timeline">"""
     j = 1
@@ -1338,30 +1386,27 @@ def print_route2():
         print("Hop {0}: {1} {2} --> {3} {4}" .format(j, names[k - 1],
                                                      ips[k - 1], names[k],
                                                      ips[k]))
-        
-        if (j%2 == 0):
-            
+
+        if (j % 2 == 0):
+
             text += """<div class="container right">
     <div class="content">
       <h4>Salt nº {0}: Origen --> Destí</h4>
       <p>{1} {2} --> {3} {4}</p>
     </div>
 </div>""".format(j, names[k - 1], ips[k - 1], names[k], ips[k])
-        else:            
+        else:
             text += """<div class="container left">
     <div class="content">
       <h4>Salt nº {0}: Origen --> Destí</h4>
       <p>{1} {2} --> {3} {4}</p>
     </div>
 </div>""".format(j, names[k - 1], ips[k - 1], names[k], ips[k])
-            
+
         j += 1
 
-  
-    text += """</div>"""  
-    return text  
-
-
+    text += """</div>"""
+    return text
 
 
 only_ips = []
@@ -1385,79 +1430,82 @@ for address in ips:
 print(ips)
 print(only_ips)
 
-only_ips = only_ips[::-1] #reversing del array
+only_ips = only_ips[::-1]  # reversing del array
 
 result = re.match(ip_pattern, ip_remitent)
 if result:
-    only_ips.insert(0,ip_remitent)
+    only_ips.insert(0, ip_remitent)
 
 
-#HO COMENTEM PER NO GASTAR API QUERYS!!!
+# HO COMENTEM PER NO GASTAR API QUERYS!!!
 
-#Recolectem Ciutats d'on es troben les IPs (IPv4 i IPv6) (per despres representarles al mapa):
+# Recolectem Ciutats d'on es troben les IPs (IPv4 i IPv6) (per despres representarles al mapa):
 for mta_address in only_ips:
     if (re.match(ip_pattern, mta_address) or re.match(ipv6_pattern, mta_address)):
         print("Mta address: " + mta_address)
-        #OJO lhem fet la asyncrona, podem reaprofitar connexió
-        #async with geoip2.webservice.AsyncClient(534778, '2KcXWF0vdaOxe6dL') as client:
+        # OJO lhem fet la asyncrona, podem reaprofitar connexió
+        # async with geoip2.webservice.AsyncClient(534778, '2KcXWF0vdaOxe6dL') as client:
         try:
-            with geoip2.webservice.Client(534778, '2KcXWF0vdaOxe6dL') as client:        
+            with geoip2.webservice.Client(534778, '2KcXWF0vdaOxe6dL') as client:
                 #response = client.country('203.0.113.0')
                 #response = client.insights('203.0.113.0')
                 response = client.city(mta_address)
                 city_names.append(str(response.city.name))
                 longituds.append(response.location.longitude)
                 latituds.append(response.location.latitude)
-                print("IP: " + str(mta_address) + " --> City: " + str(response.city.name))
-                print("IP: " + str(mta_address) + " --> Latitude: " + str(response.location.latitude))
-                print("IP: " + str(mta_address) + " --> Longitude: " + str(response.location.longitude))
+                print("IP: " + str(mta_address) +
+                      " --> City: " + str(response.city.name))
+                print("IP: " + str(mta_address) + " --> Latitude: " +
+                      str(response.location.latitude))
+                print("IP: " + str(mta_address) + " --> Longitude: " +
+                      str(response.location.longitude))
         except:
             city_names.append("Multicast IP")
             longituds.append(0)
             latituds.append(0)
-        
 
 
-#Printar tot al mapamundi
-fig=plt.figure(figsize=(14, 10))
-ax=fig.add_axes([0.1,0.1,0.8,0.8])
+# Printar tot al mapamundi
+fig = plt.figure(figsize=(14, 10))
+ax = fig.add_axes([0.1, 0.1, 0.8, 0.8])
 
-m = Basemap(projection='merc',llcrnrlat=-80,urcrnrlat=80,\
-            llcrnrlon=-180,urcrnrlon=180,lat_ts=20,resolution='c')
+m = Basemap(projection='merc', llcrnrlat=-80, urcrnrlat=80,
+            llcrnrlon=-180, urcrnrlon=180, lat_ts=20, resolution='c')
 m.drawcoastlines()
 
 title = ""
 for i in range(len(city_names)):
     title = title + " --> " + city_names[i]
     if i < (len(city_names)-1):
-        
 
         # Dibuixem linia entre ciutat i ciutat
-        m.drawgreatcircle(longituds[i],latituds[i],longituds[i+1],latituds[i+1],linewidth=2,color='b')
+        m.drawgreatcircle(
+            longituds[i], latituds[i], longituds[i+1], latituds[i+1], linewidth=2, color='b')
         m.drawcoastlines()
-        m.fillcontinents(color='tan',lake_color='lightblue')
+        m.fillcontinents(color='tan', lake_color='lightblue')
         m.drawmapboundary(fill_color='lightblue')
         # draw parallels
-        #m.drawparallels(np.arange(10,90,20),labels=[1,1,0,1])
+        # m.drawparallels(np.arange(10,90,20),labels=[1,1,0,1])
         # draw meridians
-        #m.drawmeridians(np.arange(-180,180,30),labels=[1,1,0,1])
-        
-        x, y = m(longituds[i+1], latituds[i+1])  
-        plt.text(x, y, city_names[i+1],fontsize=12,fontweight='bold', ha='left',va='top',color='k')
-        
-        x, y = m(longituds[i], latituds[i])  
-        plt.text(x, y, city_names[i],fontsize=12,fontweight='bold',ha='left',va='top',color='k')
-        
-#Assignem titol
-ax.set_title("Ruta del correu" + title);
+        # m.drawmeridians(np.arange(-180,180,30),labels=[1,1,0,1])
 
-#Guardem la imatge en format png amb el temps actual com a nom
+        x, y = m(longituds[i+1], latituds[i+1])
+        plt.text(x, y, city_names[i+1], fontsize=12,
+                 fontweight='bold', ha='left', va='top', color='k')
+
+        x, y = m(longituds[i], latituds[i])
+        plt.text(x, y, city_names[i], fontsize=12,
+                 fontweight='bold', ha='left', va='top', color='k')
+
+# Assignem titol
+ax.set_title("Ruta del correu" + title)
+
+# Guardem la imatge en format png amb el temps actual com a nom
 now = datetime.now()
 current_time = now.strftime("%H:%M:%S")
 image_path_html = "mapas/" + current_time + ".png"
 image_path = "../htdocs/mapas/" + current_time + ".png"
 plt.savefig(image_path)
-
 
 
 def isRegistered(domain):
@@ -1468,14 +1516,15 @@ def isRegistered(domain):
     else:
         print("Esta registrat: " + domain)
         return bool(w.domain_name)
-    
+
 
 def getCreationDate(domain):
     if isRegistered(domain):
         whois_info = whois.whois(domain)
         print("Domain creation date:", whois_info.creation_date)
         return whois_info.creation_date
-        
+
+
 def domainLess3Month(creation_date):
     if creation_date:
         ara = datetime.now()
@@ -1487,19 +1536,18 @@ def domainLess3Month(creation_date):
             print("Fa menys de 3 mesos!\r\nNo pinta bé! +10")
             return True
         else:
-            print("Fa més de 3 mesos!")     
+            print("Fa més de 3 mesos!")
             return False
     else:
-        print("No te creation date!: +5")     
-        
-      
-        
-#Descarreguem l'arxiu que conté els dominis dels proveidors publics
+        print("No te creation date!: +5")
+
+
+# Descarreguem l'arxiu que conté els dominis dels proveidors publics
 arxiu = open('public_domain_providers.txt', 'r')
 linies = arxiu.readlines()
 arxiu.close()
 
-#Mirem que el domini del remitent i del destinatari no sigui el mateix
+# Mirem que el domini del remitent i del destinatari no sigui el mateix
 public_domain_providers = []
 # Strips the newline character
 for line in linies:
@@ -1507,28 +1555,27 @@ for line in linies:
 
 if not msg['to']:
     msg['to'] = "<->"
-to_email = msg['to'].split('<',1)
-to_email = to_email[len(to_email)-1].split('>',1)
+to_email = msg['to'].split('<', 1)
+to_email = to_email[len(to_email)-1].split('>', 1)
 to_email = to_email[0]
 print("To_email: " + to_email)
 to_domain = ""
 if (to_email and (re.match(domain_pattern, to_email))):
     print("Es un email!")
-    to_domain = to_email.split('@',1)
+    to_domain = to_email.split('@', 1)
     to_domain = to_domain[len(to_domain)-1]
     print("To_domain: " + to_domain)
-    
-    
+
 
 if not msg['from']:
     msg['from'] = "<->"
-from_email = msg['from'].split('<',1)
-from_email = from_email[len(from_email)-1].split('>',1)
+from_email = msg['from'].split('<', 1)
+from_email = from_email[len(from_email)-1].split('>', 1)
 from_email = from_email[0]
 print("From_email: " + from_email)
 if (from_email and (re.match(domain_pattern, from_email))):
     print("Es un email!")
-    from_domain = from_email.split('@',1)
+    from_domain = from_email.split('@', 1)
     from_domain = from_domain[len(from_domain)-1]
     print("From_domain: " + from_domain)
     remitent_correu = from_email
@@ -1538,59 +1585,57 @@ if (from_email and (re.match(domain_pattern, from_email))):
         recent_creation_date = True
     else:
         recent_creation_date = False
-    #Mirar si es de la mateixa companyia
+    # Mirar si es de la mateixa companyia
     for public_domain_prov in public_domain_providers:
         if (from_domain == public_domain_prov):
             print("Domini de un public provider, no conta com a companyia!")
             domain_public_provider = True
-            
-            
 
-#Miro si el From i to son de la mateix companyia:
+
+# Miro si el From i to son de la mateix companyia:
 if not domain_public_provider:
     if to_domain == from_domain:
         print("Son de la mateixa companyia!!!")
         same_company = True
     else:
         print("Son de companyies diferents")
-    
+
 if not msg['Reply-to']:
     msg['Reply-to'] = "<->"
-reply_to = msg['Reply-to'].split('<',1)
-reply_to = reply_to[len(reply_to)-1].split('>',1)
+reply_to = msg['Reply-to'].split('<', 1)
+reply_to = reply_to[len(reply_to)-1].split('>', 1)
 reply_to = reply_to[0]
 print("Reply_to: " + reply_to)
 if (reply_to and (re.match(domain_pattern, reply_to))):
     print("Es un email!")
-    reply_to_domain = reply_to.split('@',1)
+    reply_to_domain = reply_to.split('@', 1)
     reply_to_domain = reply_to_domain[len(reply_to_domain)-1]
     print("Reply_to_domain: " + reply_to_domain)
 
 if not msg['Return-Path']:
     msg['Return-Path'] = "<->"
-return_path = msg['Return-Path'].split('<',1)
-return_path = return_path[len(return_path)-1].split('>',1)
+return_path = msg['Return-Path'].split('<', 1)
+return_path = return_path[len(return_path)-1].split('>', 1)
 return_path = return_path[0]
 print("Return_path: " + return_path)
 if (return_path and (re.match(domain_pattern, return_path))):
     print("Es un email!")
-    return_path_domain = return_path.split('@',1)
+    return_path_domain = return_path.split('@', 1)
     return_path_domain = return_path_domain[len(return_path_domain)-1]
     print("Reply_to_domain: " + return_path_domain)
 
 
-#Estreiem totes les paraules del body en un array
-#Decodejem el body que pot estar encodejat en MIME
+# Estreiem totes les paraules del body en un array
+# Decodejem el body que pot estar encodejat en MIME
 body = ''.join(body.get_content().splitlines(keepends=True))
-#Guardem cada paraula en un array
+# Guardem cada paraula en un array
 pattern_space_nline = '[\n\r\s]+'
 body_words = re.split(pattern_space_nline, body)
 #print("New_body: ")
-#print(body_words)
+# print(body_words)
 
-#Extreure links del body i veure la reputacio
+# Extreure links del body i veure la reputacio
 url_pattern = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
-
 
 
 #links_to_analyze = ['http://www.seim.co.kr', 'http://www.google.es']
@@ -1598,23 +1643,24 @@ links_to_analyze = []
 
 for word in body_words:
     if (word and (re.match(url_pattern, word))):
-        #Word --> Url to analyze
+        # Word --> Url to analyze
         print("Es una url!!! --> " + word)
         links_to_analyze.append(word)
 
-#Tambe hi han correus que els links estan en el codi HTML, no ens els podem saltar:
+# Tambe hi han correus que els links estan en el codi HTML, no ens els podem saltar:
 msg_words = str(msg).split('\"')
 for word in msg_words:
     if (word and (re.match(url_pattern, word))):
-        #Word --> Url to analyze
+        # Word --> Url to analyze
         print("Es una url!!! --> " + word)
         links_to_analyze.append(word)
 
-#Escanear dominio
+# Escanear dominio
 #response = vt.get_domain_report("google.com")
 
+
 def analizeIP(ip):
-    #ip_remitent
+    # ip_remitent
     print("IP a analitzar: " + str(ip))
     result = re.match(ip_pattern, ip)
     if result:
@@ -1629,7 +1675,8 @@ def analizeIP(ip):
                         if response["results"]["positives"]:
                             if (response["results"]["positives"] > 0):
                                 print("IP: " + ip)
-                                print("Positius:", response['results']['positives'])
+                                print("Positius:",
+                                      response['results']['positives'])
                                 print("IP maliciosa!!! -20!!!")
                                 return True
                             else:
@@ -1654,20 +1701,23 @@ data = False
 data_reply_to = False
 data_return_path = False
 
-#NO VULL GASTAR QUERYS
+# NO VULL GASTAR QUERYS
+
 
 def apivoid_domainrep(key, host):
-   try:
-      r = requests.get(url='https://endpoint.apivoid.com/domainbl/v1/pay-as-you-go/?key='+key+'&host='+host)
-      return json.loads(r.content.decode())
-   except:
-      return ""
+    try:
+        r = requests.get(
+            url='https://endpoint.apivoid.com/domainbl/v1/pay-as-you-go/?key='+key+'&host='+host)
+        return json.loads(r.content.decode())
+    except:
+        return ""
+
 
 print("From domain: ", from_domain)
 if re.match(regex_domain, from_domain):
     print("MATCH1")
     data = apivoid_domainrep(apivoid_key, from_domain)
-#if (from_domain != reply_to_domain):
+# if (from_domain != reply_to_domain):
 if re.match(regex_domain, reply_to_domain):
     data_reply_to = apivoid_domainrep(apivoid_key, reply_to_domain)
 
@@ -1680,103 +1730,152 @@ print("Data_return_path: ", data_return_path)
 
 
 def get_detection_engines(engines):
-   list = "";
-   for key, value in engines.items():
-      if(bool(value['detected']) == 1):
-         list+=str(value['engine'])+", "
-   return list.rstrip(", ")
-
+    list = ""
+    for key, value in engines.items():
+        if(bool(value['detected']) == 1):
+            list += str(value['engine'])+", "
+    return list.rstrip(", ")
 
 
 if(data):
-   if(data.get('error')):
-      print("Error: "+data['error'])
-   else:
-      #print("Host: "+str(data['data']['report']['host']))
-      info_from_domain += "Host: " +str(data['data']['report']['host']) + "<br>"
-      info_from_domain += "IP Address: "+str(data['data']['report']['server']['ip']) + "<br>"
-      info_from_domain += "Reverse DNS: "+str(data['data']['report']['server']['reverse_dns']) + "<br>"
-      info_from_domain += "---" + "<br>"
-      info_from_domain += "Nombre de deteccions: "+str(data['data']['report']['blacklists']['detections']) + "<br>"
-      info_from_domain += "Detectat per: "+get_detection_engines(data['data']['report']['blacklists']['engines']) + "<br>"
-      info_from_domain += "---" + "<br>"
-      info_from_domain += "Pais: "+str(data['data']['report']['server']['country_code'])+" ("+str(data['data']['report']['server']['country_name'])+")" + "<br>"
-      info_from_domain += "Continent: "+str(data['data']['report']['server']['continent_code'])+" ("+str(data['data']['report']['server']['continent_name'])+")" + "<br>"
-      info_from_domain += "Regió: "+str(data['data']['report']['server']['region_name']) + "<br>"
-      info_from_domain += "Ciutat: "+str(data['data']['report']['server']['city_name']) + "<br>"
-      info_from_domain += "---" + "<br>"
-      info_from_domain += "Hosting gratuït: "+str(data['data']['report']['category']['is_free_hosting']) + "<br>"
-      info_from_domain += "URL Shortener: "+str(data['data']['report']['category']['is_url_shortener']) + "<br>"
-      info_from_domain += "Dynamic DNS gratuït: "+str(data['data']['report']['category']['is_free_dynamic_dns']) + "<br>"
-      if (data['data']['report']['blacklists']['detections'] > 0):
-          from_domini_malicios = True
-          print("Domini " + from_domain + " maliciós!")
+    if(data.get('error')):
+        print("Error: "+data['error'])
+    else:
+        #print("Host: "+str(data['data']['report']['host']))
+        info_from_domain += "Host: " + \
+            str(data['data']['report']['host']) + "<br>"
+        info_from_domain += "IP Address: " + \
+            str(data['data']['report']['server']['ip']) + "<br>"
+        info_from_domain += "Reverse DNS: " + \
+            str(data['data']['report']['server']['reverse_dns']) + "<br>"
+        info_from_domain += "---" + "<br>"
+        info_from_domain += "Nombre de deteccions: " + \
+            str(data['data']['report']['blacklists']['detections']) + "<br>"
+        info_from_domain += "Detectat per: " + \
+            get_detection_engines(
+                data['data']['report']['blacklists']['engines']) + "<br>"
+        info_from_domain += "---" + "<br>"
+        info_from_domain += "Pais: "+str(data['data']['report']['server']['country_code'])+" ("+str(
+            data['data']['report']['server']['country_name'])+")" + "<br>"
+        info_from_domain += "Continent: "+str(data['data']['report']['server']['continent_code'])+" ("+str(
+            data['data']['report']['server']['continent_name'])+")" + "<br>"
+        info_from_domain += "Regió: " + \
+            str(data['data']['report']['server']['region_name']) + "<br>"
+        info_from_domain += "Ciutat: " + \
+            str(data['data']['report']['server']['city_name']) + "<br>"
+        info_from_domain += "---" + "<br>"
+        info_from_domain += "Hosting gratuït: " + \
+            str(data['data']['report']['category']['is_free_hosting']) + "<br>"
+        info_from_domain += "URL Shortener: " + \
+            str(data['data']['report']['category']
+                ['is_url_shortener']) + "<br>"
+        info_from_domain += "Dynamic DNS gratuït: " + \
+            str(data['data']['report']['category']
+                ['is_free_dynamic_dns']) + "<br>"
+        if (data['data']['report']['blacklists']['detections'] > 0):
+            from_domini_malicios = True
+            print("Domini " + from_domain + " maliciós!")
 else:
-   print("Error: Request failed")
-   
+    print("Error: Request failed")
 
 
-#Reply-To data
+# Reply-To data
 info_reply_to_domain = ""
 if(data_reply_to):
-   if(data_reply_to.get('error')):
-      print("Error: "+data_reply_to['error'])
-   else:
-      #print("Host: "+str(data['data']['report']['host']))
-      info_reply_to_domain += "Host: " +str(data_reply_to['data']['report']['host']) + "<br>"
-      info_reply_to_domain += "IP Address: "+str(data_reply_to['data']['report']['server']['ip']) + "<br>"
-      info_reply_to_domain += "Reverse DNS: "+str(data_reply_to['data']['report']['server']['reverse_dns']) + "<br>"
-      info_reply_to_domain += "---" + "<br>"
-      info_reply_to_domain += "Nombre de deteccions: "+str(data_reply_to['data']['report']['blacklists']['detections']) + "<br>"
-      info_reply_to_domain += "Detectat per: "+get_detection_engines(data_reply_to['data']['report']['blacklists']['engines']) + "<br>"
-      info_reply_to_domain += "---" + "<br>"
-      info_reply_to_domain += "Pais: "+str(data_reply_to['data']['report']['server']['country_code'])+" ("+str(data_reply_to['data']['report']['server']['country_name'])+")" + "<br>"
-      info_reply_to_domain += "Continent: "+str(data_reply_to['data']['report']['server']['continent_code'])+" ("+str(data_reply_to['data']['report']['server']['continent_name'])+")" + "<br>"
-      info_reply_to_domain += "Regió: "+str(data_reply_to['data']['report']['server']['region_name']) + "<br>"
-      info_reply_to_domain += "Ciutat: "+str(data_reply_to['data']['report']['server']['city_name']) + "<br>"
-      info_reply_to_domain += "---" + "<br>"
-      info_reply_to_domain += "Hosting gratuït: "+str(data_reply_to['data']['report']['category']['is_free_hosting']) + "<br>"
-      info_reply_to_domain += "URL Shortener: "+str(data_reply_to['data']['report']['category']['is_url_shortener']) + "<br>"
-      info_reply_to_domain += "Dynamic DNS gratuït: "+str(data_reply_to['data']['report']['category']['is_free_dynamic_dns']) + "<br>"
-      if (data_reply_to['data']['report']['blacklists']['detections'] > 0):
-          reply_to_domini_malicios = True
-          print("Domini " + reply_to_domain + " maliciós!")
+    if(data_reply_to.get('error')):
+        print("Error: "+data_reply_to['error'])
+    else:
+        #print("Host: "+str(data['data']['report']['host']))
+        info_reply_to_domain += "Host: " + \
+            str(data_reply_to['data']['report']['host']) + "<br>"
+        info_reply_to_domain += "IP Address: " + \
+            str(data_reply_to['data']['report']['server']['ip']) + "<br>"
+        info_reply_to_domain += "Reverse DNS: " + \
+            str(data_reply_to['data']['report']
+                ['server']['reverse_dns']) + "<br>"
+        info_reply_to_domain += "---" + "<br>"
+        info_reply_to_domain += "Nombre de deteccions: " + \
+            str(data_reply_to['data']['report']
+                ['blacklists']['detections']) + "<br>"
+        info_reply_to_domain += "Detectat per: " + \
+            get_detection_engines(
+                data_reply_to['data']['report']['blacklists']['engines']) + "<br>"
+        info_reply_to_domain += "---" + "<br>"
+        info_reply_to_domain += "Pais: "+str(data_reply_to['data']['report']['server']['country_code'])+" ("+str(
+            data_reply_to['data']['report']['server']['country_name'])+")" + "<br>"
+        info_reply_to_domain += "Continent: "+str(data_reply_to['data']['report']['server']['continent_code'])+" ("+str(
+            data_reply_to['data']['report']['server']['continent_name'])+")" + "<br>"
+        info_reply_to_domain += "Regió: " + \
+            str(data_reply_to['data']['report']
+                ['server']['region_name']) + "<br>"
+        info_reply_to_domain += "Ciutat: " + \
+            str(data_reply_to['data']['report']
+                ['server']['city_name']) + "<br>"
+        info_reply_to_domain += "---" + "<br>"
+        info_reply_to_domain += "Hosting gratuït: " + \
+            str(data_reply_to['data']['report']
+                ['category']['is_free_hosting']) + "<br>"
+        info_reply_to_domain += "URL Shortener: " + \
+            str(data_reply_to['data']['report']
+                ['category']['is_url_shortener']) + "<br>"
+        info_reply_to_domain += "Dynamic DNS gratuït: " + \
+            str(data_reply_to['data']['report']['category']
+                ['is_free_dynamic_dns']) + "<br>"
+        if (data_reply_to['data']['report']['blacklists']['detections'] > 0):
+            reply_to_domini_malicios = True
+            print("Domini " + reply_to_domain + " maliciós!")
 else:
-   print("Error data_reply_to: Request failed")
+    print("Error data_reply_to: Request failed")
 
 
-
-
-#Return-Path data
+# Return-Path data
 info_return_path_domain = ""
 if(data_return_path):
-   if(data_return_path.get('error')):
-      print("Error: "+data_return_path['error'])
-   else:
-      #print("Host: "+str(data['data']['report']['host']))
-      info_return_path_domain += "Host: " +str(data_return_path['data']['report']['host']) + "<br>"
-      info_return_path_domain += "IP Address: "+str(data_return_path['data']['report']['server']['ip']) + "<br>"
-      info_return_path_domain += "Reverse DNS: "+str(data_return_path['data']['report']['server']['reverse_dns']) + "<br>"
-      info_return_path_domain += "---" + "<br>"
-      info_return_path_domain += "Nombre de deteccions: "+str(data_return_path['data']['report']['blacklists']['detections']) + "<br>"
-      info_return_path_domain += "Detectat per: "+get_detection_engines(data_return_path['data']['report']['blacklists']['engines']) + "<br>"
-      info_return_path_domain += "---" + "<br>"
-      info_return_path_domain += "Pais: "+str(data_return_path['data']['report']['server']['country_code'])+" ("+str(data_return_path['data']['report']['server']['country_name'])+")" + "<br>"
-      info_return_path_domain += "Continent: "+str(data_return_path['data']['report']['server']['continent_code'])+" ("+str(data_return_path['data']['report']['server']['continent_name'])+")" + "<br>"
-      info_return_path_domain += "Regió: "+str(data_return_path['data']['report']['server']['region_name']) + "<br>"
-      info_return_path_domain += "Ciutat: "+str(data_return_path['data']['report']['server']['city_name']) + "<br>"
-      info_return_path_domain += "---" + "<br>"
-      info_return_path_domain += "Hosting gratuït: "+str(data_return_path['data']['report']['category']['is_free_hosting']) + "<br>"
-      info_return_path_domain += "URL Shortener: "+str(data_return_path['data']['report']['category']['is_url_shortener']) + "<br>"
-      info_return_path_domain += "Dynamic DNS gratuït: "+str(data_return_path['data']['report']['category']['is_free_dynamic_dns']) + "<br>"
-      if (data_return_path['data']['report']['blacklists']['detections'] > 0):
-          return_path_domini_malicios = True
-          print("Domini " + return_path_domain + " maliciós!")
-          #print(info_return_path_domain)
+    if(data_return_path.get('error')):
+        print("Error: "+data_return_path['error'])
+    else:
+        #print("Host: "+str(data['data']['report']['host']))
+        info_return_path_domain += "Host: " + \
+            str(data_return_path['data']['report']['host']) + "<br>"
+        info_return_path_domain += "IP Address: " + \
+            str(data_return_path['data']['report']['server']['ip']) + "<br>"
+        info_return_path_domain += "Reverse DNS: " + \
+            str(data_return_path['data']['report']
+                ['server']['reverse_dns']) + "<br>"
+        info_return_path_domain += "---" + "<br>"
+        info_return_path_domain += "Nombre de deteccions: " + \
+            str(data_return_path['data']['report']
+                ['blacklists']['detections']) + "<br>"
+        info_return_path_domain += "Detectat per: " + \
+            get_detection_engines(
+                data_return_path['data']['report']['blacklists']['engines']) + "<br>"
+        info_return_path_domain += "---" + "<br>"
+        info_return_path_domain += "Pais: "+str(data_return_path['data']['report']['server']['country_code'])+" ("+str(
+            data_return_path['data']['report']['server']['country_name'])+")" + "<br>"
+        info_return_path_domain += "Continent: "+str(data_return_path['data']['report']['server']['continent_code'])+" ("+str(
+            data_return_path['data']['report']['server']['continent_name'])+")" + "<br>"
+        info_return_path_domain += "Regió: " + \
+            str(data_return_path['data']['report']
+                ['server']['region_name']) + "<br>"
+        info_return_path_domain += "Ciutat: " + \
+            str(data_return_path['data']['report']
+                ['server']['city_name']) + "<br>"
+        info_return_path_domain += "---" + "<br>"
+        info_return_path_domain += "Hosting gratuït: " + \
+            str(data_return_path['data']['report']
+                ['category']['is_free_hosting']) + "<br>"
+        info_return_path_domain += "URL Shortener: " + \
+            str(data_return_path['data']['report']
+                ['category']['is_url_shortener']) + "<br>"
+        info_return_path_domain += "Dynamic DNS gratuït: " + \
+            str(data_return_path['data']['report']
+                ['category']['is_free_dynamic_dns']) + "<br>"
+        if (data_return_path['data']['report']['blacklists']['detections'] > 0):
+            return_path_domini_malicios = True
+            print("Domini " + return_path_domain + " maliciós!")
+            # print(info_return_path_domain)
 else:
-   print("Error data_return_path: Request failed")
-   
-
+    print("Error data_return_path: Request failed")
 
 
 def generateTableURLs():
@@ -1784,18 +1883,18 @@ def generateTableURLs():
     global puntuacio
     table = "<br><h3>Informació dels enllaços:</h3>"
     table += "<table id=\"MesuresSeguretat\">\n"
-    
+
     # Create the table's column headers
-    header = ['URL' , 'Maliciosa', 'Informació']
+    header = ['URL', 'Maliciosa', 'Informació']
     table += "  <tr>\n"
     for column in header:
         table += "    <th>{0}</th>\n".format(column.strip())
     table += "  </tr>\n"
     print("LINKS: ", links_to_analyze)
     for link in links_to_analyze:
-        #NOVA FILA
+        # NOVA FILA
         table += "  <tr>\n"
-        #NOU CAMP (COLUMNA) a la FILA
+        # NOU CAMP (COLUMNA) a la FILA
         table += "    <td>{0}</td>\n".format(link)
         # Poner en cola una URL para ser escaneada.
         response = vt.scan_url(link)
@@ -1807,13 +1906,14 @@ def generateTableURLs():
         if response["response_code"] == 200:
             if (response["results"]["positives"] > 0):
                 table += "    <td>{0}</td>\n".format("Sí")
-                cadena = "Nº Positius: {0}".format(response['results']['positives'])
+                cadena = "Nº Positius: {0}".format(
+                    response['results']['positives'])
                 table += "    <td>{0}</td>\n".format(cadena)
                 puntuacio -= 20
                 print("URL: " + link)
                 print("Positius:", response['results']['positives'])
                 print("URL maliciosa!!! +50!!!")
-                
+
             else:
                 print("URL: " + link)
                 print("URL legitima!!!")
@@ -1821,23 +1921,24 @@ def generateTableURLs():
                 table += "    <td>{0}</td>\n".format("L'enllaç sembla legítim")
         else:
             table += "    <td>{0}</td>\n".format("-")
-            table += "    <td>{0}</td>\n".format("No s'ha pogut connectar amb el servidor, torna-ho a provar més tard.")
-    
-        #TANCO FILA
+            table += "    <td>{0}</td>\n".format(
+                "No s'ha pogut connectar amb el servidor, torna-ho a provar més tard.")
+
+        # TANCO FILA
         table += "  </tr>\n"
 
-    #TANCO TAULA
+    # TANCO TAULA
     table += "</table><br>"
     return table
+
 
 def generateProgressBar():
     global puntuacio
     if puntuacio < 0:
         puntuacio = 0
-    
+
     if puntuacio >= 80:
-        
-    
+
         progress_bar = """
 <div class="w3-container w3-green">
  <div class="center">
@@ -1875,11 +1976,4 @@ def generateProgressBar():
     return progress_bar
 
 
-
 puntuacioFinal()
-
-
-
-
-
-

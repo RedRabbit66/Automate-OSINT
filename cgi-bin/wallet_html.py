@@ -12,6 +12,7 @@ import subprocess
 import json
 from urllib.parse import urlencode
 
+
 def parseConfig():
     conf_file = "config.json"
     try:
@@ -27,6 +28,7 @@ def parseConfig():
 
     return conf
 
+
 def wallet_report_html(address):
 
     table = """<section class="ftco-section">
@@ -39,16 +41,15 @@ def wallet_report_html(address):
     </div>"""
 
     try:
-        
 
         url = "https://www.bitcoinabuse.com/api/reports/check?"
 
         response = requests.request("GET", url)
 
-        #print(response.text)
+        # print(response.text)
 
-        req_address = requests.get("https://www.bitcoinabuse.com/api/reports/check?address=" + address + "&api_token=" + bitcoin_abuse_API)
-
+        req_address = requests.get(
+            "https://www.bitcoinabuse.com/api/reports/check?address=" + address + "&api_token=" + bitcoin_abuse_API)
 
         json_adress = json.loads(req_address.content)
 
@@ -70,8 +71,9 @@ def wallet_report_html(address):
                         <table class="table table-bordered table-dark table-hover">
                             <tbody>
                                 """
-            #Creem la taula amb les capçaleres corresponents
-            header = ['Abuse Type ID' , 'Abuse Type', 'Description', 'Created at']
+            # Creem la taula amb les capçaleres corresponents
+            header = ['Abuse Type ID', 'Abuse Type',
+                      'Description', 'Created at']
             table += "<thead>\n"
             for column in header:
                 table += "    <th>{0}</th>\n".format(column.strip())
@@ -83,15 +85,17 @@ def wallet_report_html(address):
                 print("Description: ", record["description"])
                 print("Created at: ", record["created_at"])
 
-                #NOVA FILA
+                # NOVA FILA
                 table += "  <tr>\n"
-                #NOU CAMP (COLUMNA) a la FILA
-                table += """<th scope="row">{0}</th>""".format(record["abuse_type_id"])
-                table += """<td>{0}</td>\n""".format(record["abuse_type_other"])
+                # NOU CAMP (COLUMNA) a la FILA
+                table += """<th scope="row">{0}</th>""".format(
+                    record["abuse_type_id"])
+                table += """<td>{0}</td>\n""".format(
+                    record["abuse_type_other"])
                 table += """<td>{0}</td>\n""".format(record["description"])
                 table += """<td>{0}</td>\n""".format(record["created_at"])
 
-                #TANCO FILA
+                # TANCO FILA
                 table += "  </tr>\n"
 
             table += """    </tbody>
@@ -109,6 +113,7 @@ def wallet_report_html(address):
 
     return table
 
+
 def url_wallet_info_html(address):
 
     table = """<section class="ftco-section">
@@ -122,15 +127,15 @@ def url_wallet_info_html(address):
 
     try:
 
-        #print(response.text)
+        # print(response.text)
 
-        req_address = requests.get("https://bitcoinwhoswho.com/api/url/" + bitcoinwhoswho_API_KEY + "?address=" + address)
-
+        req_address = requests.get(
+            "https://bitcoinwhoswho.com/api/url/" + bitcoinwhoswho_API_KEY + "?address=" + address)
 
         json_response = json.loads(req_address.content)
 
         print("JSON: ", json_response)
-        
+
         if json_response["status"] == "success":
             table = ""
             table = """
@@ -147,8 +152,8 @@ def url_wallet_info_html(address):
                         <table class="table table-bordered table-dark table-hover">
                             <tbody>
                                 """
-            #Creem la taula amb les capçaleres corresponents
-            header = ['URL' , 'Page title', 'Meta description']
+            # Creem la taula amb les capçaleres corresponents
+            header = ['URL', 'Page title', 'Meta description']
             table += "<thead>\n"
             for column in header:
                 table += "    <th>{0}</th>\n".format(column.strip())
@@ -159,14 +164,14 @@ def url_wallet_info_html(address):
                 print("Page title: ", url["page_title"])
                 print("Meta description: ", url["meta_description"])
 
-                #NOVA FILA
+                # NOVA FILA
                 table += "  <tr>\n"
-                #NOU CAMP (COLUMNA) a la FILA
+                # NOU CAMP (COLUMNA) a la FILA
                 table += """<th scope="row">{0}</th>""".format(url["url"])
                 table += """<td>{0}</td>\n""".format(url["page_title"])
                 table += """<td>{0}</td>\n""".format(url["meta_description"])
 
-                #TANCO FILA
+                # TANCO FILA
                 table += "  </tr>\n"
 
             table += """    </tbody>
@@ -178,7 +183,7 @@ def url_wallet_info_html(address):
 	</section>"""
 
     #json_response = response.json()
-    
+
     except:
         print("[-] API BitcoinWhoiswho Error")
         table = """<section class="ftco-section">
@@ -192,6 +197,7 @@ def url_wallet_info_html(address):
 
     return table
 
+
 def btc_info_html(wallet):
     table = """<section class="ftco-section">
     <div class="container">
@@ -203,10 +209,10 @@ def btc_info_html(wallet):
     </div>"""
     try:
 
-        #print(response.text)
+        # print(response.text)
 
-        req_address = requests.get("https://chain.api.btc.com/v3/address/" + wallet)
-
+        req_address = requests.get(
+            "https://chain.api.btc.com/v3/address/" + wallet)
 
         json_adress = json.loads(req_address.content)
 
@@ -230,24 +236,30 @@ def btc_info_html(wallet):
                         <table class="table table-bordered table-dark table-hover">
                             <tbody>
                                 """
-            #Creem la taula amb les capçaleres corresponents
-            header = ['Satoshis receibed' , 'Satoshis sent', 'Actual balance', 'Total Transactions', 'First transaction', 'Last Transaction']
+            # Creem la taula amb les capçaleres corresponents
+            header = ['Satoshis receibed', 'Satoshis sent', 'Actual balance',
+                      'Total Transactions', 'First transaction', 'Last Transaction']
             table += "<thead>\n"
             for column in header:
                 table += "    <th>{0}</th>\n".format(column.strip())
             table += "</thead>\n"
 
-            #NOVA FILA
+            # NOVA FILA
             table += "  <tr>\n"
-            #NOU CAMP (COLUMNA) a la FILA
-            table += """<th scope="row">{0}</th>""".format(json_adress["data"]["received"])
+            # NOU CAMP (COLUMNA) a la FILA
+            table += """<th scope="row">{0}</th>""".format(
+                json_adress["data"]["received"])
             table += """<td>{0}</td>\n""".format(json_adress["data"]["sent"])
-            table += """<td>{0}</td>\n""".format(json_adress["data"]["balance"])
-            table += """<td>{0}</td>\n""".format(json_adress["data"]["tx_count"])
-            table += """<td>{0}</td>\n""".format(json_adress["data"]["first_tx"])
-            table += """<td>{0}</td>\n""".format(json_adress["data"]["last_tx"])
+            table += """<td>{0}</td>\n""".format(
+                json_adress["data"]["balance"])
+            table += """<td>{0}</td>\n""".format(
+                json_adress["data"]["tx_count"])
+            table += """<td>{0}</td>\n""".format(
+                json_adress["data"]["first_tx"])
+            table += """<td>{0}</td>\n""".format(
+                json_adress["data"]["last_tx"])
 
-            #TANCO FILA
+            # TANCO FILA
             table += "  </tr>\n"
 
             table += """    </tbody>
@@ -266,10 +278,7 @@ def btc_info_html(wallet):
             print("First transaction: ", json_adress["data"]["first_tx"])
             print("Last Transaction: ", json_adress["data"]["last_tx"])
 
-
     except:
         print("BitcoinAbuse API Error")
 
     return table
-
-
