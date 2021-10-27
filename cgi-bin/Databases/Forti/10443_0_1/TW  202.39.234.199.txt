@@ -1,2 +1,0 @@
-jon:jon@123
-syscom:Syscom@123

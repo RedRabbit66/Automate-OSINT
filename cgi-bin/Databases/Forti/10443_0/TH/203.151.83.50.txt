@@ -1,3 +1,0 @@
-prakit.o:Kit@!117
-piyawat.vo:Piy@wat2
-wipaporn.c:Fern@2535

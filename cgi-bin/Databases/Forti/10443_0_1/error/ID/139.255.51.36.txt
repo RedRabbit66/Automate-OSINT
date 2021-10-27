@@ -1,2 +1,0 @@
-oilclinic.labpd:ptploilclinic2020
-vpn.oilclinic1:ptpl@oilclinic1

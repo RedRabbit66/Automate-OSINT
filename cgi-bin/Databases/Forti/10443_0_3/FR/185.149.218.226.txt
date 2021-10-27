@@ -1,8 +1,0 @@
-d.deleye:VPN-AD
-m.dumaine:VPN-AD
-_:_
-jm.andreani:VPN-AD
-f.adam:VPN-AD
-g.aumeunier:VPN-AD
-p.lehebel:VPN-AD
-a.deray:VPN-AD

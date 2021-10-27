@@ -1,2 +1,0 @@
-sslvpn01:lsh.ssl@#001
-sslvpn02:lsh.ssl@#002

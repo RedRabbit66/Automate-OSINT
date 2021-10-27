@@ -1,7 +1,0 @@
-vpn23228:morrison1
-vpn23169:morrison2
-vpn24148:morrison1
-vpn23220:morrison1
-vpn27006:MecPrgNo12!
-vpn23178:morrison1
-vpn27007:MecPrgMt12!@

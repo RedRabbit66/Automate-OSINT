@@ -1,2 +1,0 @@
-ssl-admin:ssl-admin
-ssl-user:ssl@admin

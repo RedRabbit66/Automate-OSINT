@@ -1,6 +1,0 @@
-SP9801:Spring@123
-sp10026:Lexima.1
-en29:Simple@3696
-SP9673:Saiamman@123
-am10098:Amnet@123
-SP9735:D@vim5!!

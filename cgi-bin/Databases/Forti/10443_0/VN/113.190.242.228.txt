@@ -1,3 +1,0 @@
-agent_vpn:123@123a
-agent_avg:avg123@123a
-agent_avg:123@123a

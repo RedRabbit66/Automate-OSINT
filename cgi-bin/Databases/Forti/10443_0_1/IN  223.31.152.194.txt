@@ -1,9 +1,0 @@
-mali:Mali@4321
-ajitr:Ajitr@1122
-vignesh:kct@2019
-arun:Arun@123
-mishra:kct@2121
-kchoudhary:Kchoudhary@1122
-mjakhmola:Mjakhmola@1123
-sreenivasulu.uppala:kct@2020
-clss1:Clss@1234

@@ -1,4 +1,0 @@
-my9-sj-2:abcd@1234
-my9-tch-2:abcd@1234
-david:PAN2821
-my9-ra-2:abcd@1234

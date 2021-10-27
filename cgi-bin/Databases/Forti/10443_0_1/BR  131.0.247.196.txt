@@ -1,5 +1,0 @@
-avaya:Med@2019!
-eserafim:juca0612
-mlessa:pacs#meddi$vpn_2019
-ecunha:pacs#meddi$vpn_2019
-lecastro:pacs#meddi$vpn_2019

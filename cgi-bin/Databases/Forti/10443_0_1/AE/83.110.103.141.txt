@@ -1,4 +1,0 @@
-whouse4:abc@123
-counter9:abc@123
-dxbuser2:abc@123
-dxbuser7:abc@123

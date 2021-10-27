@@ -1,5 +1,0 @@
-ykgrp4:ykgrp4040
-ykgrp3:ykgrp3030
-ykgrp10:yktg5123
-ykgrp5:ykgrp5050
-ykgrp7:ykgrp7070

@@ -1,5 +1,0 @@
-user7:admin@123
-user8:admin@123
-user6:admin@123
-khandelwal:123456789
-user3:admin@123

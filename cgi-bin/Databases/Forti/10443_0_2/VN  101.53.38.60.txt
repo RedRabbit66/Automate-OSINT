@@ -1,2 +1,0 @@
-vpn.VI01:vi01.vp
-vpn.vc03:STvc03

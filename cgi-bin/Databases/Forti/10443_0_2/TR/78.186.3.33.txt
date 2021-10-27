@@ -1,6 +1,0 @@
-merkez:Sbh
-sbh:Sbh
-profilo:Sbh
-tekkek:y
-sanayi:Sbh
-duru:ehir

@@ -1,3 +1,0 @@
-bcpuser:bcp123
-kweindia:kweindiakwe
-badal:Badal@123

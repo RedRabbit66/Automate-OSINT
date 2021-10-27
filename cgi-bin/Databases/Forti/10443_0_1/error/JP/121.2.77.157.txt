@@ -1,2 +1,0 @@
-hasegawa:Password1
-makiya:Password1

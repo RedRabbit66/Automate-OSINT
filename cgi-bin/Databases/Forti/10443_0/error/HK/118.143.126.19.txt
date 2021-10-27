@@ -1,2 +1,0 @@
-atosuser:AtosUser
-day2test:tset2yaD

@@ -1,9 +1,0 @@
-Vpnconta:contabilidad
-Vpnaplaneacion:aplaneacion
-Vpndmejora:dmejora
-Daniel_Soto:Santiago1104*
-Vpnmercadeo2:mercadeo2
-Vpnalmacen2:almacen2
-ventasbogota:Truher2019
-Vpncostos2:costos2
-VpnCarlos:truher20

@@ -1,6 +1,0 @@
-rogerng:ADMINVPN_User
-pandula.eramudugolla:ADG_ST_USR
-rajasekhar.arumalla:ADMINVPN_User
-grace.tee:ADG_ST_USR
-zhonghan.wong:ADMINVPN_User
-chinthaka:ADG_ST_USR

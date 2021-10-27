@@ -1,3 +1,0 @@
-sim:Qwerty11
-isa:adisopian
-adn:Smart.1984*

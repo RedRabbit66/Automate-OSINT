@@ -1,2 +1,0 @@
-laptop1:SSL-VPN
-cmkk:M

@@ -1,2 +1,0 @@
-juergen.pendl:sslVPN
-fischer:sslVPN

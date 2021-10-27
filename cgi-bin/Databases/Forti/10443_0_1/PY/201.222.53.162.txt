@@ -1,6 +1,0 @@
-santaclara:Prepaga$2021
-liquidaciones:SC_liquidaciones21
-santaclara:Acceso$2021
-liquidaciones:SC_liquidaciones20
-santaclara:Acceso$2020
-santaclara:SC_access685

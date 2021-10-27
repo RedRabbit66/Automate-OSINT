@@ -1,8 +1,0 @@
-PMC.Salee:PMC#2018
-jackrit_it:Birth06060
-PMC.YokKhae:p@ssw0rdU1
-PMC.Jinmei:PMC#2018
-PMC.Pook:PMC#2019
-PMC.1:PMC#2018
-PMC.June:PMC#2018
-v:^

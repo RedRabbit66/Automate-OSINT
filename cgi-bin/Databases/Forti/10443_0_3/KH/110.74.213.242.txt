@@ -1,3 +1,0 @@
-bunnet:Cmk@2020
-teavsokvisal:Cmk@2020!
-BKK:BKK@2020

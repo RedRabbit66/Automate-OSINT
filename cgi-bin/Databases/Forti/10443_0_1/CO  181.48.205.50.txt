@@ -1,4 +1,0 @@
-RAMS:Rams*2020
-gangel:Books*2020
-animador2:Books*2021
-ilustrador6:Oeduardo*2020

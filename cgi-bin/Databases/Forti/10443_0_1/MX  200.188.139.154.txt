@@ -1,6 +1,0 @@
-Suc Nereo:Te.ne01
-Suc Arista:Te.ar01
-Suc Anaya:Te.an01
-Suc Sierra:Te.sl01
-Suc Calzada:Te.ca01
-Suc Lapaz:Te.lp01

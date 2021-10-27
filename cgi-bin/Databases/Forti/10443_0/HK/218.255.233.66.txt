@@ -1,2 +1,0 @@
-sgioc2:86ddx2
-sgioc4:cksk32

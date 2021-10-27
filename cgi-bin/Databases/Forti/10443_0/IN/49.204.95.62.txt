@@ -1,9 +1,0 @@
-jjames:SSL-VPN Group
-tahmed:SSL-VPN Group
-ssantosh:SSL-VPN Group
-skarunanandan:SSL-VPN Group
-akotla:SSL-VPN Group
-pgupta:SSL-VPN Group
-pbagade:SSL-VPN Group
-skumar:SSL-VPN Group
-kperiyasamy:SSL-VPN Group

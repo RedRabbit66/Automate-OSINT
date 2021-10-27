@@ -1,6 +1,0 @@
-aecobichon:ae2019+
-mchoquet:mc2020+
-aruffier:ar2019+
-jmartier:jm2019+
-qfraser:2020qf=
-ahamoui:ah2019+

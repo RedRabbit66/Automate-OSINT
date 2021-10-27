@@ -1,3 +1,0 @@
-k.moumni:vespa*2018
-f.clement:Fc*2014*
-d.leroy:dl*2014

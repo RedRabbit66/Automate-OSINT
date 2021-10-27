@@ -1,2 +1,0 @@
-psy1010:SSL_VPN
-netman123:SSL_VPN

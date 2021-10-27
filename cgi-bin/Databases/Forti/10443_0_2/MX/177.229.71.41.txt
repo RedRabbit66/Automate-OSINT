@@ -1,2 +1,0 @@
-oscar:oscar
-remotedesktop:gomexremoto

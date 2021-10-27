@@ -1,5 +1,0 @@
-engineering:KWsp12345
-adminpur:Virus555
-production:GoAway889
-doltech:EssentialNet
-salesmarketing:StillStrong

@@ -1,6 +1,0 @@
-narkis:142536
-barakr:B142536r
-+:7
-Danna:h9WyMYHC
-*:v8T
-syslogics:SysAdmin

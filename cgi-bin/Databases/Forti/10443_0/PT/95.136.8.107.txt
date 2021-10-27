@@ -1,2 +1,0 @@
-SPT:ATAC
-NEA:ATAC

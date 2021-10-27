@@ -1,2 +1,0 @@
-crs1:crs1
-accounts:accounts

@@ -1,5 +1,0 @@
-RAM:MA
-HOE:California12!
-BER:GF
-SCA:MA
-NEA:MA

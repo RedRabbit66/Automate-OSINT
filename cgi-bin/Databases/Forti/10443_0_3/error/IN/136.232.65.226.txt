@@ -1,2 +1,0 @@
-vpn1:RealTech@1
-vpn1:rnplvpn@1

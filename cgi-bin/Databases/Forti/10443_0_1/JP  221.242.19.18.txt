@@ -1,4 +1,0 @@
-user04:kgkg0004
-user05:kgkg0005
-user06:kgkg0006
-user02:kgkg0002

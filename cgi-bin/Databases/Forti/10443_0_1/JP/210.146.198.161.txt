@@ -1,2 +1,0 @@
-kodama:interfarmPass
-aonuma:password

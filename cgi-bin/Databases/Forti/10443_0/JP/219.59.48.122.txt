@@ -1,7 +1,0 @@
-marugame1:test
-nakamura1:test
-tokyo1:test
-susaki1:test
-aki1:test
-omura1:test
-fukuyama1:test

@@ -1,9 +1,0 @@
-asistente:asistente01
-CiudadSalud:CDSalud001
-Yucatan:Yucatan2020
-chetumal:Chetumal_Qro
-ing-sistemas:ing-sistema5
-tapachula:Tapchula_Arr
-Cozumel:Cozumel1
-cancun_ofi:Codisel_C4n
-ContCodisel1:Admin_4235

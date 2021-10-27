@@ -1,1 +1,0 @@
-move_asm:coi03met

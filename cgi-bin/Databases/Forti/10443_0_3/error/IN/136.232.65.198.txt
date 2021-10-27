@@ -1,2 +1,0 @@
-test:Nimbus$123
-k.sethi:nimbus@123

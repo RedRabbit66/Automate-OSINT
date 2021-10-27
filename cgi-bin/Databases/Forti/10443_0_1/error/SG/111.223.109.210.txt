@@ -1,2 +1,0 @@
-vpnuser1:Very900#
-siemens:passWORD1234

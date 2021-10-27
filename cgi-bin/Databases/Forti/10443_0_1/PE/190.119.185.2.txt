@@ -1,3 +1,0 @@
-covisol2:covi@sol10
-C:E
-covisol:covi@sol10

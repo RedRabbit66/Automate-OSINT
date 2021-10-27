@@ -1,4 +1,0 @@
-Koga:Abc@123
-May:Abc@123
-Son:Abc@123
-Tokura:Abc@123

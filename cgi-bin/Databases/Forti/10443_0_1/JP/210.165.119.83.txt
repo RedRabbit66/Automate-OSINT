@@ -1,1 +1,0 @@
-serviceUSR:P@ssw0rd

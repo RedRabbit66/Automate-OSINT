@@ -1,3 +1,0 @@
-UMR,cn=Ulysse MEYER:DC = local, DC = vnet, CN = Users, CN = Ulysse MEYER
-CPT,cn=Cl:ment PASSOT
-RMO,cn=Romuald MONTEIRO:DC = local, DC = vnet, CN = Users, CN = Romuald MONTEIRO

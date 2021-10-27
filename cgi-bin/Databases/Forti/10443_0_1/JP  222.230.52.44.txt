@@ -1,3 +1,0 @@
-user23:user23
-user02:user02
-user04:user04

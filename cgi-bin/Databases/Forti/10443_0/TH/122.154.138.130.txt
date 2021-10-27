@@ -1,2 +1,0 @@
-planner2:planner2
-planner3:planner3

@@ -1,2 +1,0 @@
-remote:nbremote2020
-remote1:nbremote2020

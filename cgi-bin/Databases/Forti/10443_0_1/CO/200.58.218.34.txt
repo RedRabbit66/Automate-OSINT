@@ -1,4 +1,0 @@
-almacen.dos:almacen
-mauricio.ojeda:ojeda
-marta.cardona:Tipalma2018
-coor.proyectos:proyectos

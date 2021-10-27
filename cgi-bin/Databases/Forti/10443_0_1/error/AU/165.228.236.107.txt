@@ -1,7 +1,0 @@
-tfranklin:BM-VPN-Access
-skuru:BM-VPN-Access
-dhalim:BM-VPN-Access
-mduggan:BM-VPN-Access
-dpurdon:BM-VPN-Access
-jchappell:BM-VPN-Access
-bmvpn2:BM-VPN-Access

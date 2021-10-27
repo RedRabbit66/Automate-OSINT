@@ -1,4 +1,0 @@
-j.gachelin:JcicatG28*
-s.mongeard:SMCicat28*
-j.levannier:JLV3rCicat*
-f.maussion:FciC@t28*

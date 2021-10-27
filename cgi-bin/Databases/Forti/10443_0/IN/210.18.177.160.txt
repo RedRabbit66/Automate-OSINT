@@ -1,7 +1,0 @@
-Mobile-VPN1:Inn0ppl@11
-Targetbay-VPN1:Target@20
-Drupal-VPN1:Inn0ppl@11
-Magento-VPN1:Inn0ppl@11
-Targetbay-VPN3:Target@20
-Magento-VPN3:Inn0ppl@11
-Drupal-VPN2:Inn0ppl@11

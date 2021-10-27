@@ -1,2 +1,0 @@
-roi:Rop@2016
-roi:qazQAZ

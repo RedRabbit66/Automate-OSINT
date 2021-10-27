@@ -1,3 +1,0 @@
-Webint1:Verint1!
-user01:User1234##
-user02:User1234##

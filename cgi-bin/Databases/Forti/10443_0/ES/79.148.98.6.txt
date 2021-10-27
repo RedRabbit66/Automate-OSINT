@@ -1,8 +1,0 @@
-vicarios:Alpujarra2017
-rondaagd:CTRs
-alsajara:CTRs
-elrubin:CTRs
-trujalsg:CTRs
-alfaguara:CTRs
-almijara:CTRs
-loli:nomadas

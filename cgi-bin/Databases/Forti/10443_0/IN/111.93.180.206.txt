@@ -1,9 +1,0 @@
-laxmi2:852456
-laxmi1:852456
-mktg2:852456
-finance2:852456
-medicaclinic:Clinic@852456
-purchase2:852456
-triotree:Passw0rd
-sandip:Sagar@123
-purchase1:852456

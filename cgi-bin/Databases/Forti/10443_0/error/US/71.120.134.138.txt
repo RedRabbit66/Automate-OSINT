@@ -1,2 +1,0 @@
-e.peterson:SSL-VPN Employee Users
-rhunter-vpn:SSL-VPN Employee Users

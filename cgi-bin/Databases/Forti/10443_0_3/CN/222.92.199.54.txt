@@ -1,2 +1,0 @@
-MES:CPTadmin@123
-T100:cpt@123789

@@ -1,2 +1,0 @@
-GANESH:ganesh
-LACTOS:LACTOS

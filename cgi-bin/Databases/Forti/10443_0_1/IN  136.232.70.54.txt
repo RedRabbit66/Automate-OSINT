@@ -1,4 +1,0 @@
-user4:user4@123
-dt7:userp@$$w0rd
-dt8:userp@$$w0rd
-dt14:userp@$$w0rd

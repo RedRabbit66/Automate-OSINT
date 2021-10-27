@@ -1,9 +1,0 @@
-fclakev:UtentiVPN_SharedFolder
-f008854:UtentiVPN_Fus_Lan
-fvianer:sft-751_SL1m-fu41n4!Pc_vPN
-f008846:UtentiVPN_Fus_Lan
-f008832:UtentiVPN_Fus_Lan
-f075372:UtentiVPN_CicloAttivo
-f008594:UtentiVPN_Fus_Lan
-f080094:UtentiVPN_SharedFolder
-f008860:UtentiVPN_SharedFolder

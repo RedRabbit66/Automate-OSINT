@@ -1,3 +1,0 @@
-user004:VpnPass
-user005:VpnPass
-user014:VpnPass

@@ -1,5 +1,0 @@
-sistemas:SIE22S
-fmexico:FME55S
-tbarrientos:TBE49S.VPN Usuarios
-larroyo:LRE88S
-llinares:LLE52S

@@ -1,3 +1,0 @@
-mercadeo:mercadeoGHL2019*
-sistemas:sistemasGHL2019*
-gerencia:gerenciaGHL2019*

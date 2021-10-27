@@ -1,7 +1,0 @@
-remopla09:$r2019m03$
-remopla11:$r2019m03$
-remopla15:$r2019m03$
-remopla02:$r2019m03$
-remopla04:$r2019m03$
-remopla06:$r2019m03$
-remopla27:$r2019m03$

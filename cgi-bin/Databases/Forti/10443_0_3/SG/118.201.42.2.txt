@@ -1,4 +1,0 @@
-accs:jzwgTZbb
-avayaadmin:avaya!123
-malifax:secure!123
-accs:accs@123

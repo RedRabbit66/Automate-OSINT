@@ -1,6 +1,0 @@
-junman:CA001@SM03
-wong:OLS006@RD03
-benjamin.tseng:CA001@SM10
-shetyee.chiew:CA001@SM08
-ycong:OLS009@PUR01
-nur:ols@2017

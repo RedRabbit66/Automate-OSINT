@@ -1,5 +1,0 @@
-oiscadmin:0tsuk@1t
-60.15:oiscadmin
-sagyo01:sagyo01pass
-user02:password2
-user01:password1

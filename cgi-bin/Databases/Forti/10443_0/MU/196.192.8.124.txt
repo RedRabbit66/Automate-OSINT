@@ -1,2 +1,0 @@
-adm-ioo:mxoper$2024
-mtadmin:mtAdm!2020

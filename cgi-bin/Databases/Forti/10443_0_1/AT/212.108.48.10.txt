@@ -1,6 +1,0 @@
-MartinKofler:MarKo2010$
-Vaishaipl:SSL_VPN_USER
-Tomasz:SSL_VPN_USER
-walzer:SSL_VPN_USER
-Manfred:SSL_VPN_USER
-hammerschmidt:SSL_VPN_USER

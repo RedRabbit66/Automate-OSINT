@@ -1,5 +1,0 @@
-user:user
-Ventas17:V3nt@s17
-Ventas12:V3nt@s12
-Ventas18:V3nt@s18
-Ventas9:V3nt@s9

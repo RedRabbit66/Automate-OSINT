@@ -1,3 +1,0 @@
-qpay:qpay
-loh:loh
-GK4:global4

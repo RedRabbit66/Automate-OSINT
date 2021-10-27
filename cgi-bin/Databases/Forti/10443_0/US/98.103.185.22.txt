@@ -1,3 +1,0 @@
-Jeff:Password#33
-full-access:root
-kaleb:Password#33

@@ -1,2 +1,0 @@
-sslvpnuser2:2vpnefirmara
-sslvpnuser:1vpnefirmara

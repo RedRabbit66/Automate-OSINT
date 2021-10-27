@@ -1,7 +1,0 @@
-manodip:manodip@123
-raj:raj@123
-deepak:deepak@123
-swarnali:swarnali@123
-bimal:bimal@123
-dayco:dayco@456
-mehboob:mehboob@123

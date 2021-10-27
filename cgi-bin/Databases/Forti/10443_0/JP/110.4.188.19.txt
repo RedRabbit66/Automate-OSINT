@@ -1,3 +1,0 @@
-vpn06:vpn06
-vpn11:vpn11
-vpn05:oac05

@@ -1,2 +1,0 @@
-user3:password1
-user1:password1

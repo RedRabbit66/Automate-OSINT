@@ -1,2 +1,0 @@
-syoji010:SSLVPN-group_hoku
-starkey:SSLVPN-group_star

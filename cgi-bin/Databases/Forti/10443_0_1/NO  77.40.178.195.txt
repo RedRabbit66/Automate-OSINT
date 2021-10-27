@@ -1,6 +1,0 @@
-vosstaxi:taxivoss
-aal:!aal123
-taxi1:Oledoledoffen123
-bt:bytaxi
-ataxi:taxia1234
-taxi3:megagrill

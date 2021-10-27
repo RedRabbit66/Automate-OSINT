@@ -1,6 +1,0 @@
-bnp:BnP$010204!
-rschenkel:SSLVPN-Benutzer
-pfeuffer:SSLVPN-Benutzer
-10015-kpfeuffer:SSLVPN-Benutzer
-bhartlieb:bH$8653sk
-10015-tlenkner:SSLVPN-Benutzer

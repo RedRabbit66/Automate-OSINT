@@ -1,8 +1,0 @@
-linda:SSL-Users
-Ora:O123456!
-roy:SSL-Users
-Smadar:S123456!
-cybercom:20cyber19
-yairn:SSL-Users
-Ahishay:Af123456
-Saar:Sa12321~

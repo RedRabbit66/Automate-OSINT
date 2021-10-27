@@ -1,2 +1,0 @@
-simon.su:su@zhemei
-jack:jack@vpn@@

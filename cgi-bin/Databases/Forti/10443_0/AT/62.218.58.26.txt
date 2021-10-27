@@ -1,5 +1,0 @@
-aplanetz:vpn-group
-Gerngross:Pa$$w0rd!
-Gerngross:vpn-group
-kormann:vpn-group
-liebeteggers:IntraEB15!

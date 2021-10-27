@@ -1,6 +1,0 @@
-wrp:Emax25!
-wps:Lokus92!
-7:wrp
-kma:KMA119!
-ap:AP2k!!
-u._:_

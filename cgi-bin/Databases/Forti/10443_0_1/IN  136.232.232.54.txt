@@ -1,8 +1,0 @@
-viji:viji
-shanet:shanet
-arunkpk:arunkpk
-libin:libin
-rajehsk:rajehsk
-sudhakar:sudhakar
-kalesh:kalesh
-gopi:gopi

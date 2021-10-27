@@ -1,6 +1,0 @@
-vpn-kks:SLvpn1@$
-vpn-mjl:SLvpn1@$
-vpn-dek:SLvpn1@$
-vpn-glh:SLvpn1@$
-vpn-jlr:SLvpn1@$
-vpn-mjf:SLvpn1@$

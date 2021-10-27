@@ -1,4 +1,0 @@
-philippe:Blanche2008!
-amar:JNP2011
-collab:collab
-collab:collab.wizard_sslvpn_usergroup

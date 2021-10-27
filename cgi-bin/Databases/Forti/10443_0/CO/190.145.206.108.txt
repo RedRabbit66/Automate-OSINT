@@ -1,9 +1,0 @@
-cartera:cartera
-supermercados:supermercados
-gindustrial:gindustrial
-valledupar:valledupar
-coorcontabilidad:coorcontabilidad
-rtovar:rtovar
-cinterno:cinterno
-serasociado2:serasociado2
-mgarcia:mgarcia

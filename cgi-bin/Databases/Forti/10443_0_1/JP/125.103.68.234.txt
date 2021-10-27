@@ -1,7 +1,0 @@
-m.sakai-ssl:mVme2WBBHmhS
-ssl-user02:password
-s.takei-ssl:xUagk4COVMpr
-m.ishikawa-ssl:87LALPQKtixZ
-t.otsuka-ssl:xHj0zoL3URwD
-y.hamada-ssl:nlZl7QEwaFV1
-y.harao-ssl:ARsJmtM7Z1W8

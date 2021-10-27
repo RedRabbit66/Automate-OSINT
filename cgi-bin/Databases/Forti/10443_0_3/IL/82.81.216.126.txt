@@ -1,2 +1,0 @@
-rina:pet@2020
-amir:pet@2019

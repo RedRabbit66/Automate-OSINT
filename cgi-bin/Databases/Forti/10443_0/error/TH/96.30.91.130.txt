@@ -1,2 +1,0 @@
-KEAC01:ser@AC01
-KESA02:ser@SA02

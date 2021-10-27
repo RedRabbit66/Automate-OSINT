@@ -1,2 +1,0 @@
-base:base@banos18
-utopiux:UtpX@VPN2020_GB

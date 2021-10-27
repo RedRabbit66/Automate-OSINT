@@ -1,4 +1,0 @@
-VPN-pz09:Password1
-VPN-pz04:Password1
-VPN-pz08:Password1
-VPN-pz01:Password1

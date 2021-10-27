@@ -1,6 +1,0 @@
-IZUMI-USER16:passWord16
-IZUMI-kawachi:passWord037
-IZUMI-kounan:passWord030
-IZUMI-USER10:passw10
-IZUMI-USER15:password15
-IZUMI-USER12:passw12

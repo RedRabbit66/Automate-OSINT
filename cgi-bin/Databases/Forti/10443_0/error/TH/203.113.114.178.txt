@@ -1,3 +1,0 @@
-vsp3:vsp3
-vsp8:vsp8
-vsp10:vsp10

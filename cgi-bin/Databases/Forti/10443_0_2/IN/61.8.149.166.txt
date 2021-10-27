@@ -1,9 +1,0 @@
-sanjeevb:Pass@12345
-depot:Kcl@321
-kclmktg:Pass@12345
-milin:Ncss@2003
-vkmarathe:Pass@12345
-akanthi:Pass@12345
-ajadhav:India@2020#
-23145:November@2020
-rupesh:Caml1nfort

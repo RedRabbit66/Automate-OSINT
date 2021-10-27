@@ -1,2 +1,0 @@
-servizi2:ItaliaServizi2
-servizi8:ItaliaServizi8

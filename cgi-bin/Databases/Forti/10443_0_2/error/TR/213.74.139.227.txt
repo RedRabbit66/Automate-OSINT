@@ -1,6 +1,0 @@
-mkaya:mk1402
-opamukcu:op.0611
-odemir:00od2701
-guyar:00gu.2009
-fsen:fs2909
-mkaya:mk1402.SSL_Users

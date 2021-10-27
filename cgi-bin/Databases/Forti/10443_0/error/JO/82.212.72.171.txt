@@ -1,9 +1,0 @@
-user4:user123
-user1:user123
-yousef:yousef123
-saad:saad123
-pioneer:pioneer123
-agent12:agent_123
-user7:user123
-user2:user123
-user8:user123

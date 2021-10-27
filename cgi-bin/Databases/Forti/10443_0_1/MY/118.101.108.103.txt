@@ -1,6 +1,0 @@
-jaques:password
-yinsze:password
-sokyee:password
-yan:password
-natalie:password
-nelson:password

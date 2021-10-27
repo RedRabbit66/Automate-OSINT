@@ -1,5 +1,0 @@
-PantaRhei:SSL4PantaRhei2secure
-user66@advokatur.lan:SSLVPNUSER
-user93@advokatur.lan:SSLVPNUSER
-user32@advokatur.lan:SSLVPNUSER
-user88@advokatur.lan:SSLVPNUSER

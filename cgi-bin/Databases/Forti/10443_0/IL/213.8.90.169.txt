@@ -1,6 +1,0 @@
-vpn4:Vpn2020
-tadiran:1q2w3e4r5t
-Team:team2019!
-vpn2:Vpn2020SSL_VPN_GROUP
-vpn2:Vpn2020
-opensky1:opensky555

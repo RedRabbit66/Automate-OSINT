@@ -1,7 +1,0 @@
-michishita:password@1
-fukunaga:password@1
-nunomura:password@1
-hatai:password@1
-taharabaru:password@1
-fujioka:password@1
-nagamatsu:password@1

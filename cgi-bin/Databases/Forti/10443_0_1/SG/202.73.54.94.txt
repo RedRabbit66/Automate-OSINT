@@ -1,4 +1,0 @@
-annie.koh:SSLVPN_LDAP
-Stephanie:J@EJoong7590
-chaicw:SSLVPN_LDAP
-m.throwya:SSLVPN_LDAP

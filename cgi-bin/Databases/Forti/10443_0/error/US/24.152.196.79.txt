@@ -1,2 +1,0 @@
-CCC_Staff:vpn@ccc
-CCC_Staff:vpn@cccVPN Access Group

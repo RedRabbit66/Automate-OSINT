@@ -1,6 +1,0 @@
-megacable6:vpnmega106
-megacable5:vpnmega105
-megacable7:vpnmega107
-megacable8:vpnmega108
-megacable9:vpnmega109
-megacable1:vpnmega101

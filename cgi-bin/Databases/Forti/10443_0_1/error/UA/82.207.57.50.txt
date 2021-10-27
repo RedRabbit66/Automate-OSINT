@@ -1,4 +1,0 @@
-cn=hcj_press02:C = UA, ST = KIEV, O = HCJ, OU = HCJ, CN = hcj_press02, emailAddress = admin@hcj.gov.ua
-z0151:123321
-z0171:123321
-z0161:123321

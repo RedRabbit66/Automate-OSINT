@@ -1,7 +1,0 @@
-grocha:pacs#meddi$vpn_2019
-mlessa:pacs#meddi$vpn_2019
-btorres:pacs#meddi$vpn_2019
-lecastro:pacs#meddi$vpn_2019
-pnfernande:pacs#meddi$vpn_2019
-avaya:Med@2019!
-eserafim:juca0612

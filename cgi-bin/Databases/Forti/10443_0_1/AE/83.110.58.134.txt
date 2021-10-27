@@ -1,9 +1,0 @@
-abdalla_hr:Alasab$123
-DCProc.Rumaitha:DCProc@alasab
-90740.wisal:$212wuy
-Faisal.Phase2:Faisal@12345
-Amin.Account:alasab@12345
-DCRumaitha:Shiela@2020
-Kasheef.Procurement:KasheefAlasab
-Burhan:Burhan##233
-AdminSite:alasab@123

@@ -1,9 +1,0 @@
-ipoblacion:ipoblacionMB
-Scasas:ScasasMB
-Jorge:JorgeMB
-mcctelecom:mcct3l3c0m
-Lanit:LanitMB
-Aperez:AperezMB
-Salonso:SALONSOMB
-Joseba:JosebaMB
-Csena:CsenaMB

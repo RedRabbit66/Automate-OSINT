@@ -1,2 +1,0 @@
-GBPVPNUser3:Password123
-GBPVPNUser2:Password123

@@ -1,6 +1,0 @@
-gerenciaventas:Enero2021*
-analisiscomercial:Colombia20%
-cartera:Alfa7777
-CONTABILIDAD:Alfa4321*
-epo:Colombia1
-gerenciaventas:DuMo2020*

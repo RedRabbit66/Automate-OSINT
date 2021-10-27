@@ -1,6 +1,0 @@
-s.pair:Pair,19
-audran:audran2019
-E:F
-s.creuset:Ccpa3
-maryline:maryline
-Rodolphe:Rodolphem1

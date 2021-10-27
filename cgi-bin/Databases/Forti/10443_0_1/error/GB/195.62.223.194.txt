@@ -1,7 +1,0 @@
-Feeds-AnGa:FE-AX-RDPUsers
-Feeds-KaWa:FE-AX-RDPUsers
-Feeds-LuWo:FE-AX-RDPUsers
-Feeds-HeSt:FE-AX-RDPUsers
-Group-ICit-SoAs:GTT-Group
-Group-RaMi:GTT-Group
-Sharron.Dudley:GTT-Group

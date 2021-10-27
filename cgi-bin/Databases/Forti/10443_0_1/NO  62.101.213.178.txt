@@ -1,2 +1,0 @@
-stig:15.5Dslep$
-kurt:15.5Dslep$

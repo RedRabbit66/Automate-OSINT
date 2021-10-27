@@ -1,2 +1,0 @@
-wsmassey:Motorola1
-nokia:Nokia2135

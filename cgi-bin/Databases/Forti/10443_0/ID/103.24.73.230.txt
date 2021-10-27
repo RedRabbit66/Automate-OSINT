@@ -1,2 +1,0 @@
-VpnUser2:Password1
-VpnUser1:Password1

@@ -1,3 +1,0 @@
-yang.li:SSL_VPN_Users-VNC
-zhonghe.zheng:Rc2rKeRG
-kimura:12345678

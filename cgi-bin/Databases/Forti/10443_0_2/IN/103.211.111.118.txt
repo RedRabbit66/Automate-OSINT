@@ -1,1 +1,0 @@
-socadmin:$123$soc

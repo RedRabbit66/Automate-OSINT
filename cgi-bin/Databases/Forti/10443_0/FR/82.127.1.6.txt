@@ -1,3 +1,0 @@
-calasys1:calasys73
-electro2:astr2Elec
-electro1:astr1Elec

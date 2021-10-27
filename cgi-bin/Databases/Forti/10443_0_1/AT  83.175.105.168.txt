@@ -1,4 +1,0 @@
-team.ost1:Register1+
-team.west1:Register1+
-team.ost2:Register1+
-team.west2:Register1+

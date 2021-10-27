@@ -1,2 +1,0 @@
-lbl.vpn:ERTY@4321
-aak:EDC@19.SSL-VPN-Client

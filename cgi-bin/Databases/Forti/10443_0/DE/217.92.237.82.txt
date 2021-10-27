@@ -1,4 +1,0 @@
-hake:*Allach123
-NRIRegensburg:NRI_VPN
-nnietzel:Pw2020!
-tle:060410*TL

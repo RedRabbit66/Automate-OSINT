@@ -1,2 +1,0 @@
-hs:MVDR192%
-sk:ABCdef1%

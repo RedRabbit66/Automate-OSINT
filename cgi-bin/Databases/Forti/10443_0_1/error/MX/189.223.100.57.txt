@@ -1,6 +1,0 @@
-CONTA:CONTA1.1
-Tecate1:Sys@Forti20
-Ensenada2:Sys@Forti20
-logistica:Sys@Fc20
-Rio2:Sys@Forti20
-oscar:123456

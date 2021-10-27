@@ -1,8 +1,0 @@
-ops02:bahana02
-ops10:bahana10
-ops09:bahana09
-ops04:bahana04
-5:g
-6:s
-0:ops04
-&:4

@@ -1,3 +1,0 @@
-VPN@FINA:Produccion@
-VPN@AVERA:Produccion@
-VPN@JAVIERCUBERO:Produccion@

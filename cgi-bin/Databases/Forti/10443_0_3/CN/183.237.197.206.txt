@@ -1,6 +1,0 @@
-test:zxcv@1234
-sh.xu:xx3210
-eric.chen:Welab@2020
-tony.liang:Rong213123
-monica.yang:1qaz!QAZ2020
-jerry.li:llf890820

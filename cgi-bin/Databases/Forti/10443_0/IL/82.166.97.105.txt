@@ -1,9 +1,0 @@
-mservice:Ms@2020
-anata:An@2021
-ZivUser:NAEH%2020
-olga:Ol@2807Ldap_Group
-FBC:F$c9611
-nirel:BHR@K2021
-koral:EURK$20
-mazal:NZK123
-ron:Shir$2012

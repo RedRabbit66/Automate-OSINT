@@ -1,6 +1,0 @@
-comex01:comex
-magaly:magaly
-comex03:comex
-comex02:comex
-jenny:casita123
-jose:jose

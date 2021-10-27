@@ -1,4 +1,0 @@
-Ady:1234
-Nati:SSL-VPN
-Tal:1234
-Yaeln:1234

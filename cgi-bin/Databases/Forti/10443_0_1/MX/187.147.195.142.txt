@@ -1,6 +1,0 @@
-sucursal.montejo:Cl1n!c42020
-sucursal.motul:Cl1n!c42020
-sucursal.villas:Cl1n!c42020
-sucursal.uman:Clinica2019
-sucursal.caucel:Cl1n!c42020
-sucursal.kalia:Cl1n!c42020

@@ -1,4 +1,0 @@
-lital:142536
-syslogics:SysAdmin
-shiran:142536
-niv:142536

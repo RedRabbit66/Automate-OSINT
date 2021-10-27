@@ -1,5 +1,0 @@
-shira:SSL-VPN
-Anatoly:SSL-VPN
-shir:SSL-VPN
-linoy:SSL-VPN
-eli:SSL-VPN

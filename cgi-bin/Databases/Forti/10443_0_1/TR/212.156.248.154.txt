@@ -1,7 +1,0 @@
-opel.satis:Neskar2020
-melike.gizen:melike2019
-aytenbalkan:12345678
-netmobil:F2019
-serkan.pelin:Neskar2020
-tayfun.netsis:Tayfun@2020-
-oner.bilgin:Oner2015

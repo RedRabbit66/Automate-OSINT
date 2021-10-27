@@ -1,4 +1,0 @@
-datavisor:LR123456
-pintec:jimubox123
-yanbin.zhang:servasdf^ic&e2017
-tianpeng.du:920928Du

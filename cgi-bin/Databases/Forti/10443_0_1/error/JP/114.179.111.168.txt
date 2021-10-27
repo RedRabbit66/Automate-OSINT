@@ -1,4 +1,0 @@
-mitani:SSLVPN-UserGroup
-kurata:SSLVPN-UserGroup
-thanh.hx:SSLVPN-UserGroup
-ha.nt:SSLVPN-UserGroup

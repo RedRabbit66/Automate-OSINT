@@ -1,2 +1,0 @@
-fp-rd:ssl-vpn-group
-fp-it:ssl-vpn-group

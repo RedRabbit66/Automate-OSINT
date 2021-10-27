@@ -1,5 +1,0 @@
-jefecompras:Pulpa@123
-licitacion:Pulpa@123
-directorcompras:Pulpa@123
-asesorcomercial3:Pulpa@123
-contratacionestatal:Pulpa@123

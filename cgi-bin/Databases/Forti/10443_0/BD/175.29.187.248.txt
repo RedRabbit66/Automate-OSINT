@@ -1,2 +1,0 @@
-abdus.salam:PermitMetoLogIn!salam
-muntasir.ahmed:PermitMetoLogIn!muntasir

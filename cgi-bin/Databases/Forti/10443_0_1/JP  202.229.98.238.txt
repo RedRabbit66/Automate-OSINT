@@ -1,2 +1,0 @@
-ssluser02:user02
-ssluser01:user01

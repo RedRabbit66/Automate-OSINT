@@ -1,5 +1,0 @@
-tcasa:RxTC19!
-lflores:Rx20LF!
-ldiaz:Rx20Ld!
-saguero:Rx18Sa!
-vromero:Rx18Vrt!

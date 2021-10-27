@@ -1,9 +1,0 @@
-pimpirutm:THZPPC-VPN
-nontipanu:THZPPC-VPN
-ailadac:THZPPC-VPN
-wongduend:THZPPC-VPN
-saharatr:THZPPC-VPN
-tharineeb:THZPPC-VPN
-annam:THZPPC-VPN
-tananyak:THZPPC-VPN
-chotikabo:THZPPC-VPN

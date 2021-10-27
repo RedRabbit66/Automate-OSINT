@@ -1,4 +1,0 @@
-meital:vpn@clt!
-covid10:01032020
-qa:vpn@clt!
-revital:vpn@clt!

@@ -1,2 +1,0 @@
-aldebra:Aldebraspa
-luigi:Password1

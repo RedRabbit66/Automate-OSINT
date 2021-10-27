@@ -1,4 +1,0 @@
-faik:fa19+-
-finans:knn19+-
-duygu:dyg19*
-serkan:srkn19+-*

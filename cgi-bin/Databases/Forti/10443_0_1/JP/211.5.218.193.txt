@@ -1,2 +1,0 @@
-VPNuser001:User001$$
-Vpn-sys002:Super002$$

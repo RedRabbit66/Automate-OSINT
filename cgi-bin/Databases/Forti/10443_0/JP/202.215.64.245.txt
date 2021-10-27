@@ -1,3 +1,0 @@
-SSK1000:alphasos?
-SSK0014:ssk1634
-SSK0029:ssk1634

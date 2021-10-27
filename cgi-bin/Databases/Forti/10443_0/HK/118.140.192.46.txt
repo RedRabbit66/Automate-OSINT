@@ -1,3 +1,0 @@
-kpm.ca:kpm.ca
-yklau:yklau
-tunnel-access:root

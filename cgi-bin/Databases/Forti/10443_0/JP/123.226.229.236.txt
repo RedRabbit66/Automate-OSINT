@@ -1,4 +1,0 @@
-DP0008:DP@remote123
-DP0012:DP@remote123
-DP0009:DP@remote123
-DP0011:DP@remote123

@@ -1,2 +1,0 @@
-doris:apecdoris
-garry:doris52jay

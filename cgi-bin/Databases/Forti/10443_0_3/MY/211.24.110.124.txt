@@ -1,2 +1,0 @@
-vpnmyob3:myob@2020
-vpnlinex:LX@20118a

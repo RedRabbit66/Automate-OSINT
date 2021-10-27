@@ -1,3 +1,0 @@
-romina.seminario:rseminario
-milagros.estrada:mestrada
-candy.yrupailla:cyrupailla

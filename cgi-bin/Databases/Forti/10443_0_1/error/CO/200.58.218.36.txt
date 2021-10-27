@@ -1,2 +1,0 @@
-almacen.dos:almacen
-mc.troqueles:troqueles

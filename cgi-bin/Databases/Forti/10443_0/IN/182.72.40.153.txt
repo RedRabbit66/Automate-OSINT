@@ -1,2 +1,0 @@
-user7:pass@2020
-user20:pass@2020

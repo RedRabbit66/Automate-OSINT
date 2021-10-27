@@ -1,2 +1,0 @@
-vpnpureuser01:P@ssw0rd
-vpnpureuser05:P@ssw0rd

@@ -1,2 +1,0 @@
-tdoring:SSLVPN_Users
-lbarker:SSLVPN_Users

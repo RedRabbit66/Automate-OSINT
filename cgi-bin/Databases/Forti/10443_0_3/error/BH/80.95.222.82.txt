@@ -1,2 +1,0 @@
-INVITA:invitacmc
-test:password

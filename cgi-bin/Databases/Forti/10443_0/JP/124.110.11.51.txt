@@ -1,2 +1,0 @@
-remote2:Kaiunlogi2
-remote1:Kaiuncold1

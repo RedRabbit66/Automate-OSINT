@@ -1,7 +1,0 @@
-user13:user13@noc
-aml01:aml01@noc
-bir01:bir01@noc
-dhan01:dhan01@noc
-sur01:sur01@noc
-bhw02:bhw02@noc
-user6:user6@noc

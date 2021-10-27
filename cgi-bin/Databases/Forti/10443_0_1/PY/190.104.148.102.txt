@@ -1,2 +1,0 @@
-AdminPvoip:PvoipAdmin@2020
-JAchar:JAcharVPN

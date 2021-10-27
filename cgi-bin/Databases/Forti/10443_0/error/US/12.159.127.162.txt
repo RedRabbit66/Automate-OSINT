@@ -1,2 +1,0 @@
-skoons:SSL VPN
-coleksa:SSL VPN

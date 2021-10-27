@@ -1,4 +1,0 @@
-Mqadmin:mqPN0#q2
-simon:sim@12345
-simon:Bme@123456
-simon:Si@12345

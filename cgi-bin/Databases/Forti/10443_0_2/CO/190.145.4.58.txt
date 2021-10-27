@@ -1,8 +1,0 @@
-SoporteF:50p0rt315
-Comercial:Comercial.2020@
-Zonasabana:1022368396
-zonanorte:Comercial.2019
-Contingencia3:Fonsodi3.2020
-0:SSL VPN USERS
-expinn:Financial.2019
-Medellin2:Conexion.2019

@@ -1,2 +1,0 @@
-Admin-pk1:M0$12345
-Adminsale-bkk1:M0$12345

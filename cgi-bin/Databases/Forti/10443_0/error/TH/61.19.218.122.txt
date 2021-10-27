@@ -1,7 +1,0 @@
-stk5:System$1
-stk4:System$1
-wanna.p:System$1
-helpdesk:System$1
-nuengruethai.m:System$1
-daniel.c:System$1
-stk2:System$1

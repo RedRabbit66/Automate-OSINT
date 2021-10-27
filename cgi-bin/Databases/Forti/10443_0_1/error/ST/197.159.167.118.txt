@@ -1,2 +1,0 @@
-afilho:CONST_250575_P
-gestao:ges#2020

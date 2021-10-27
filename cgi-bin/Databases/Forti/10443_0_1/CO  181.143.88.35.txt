@@ -1,9 +1,0 @@
-rodolfo.restrepo:Abc12345
-auxiliar.mantenimien:Abc12345
-gicelle.echavarria:Gaem123
-diana.valencia:Santi2015
-andres.cardona:Abc12345
-edwin.montoya:Sistemas0411
-diego.vanegas:Abc12345
-lider.sst:Abc12345
-a.logistica:Abc12345

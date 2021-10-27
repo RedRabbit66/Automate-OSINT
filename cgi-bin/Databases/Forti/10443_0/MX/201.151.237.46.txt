@@ -1,8 +1,0 @@
-b.avila:Coq673910*
-b.luna:Coq1011*
-s.juarez:Coqsoc*
-epadilla:Cedis040120*
-aavila:Comer0104
-j.barron:Coq230318*
-gbecerril:gbda9787*
-d.munoz:Kod785402*

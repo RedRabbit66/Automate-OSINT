@@ -1,7 +1,0 @@
-jasimahmed:bme@1234
-bme:P@ssword456
-nusry:nusry
-shihastk:tkshi@1234
-bmecosting:bme@1234
-stanley:bme@12345
-mshafi:mshafi

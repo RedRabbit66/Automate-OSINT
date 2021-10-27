@@ -1,5 +1,0 @@
-supervisor:/2020EcP1nt0Sup
-paseosf:P1nt0_PS
-produccion:ProPint0EC10
-compras:P1nt0Compras2020EC
-sistemas:2020S1stem@sEc

@@ -1,4 +1,0 @@
-user6:user6
-user3:user3
-user4:user4
-user1:user1

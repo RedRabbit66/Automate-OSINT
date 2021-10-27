@@ -1,4 +1,0 @@
-user4:abc123
-user2:abc123
-user2:abc123.SSL_VPN_Users
-user3:abc123

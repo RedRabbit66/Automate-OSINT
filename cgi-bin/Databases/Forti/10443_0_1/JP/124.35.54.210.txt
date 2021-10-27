@@ -1,2 +1,0 @@
-ssl-vpnuser1:wd23mako
-ssl-vpntest:Jcast256

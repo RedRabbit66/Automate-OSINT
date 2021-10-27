@@ -1,4 +1,0 @@
-ford:ford123
-mazda:mazda123
-ford:ford123UsuariosSSL
-volvo:volvo123

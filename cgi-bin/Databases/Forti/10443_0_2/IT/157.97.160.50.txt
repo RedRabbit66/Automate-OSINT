@@ -1,3 +1,0 @@
-mitcom:$MitCOM$15
-gns:GNSvpn18!!
-s.pezzini:MNDspVPN20

@@ -1,2 +1,0 @@
-remote-user01:WS001
-remote-user02:WS001

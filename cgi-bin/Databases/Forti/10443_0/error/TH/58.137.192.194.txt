@@ -1,8 +1,0 @@
-mayuree.anu:SLP@2019
-thanawat.sut:Slp@2019
-phadcharanon:Slp@2020
-siriporn.kon:siri2019
-prasert:Slp@2020
-praput:151002
-teerayut.phu:SLP@2020
-pimolrat:noi@1234

@@ -1,4 +1,0 @@
-crmvpn:tunaiku2k20
-N: _
-vpncollection:senyumku
-crmvpn:amarbank

@@ -1,4 +1,0 @@
-dpaniagua:dpaniagua
-VentasSGS:Ventas2020
-RRHHSGS:RRHH2020
-ContSGS:Cont2020

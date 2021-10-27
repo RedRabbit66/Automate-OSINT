@@ -1,2 +1,0 @@
-admin:admin@12345%T
-admin:P@ssw0rd

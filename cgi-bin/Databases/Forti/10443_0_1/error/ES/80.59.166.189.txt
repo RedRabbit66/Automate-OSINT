@@ -1,3 +1,0 @@
-barcelona:Barcelona!
-gsmserver:gsmVPN2020!
-canarias:GSM@Canarias

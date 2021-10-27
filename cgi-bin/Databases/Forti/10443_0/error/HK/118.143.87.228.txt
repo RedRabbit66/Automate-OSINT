@@ -1,2 +1,0 @@
-admin:admin@12345%T
-HGC_support:P@$$w0rd

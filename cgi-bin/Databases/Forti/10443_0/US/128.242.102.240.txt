@@ -1,3 +1,0 @@
-advantec-test02:Adv@02!!
-syscomadmin:5Syscom5
-advantec-test01:Adv@01!!

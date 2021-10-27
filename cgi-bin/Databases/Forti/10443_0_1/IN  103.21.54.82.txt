@@ -1,3 +1,0 @@
-user8:admin@123
-user7:admin@123
-user3:admin@123

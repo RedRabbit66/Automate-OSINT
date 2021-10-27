@@ -1,5 +1,0 @@
-kiikuni:Mori-002
-niwa:Mori-004
-yamamoto:Mori-009
-asano:Mori-005
-matsuo:Mori-011

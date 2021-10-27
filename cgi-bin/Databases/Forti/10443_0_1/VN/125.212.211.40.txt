@@ -1,6 +1,0 @@
-votuyen:Welcome@12345678901
-lienhoa:Thang12@123
-NguyenNho:Phaigiau1234567890123456
-nguyenyen:ngocthU@1489
-phaman:P@$5word01
-huynhthanh:Tinhyeucaothuong@93

@@ -1,2 +1,0 @@
-helpdesk:hotdesk
-hoshino:hoshino

@@ -1,4 +1,0 @@
-hsnt:t0605h
-nmrt:t0127n
-sbnm:h0207s
-TPN_Draw:tecpn

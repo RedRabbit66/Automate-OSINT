@@ -1,4 +1,0 @@
-engineering:teknik123
-humancapital:wb123456
-keuangan:wb123456
-procurement:wb123456

@@ -1,6 +1,0 @@
-mradiu:DMD34
-elvire:0505
-mp:mpv,34
-sabah:DMD34
-samira:dmd34
-lieuran:Li34Dmd*

@@ -1,5 +1,0 @@
-thno:winhi2818
-winhi_sap1:winhi_sap1
-winhi_sap3:winhi_sap3
-winhi_gw1:winhi_gw1
-winhi:winhi0048

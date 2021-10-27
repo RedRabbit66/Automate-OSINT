@@ -1,6 +1,0 @@
-tvcs03:tvcs031234
-tvcs01:tvcs011234
-tvcs06:tvcs061234
-tv6396:tv6396
-tv2227:tv2227
-tv6582:tv6582

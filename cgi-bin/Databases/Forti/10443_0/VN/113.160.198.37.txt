@@ -1,2 +1,0 @@
-spvn_user:spvnuser@2020
-kddivn:Password123

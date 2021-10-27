@@ -1,2 +1,0 @@
-npc17.ryuken:ryuken17
-npc16.ryuken:ryuken16

@@ -1,2 +1,0 @@
-acc1:admin
-acc3:admin

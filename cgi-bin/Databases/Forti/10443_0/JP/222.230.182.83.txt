@@ -1,3 +1,0 @@
-JOIN10:join010
-JOIN6:join006
-JOIN3:join003

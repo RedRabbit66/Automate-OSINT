@@ -1,3 +1,0 @@
-tenzin:ts123=TS
-kvetka:ks123=KS
-carolyn:cs123=CS

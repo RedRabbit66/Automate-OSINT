@@ -1,6 +1,0 @@
-P:L.,6r
-callcenter1:1234
-callcenter3:1234
-hussein:Hh123456
-callcenter2:1234
-mashreqe:MBC@2016

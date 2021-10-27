@@ -1,6 +1,0 @@
-GMiller:SSLVPN_Users
-ahoye:SSLVPN_Users
-EJurado:SSLVPN_Users
-ttischer:SSLVPN_Users
-pmason:SSLVPN_Users
-lkarr:SSLVPN_Users

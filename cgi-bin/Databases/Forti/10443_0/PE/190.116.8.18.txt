@@ -1,3 +1,0 @@
-vtasypsa1:vta5475@#1
-srvsypsa2:srv5475@#2
-ingsypsa1:ing5475@#1

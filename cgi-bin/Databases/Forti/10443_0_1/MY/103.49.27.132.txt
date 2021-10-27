@@ -1,2 +1,0 @@
-QES-VPN:qes123
-SW-VPN:sw123

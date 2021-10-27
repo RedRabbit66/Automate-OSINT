@@ -1,4 +1,0 @@
-UsuarioUM21:UMvpn$21
-UsuarioUM10:UMvpn$10
-UsuarioUM01:UMvpn$01
-UsuarioUM09:UMvpn$09

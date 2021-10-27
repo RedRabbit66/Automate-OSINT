@@ -1,9 +1,0 @@
-sip:P0l1c14.2019
-9:g_solo_sip.tunnel-access
-soporte:T3mporal
-excelsis:T3mporal
-test1:T3mporal
-agauto:p0l1c14.2020
-0:admin
-isa1:isa123software
-capacitacion:T3mporal.!

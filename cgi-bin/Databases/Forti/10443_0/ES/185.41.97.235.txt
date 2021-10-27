@@ -1,2 +1,0 @@
-extern:$catfinance$2018
-lidia:$catfinance$2018

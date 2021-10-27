@@ -1,2 +1,0 @@
-inventario:InvenTaR!0
-sistemas:Sup3Reg@10n

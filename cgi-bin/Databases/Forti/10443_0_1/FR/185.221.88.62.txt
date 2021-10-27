@@ -1,4 +1,0 @@
-Nicolas_Vinci:CITECO_VPNSSL
-Jules_Moizan-Cazalbou:CITECO_VPNSSL
-Olivier_Girard:CITECO_VPNSSL
-Ghislain_Lauverjat:CITECO_VPNSSL

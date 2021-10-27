@@ -1,2 +1,0 @@
-vpnuser01:ssh6707
-vpnuser04:ssh6707

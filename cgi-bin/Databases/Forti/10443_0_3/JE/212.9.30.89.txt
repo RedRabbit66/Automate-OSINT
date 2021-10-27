@@ -1,3 +1,0 @@
-oswald.lopes:SSL-VPN-USER
-vinod.agole:SSL-VPN-USER
-dhanaji.kashid:SSL-VPN-USER

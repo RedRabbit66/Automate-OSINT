@@ -1,2 +1,0 @@
-G346:Gnet@Vpn
-G328:Gnet@Vpn

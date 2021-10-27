@@ -1,6 +1,0 @@
-parthib:cisco.acs123
-L2APP:Appsteam@!@#
-TGB1:Tripura)(*
-AGVB2:Assam$%^
-TGB2:Tripura#$%
-MRB1:Manipur@!@#

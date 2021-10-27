@@ -1,3 +1,0 @@
-giudici.b:aurora
-butti.m:rizzola
-andrighetti.d:micio

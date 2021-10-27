@@ -1,2 +1,0 @@
-secom:Secom@2020
-kvnadmin:Password123

@@ -1,4 +1,0 @@
-kanri:kanri
-z:7
-user:user
-z:=

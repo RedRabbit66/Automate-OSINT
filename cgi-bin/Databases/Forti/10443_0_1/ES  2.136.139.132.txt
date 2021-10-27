@@ -1,5 +1,0 @@
-pedidos6:pedidos6*56
-pedidos4:pedidos4*57
-pedidos9:pedidos9*58
-paqui:paqui*52
-pedidos3:pedidos3*56

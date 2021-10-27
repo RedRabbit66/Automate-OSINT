@@ -1,2 +1,0 @@
-victorgssl:ssl3PL.2
-luispssl3pl:cq3314S@M

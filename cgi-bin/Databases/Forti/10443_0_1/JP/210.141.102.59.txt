@@ -1,9 +1,0 @@
-honsya01:hd_office@tc1
-hanbai04:ryu_nisiyama@r5z
-seisan01:ke_yosimoto@h2s
-telework21:telework@7gy
-nhs01:nhs01@en5
-nCS01:ncs01@cmu
-shiten01:brc_office@3xg
-kumamoto01:kmt_factory@gd6
-seisan04:yo_huzita@kvm

@@ -1,3 +1,0 @@
-avicente:avicente
-GCivil:GCivil2019
-Hikvision:Hikvision

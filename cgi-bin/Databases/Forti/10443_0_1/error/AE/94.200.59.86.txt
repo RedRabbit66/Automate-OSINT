@@ -1,8 +1,0 @@
-rahul:SSL_VPN_USERS
-adishree:SSL_VPN_USERS
-software:Re$123
-rachita:SSL_VPN_USERS
-*:QX0MxL
-sufian:SSL_VPN_USERS
-rupika:SSL_VPN_USERS
-aishwarya:SSL_VPN_USERS

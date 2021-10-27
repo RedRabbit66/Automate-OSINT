@@ -1,5 +1,0 @@
-maggie:sslvpn-limit-access
-michelle:sslvpn-limit-access
-annis:sslvpn-limit-access
-landy:sslvpn-limit-access
-lawrence:345234

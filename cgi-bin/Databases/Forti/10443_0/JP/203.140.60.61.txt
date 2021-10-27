@@ -1,5 +1,0 @@
-lpgc0016:subsidy01
-lpgc0009:public02
-lpgc0019:subsidy04
-lpgc0021:subsidy06
-lpgc0008:public01

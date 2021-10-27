@@ -1,7 +1,0 @@
-mageguide:Ma123456*
-designvpn:Dv123456*
-hraxf:Hr123456*
-marketingvpn:Ma123456*
-accountvpn:Av123456*
-K.alexandropoulou:Ka123456*
-th.raptis:Tr123456*

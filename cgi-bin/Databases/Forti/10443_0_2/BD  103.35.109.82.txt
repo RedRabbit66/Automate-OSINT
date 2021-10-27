@@ -1,9 +1,0 @@
-sumaya:SuM@2020
-fs_ieef:$2020@57%0
-fs_cad:$2020@^64%
-fs_compliance:$2020@08!
-fs_infra_finance:$2020@9&95
-fs_technical:$2020@89%44
-fs_other_re:$2020@690*
-fs_finance_accounts:$2020@62%*
-fs_ics:$2020@89%0

@@ -1,7 +1,0 @@
-user1:tmp2563
-mvb:mvb1708
-msd:msd2509
-dty:dty2020
-jwk:jwk021229
-sdk:sdk2018
-crp:crp100558

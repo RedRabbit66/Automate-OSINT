@@ -1,2 +1,0 @@
-sncho:123456
-test:test

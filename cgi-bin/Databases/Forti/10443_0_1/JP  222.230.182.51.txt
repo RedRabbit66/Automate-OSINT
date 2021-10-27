@@ -1,3 +1,0 @@
-doi:doi
-isono:isono
-ono:ono

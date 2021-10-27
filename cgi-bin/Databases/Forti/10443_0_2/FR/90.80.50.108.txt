@@ -1,6 +1,0 @@
-planning.avignon:VPNSSL_TORANN
-exploit1.nancy:philippeHONOR
-Assist_Tours:VPNSSL_TORANN
-v:_
-hgilgaire:VPNSSL_TORANN
-freynaud:VPNSSL_TORANN

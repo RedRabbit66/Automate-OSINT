@@ -1,3 +1,0 @@
-punit:123456
-guest1:123456
-guest2:123456.sslvpn

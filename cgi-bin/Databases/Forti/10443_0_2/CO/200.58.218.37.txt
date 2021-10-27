@@ -1,5 +1,0 @@
-almacen.dos:almacen
-coor.proyectos:proyectos
-mc.troqueles:troqueles
-fidel.caceres:tp2020*
-marta.cardona:Tipalma2018

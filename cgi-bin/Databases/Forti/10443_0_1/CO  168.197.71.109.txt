@@ -1,2 +1,0 @@
-connection_sv:SVDav.2020*
-connection_hn:Davivienda.2020*

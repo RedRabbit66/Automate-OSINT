@@ -1,6 +1,0 @@
-ikeda:vag2540
-kamei:kamesan
-imakiire:imaq-vpn
-hosoya:2004423
-kitada:kitada-vpn
-kato:kato-jvpn

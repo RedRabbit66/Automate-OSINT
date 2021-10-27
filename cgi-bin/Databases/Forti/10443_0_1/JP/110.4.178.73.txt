@@ -1,2 +1,0 @@
-tsuru:remote470
-ksguser:ksguser

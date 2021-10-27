@@ -1,2 +1,0 @@
-customer:Customer!2
-shadmin:SH@2019sv

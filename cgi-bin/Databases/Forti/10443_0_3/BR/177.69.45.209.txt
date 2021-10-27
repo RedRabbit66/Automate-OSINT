@@ -1,4 +1,0 @@
-suporte.ti:reiter@123
-e.1,+:3
-devices:suporte!@#
-altamiro.vieira:miro@1015

@@ -1,2 +1,0 @@
-warehouse2:VPNpassword2
-warehouse1:VPNpassword1

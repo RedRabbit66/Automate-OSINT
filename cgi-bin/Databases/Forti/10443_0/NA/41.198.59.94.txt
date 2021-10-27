@@ -1,4 +1,0 @@
-dekokerd:/nfs.dekokerd/
-full-access:root
-administrator:Nfs@Bsky20!8
-MKuvare:/nfs.kuvare/

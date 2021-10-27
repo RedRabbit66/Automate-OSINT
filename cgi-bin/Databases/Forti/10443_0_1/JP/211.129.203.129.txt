@@ -1,3 +1,0 @@
-splunk:hpsplunk
-hpuser:hpuser
-rics:rics

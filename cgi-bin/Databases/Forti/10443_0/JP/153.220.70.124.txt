@@ -1,8 +1,0 @@
-syoji014:SSLVPN-group_hoku
-syoji008:SSLVPN-group_hoku
-syoji010:SSLVPN-group_hoku
-syoji002:SSLVPN-group_hoku
-5:syoji014
-syoji009:SSLVPN-group_hoku
-syoji005:SSLVPN-group_hoku
-starkey:SSLVPN-group_star

@@ -1,2 +1,0 @@
-patologia:PatoUpc20
-sopotec:Soloyopuedo18

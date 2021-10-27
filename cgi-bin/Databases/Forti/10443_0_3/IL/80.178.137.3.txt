@@ -1,3 +1,0 @@
-davids:Ds#12345
-moranm:Mm#1234
-sagim:Sm#12345

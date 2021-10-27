@@ -1,2 +1,0 @@
-FDG:FDG01_
-RosaC:RosaC01_

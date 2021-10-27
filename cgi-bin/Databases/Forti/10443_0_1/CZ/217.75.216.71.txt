@@ -1,3 +1,0 @@
-CIMTO_Klimova:CIMTO_User_Storage_Group
-CIMTO_Kalova:CIMTO_User_Pohoda_Group
-CIMTO_Beroun:CIMTO_User_Storage_Group

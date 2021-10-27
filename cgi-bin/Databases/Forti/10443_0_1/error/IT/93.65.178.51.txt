@@ -1,2 +1,0 @@
-Std_Romani1:RmnS_T*23
-Std_Romani2:RmnS_T#15

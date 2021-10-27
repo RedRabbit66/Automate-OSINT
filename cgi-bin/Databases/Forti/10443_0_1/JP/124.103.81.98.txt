@@ -1,4 +1,0 @@
-fbiuser:password
-gifuser:gifu_yamahi
-iwamura:sP37ztA8
-wakasa@yamahi.com:yamahi6213731

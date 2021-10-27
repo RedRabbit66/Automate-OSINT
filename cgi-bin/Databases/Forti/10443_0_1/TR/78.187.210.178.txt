@@ -1,5 +1,0 @@
-ciftlik:Sbh
-ordu:Sbh
-tokat:Sbh
-55bd951:Sbh
-55abd801:Sbh

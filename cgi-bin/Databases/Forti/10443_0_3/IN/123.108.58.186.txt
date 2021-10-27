@@ -1,4 +1,0 @@
-softcore3:softcore3@123
-softcore2:softcore2@123
-softcore1:softcore1@123
-14.74:softcore2

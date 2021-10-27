@@ -1,6 +1,0 @@
-narol:narol$456
-idgah:idgah
-trikam:trikam
-sarkhej:sarkhej$456
-porbandar:porbandar
-lgadi:lgadi@123

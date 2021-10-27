@@ -1,2 +1,0 @@
-sslvpntest:belcher1024
-AngelC:pass*1234

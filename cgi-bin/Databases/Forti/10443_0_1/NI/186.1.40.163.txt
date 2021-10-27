@@ -1,3 +1,0 @@
-farias:Sierras#dau
-telecobro2:Sierras#tele2
-jsolorzano:Sierras#js

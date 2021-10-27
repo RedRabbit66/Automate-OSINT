@@ -1,7 +1,0 @@
-altr-sales:Tally@321456
-pzk-sales:Tally@321456
-kkm-sales:Tally@321456
-ttlr-svc:Tally@321456
-alv-svc:Tally@321456
-ckd-sales:Tally@321456
-wdy-svc:Tally@321456

@@ -1,7 +1,0 @@
-S.Pointner:SyPo_12345
-M.Schwaighofer:Ms_12345
-B.Wagner:BaWa_12345
-G.Walter:GerWa_12345
-G.Putz:GiPu_12345
-I.Floeckner:Inf_12345
-R.Dengg:RiPa_12345

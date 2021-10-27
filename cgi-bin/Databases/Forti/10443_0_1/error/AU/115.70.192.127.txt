@@ -1,3 +1,0 @@
-vpn.pptp.Gemma.101:GreenNote09!
-vpn.pptp.jade101:GreenNote85!
-vpn.pptp.rebecca101:GreenNote09!

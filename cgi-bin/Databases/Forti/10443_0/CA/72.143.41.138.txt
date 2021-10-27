@@ -1,2 +1,0 @@
-ejohnson:SSL-VPN-users
-dnita:SSL-VPN-users

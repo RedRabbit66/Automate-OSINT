@@ -1,3 +1,0 @@
-pd_ncat76:ncat
-pd_ncat72:ncat
-pd_ncat77:ncat

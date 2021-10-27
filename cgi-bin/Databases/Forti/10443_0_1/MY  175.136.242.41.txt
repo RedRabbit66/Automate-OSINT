@@ -1,8 +1,0 @@
-nelson:nelson218
-Kogilah:Uat@1054
-GohPRG:prg@123
-Finance1:finance@123
-YasinQA:Yasin@123
-ZilawatiPRG:prg@123
-PeterPDC:peter@upeca
-HafizPRG:prg@123

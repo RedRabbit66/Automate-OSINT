@@ -1,2 +1,0 @@
-RemoteMainteUser2@yamato:MainteGroup
-RemoteMainteUser1@yamato:MainteGroup

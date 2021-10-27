@@ -1,4 +1,0 @@
-yb.pro:YB@2020
-exi.phuongptn:Phuong@2019
-yb.vietbq:Viet@2022
-mai.sinhln:123456789a@

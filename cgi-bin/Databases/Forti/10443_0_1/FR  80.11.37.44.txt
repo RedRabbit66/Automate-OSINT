@@ -1,3 +1,0 @@
-nguilbaud:SATMARCOM01
-util-stphilibert-01:STPH2015
-util-marennes-04:satmar-2014

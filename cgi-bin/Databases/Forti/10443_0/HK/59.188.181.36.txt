@@ -1,7 +1,0 @@
-peter.tse@internad.hk:SSLVPNGroup
-joey.fan@internad.hk:SSLVPNGroup
-raymond.lee@internad.hk:SSLVPNGroup
-carson.luk@internad.hk:SSLVPNGroup
-angel.fok@internad.hk:SSLVPNGroup
-madeleine.ling@internad.hk:SSLVPNGroup
-will.sung@internad.hk:SSLVPNGroup

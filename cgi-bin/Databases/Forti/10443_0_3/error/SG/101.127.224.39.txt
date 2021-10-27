@@ -1,2 +1,0 @@
-majestic03:password
-majestic01:password

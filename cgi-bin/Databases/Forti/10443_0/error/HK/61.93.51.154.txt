@@ -1,3 +1,0 @@
-CT:conduct
-WC:conduct
-YMT:conduct

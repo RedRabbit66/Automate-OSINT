@@ -1,2 +1,0 @@
-adminVPN:VPNl1f3
-userVPN:tlife2020

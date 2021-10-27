@@ -1,6 +1,0 @@
-YL010:1234Haid
-kieutrinh:1234Haid
-TEST01:haid123
-quyenlena:1234Haid
-yinl02:1234Haid
-shiml02:1234Haid

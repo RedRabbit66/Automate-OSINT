@@ -1,4 +1,0 @@
-almacen.dos:almacen
-mc.troqueles:troqueles
-esystems:esystemsjyc
-juan.mejia:T1palma

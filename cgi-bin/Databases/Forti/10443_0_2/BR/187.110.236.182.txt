@@ -1,8 +1,0 @@
-pentecoste:Pen@123@456@789
-pecas5:Pec@123@456@789
-picos:Pic@123@456@789
-pacajus:Pac@123@456@789
-baturite:Bat@123@456@789
-pecas1:Pec@123@456@789
-rodrigo:Rod@123@456@789
-pecas2:Pec@123@456@789

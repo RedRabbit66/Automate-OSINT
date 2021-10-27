@@ -1,2 +1,0 @@
-vpn1:vpn1
-vpn:ssl$321$

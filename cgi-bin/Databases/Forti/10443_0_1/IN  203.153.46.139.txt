@@ -1,3 +1,0 @@
-sh_bs_ms:Access@#135$
-AE_TECH1:apg@#123
-ADE_BASIS:apg@#123

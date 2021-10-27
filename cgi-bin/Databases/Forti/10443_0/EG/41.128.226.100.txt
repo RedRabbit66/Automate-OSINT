@@ -1,4 +1,0 @@
-SM-tanta:123456
-SM-ism:123456
-assuit:123456
-SM-alex:123456

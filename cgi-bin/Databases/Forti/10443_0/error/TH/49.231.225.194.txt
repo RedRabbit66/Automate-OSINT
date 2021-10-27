@@ -1,5 +1,0 @@
-en_manager:En_manager
-yptsale1:Yptsale1
-kongsakk:Kongsakk
-chanidapa:Chanidapa
-endo:Endo

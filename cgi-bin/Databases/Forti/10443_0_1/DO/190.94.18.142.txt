@@ -1,6 +1,0 @@
-kcpanama:4710269
-temporal:Pennys@2020
-m.costa:Pennys@2019
-m.manon:123456789
-m.rodriguez:1234567890
-dts:DTS@2019

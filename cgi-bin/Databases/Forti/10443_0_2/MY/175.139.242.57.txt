@@ -1,3 +1,0 @@
-BNetwork:BNPassw0rd
-vpn_kinta:!Pass1234
-vpn_taiping:!Pass1234

@@ -1,7 +1,0 @@
-nuneza_VPN:Guayaquil"2
-basantef_VPN:Amigo
-cuevaja_VPN:Ecuador"3
-bravoj_VPN:Ecuador"2
-toledor_VPN:Fernanda"2
-navarretes_VPN:Francia2018
-guerreros_VPN:Felicidad

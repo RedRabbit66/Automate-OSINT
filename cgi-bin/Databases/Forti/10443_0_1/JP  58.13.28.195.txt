@@ -1,3 +1,0 @@
-t.uda:prosper
-m.sano:prosper
-prosper:prosper

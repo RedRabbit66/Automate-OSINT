@@ -1,4 +1,0 @@
-tovi:tb123456!
-galit:gm123456!
-Y:wd
-itay.c:ic123456!

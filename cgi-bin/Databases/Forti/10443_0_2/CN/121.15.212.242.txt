@@ -1,4 +1,0 @@
-VPN-user1:Abc_1234
-VPN-user228:Acs@1234
-VPN-user229:Acs@1234
-VPN-user230:Acs@1234

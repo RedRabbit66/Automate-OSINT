@@ -1,8 +1,0 @@
-anna.japinan:anna.japinan
-jdi.cebu8:jdi.cebu8
-jdi.cagayan1:jdi.cagayan1
-jdi.iloilo:jdi.iloilo
-jdi.bacolod:jdi.bacolod
-shyn.caronongan:welcome02
-jdi.davao2:jdi.davao2
-jdi.zamboanga:jdi.zamboanga

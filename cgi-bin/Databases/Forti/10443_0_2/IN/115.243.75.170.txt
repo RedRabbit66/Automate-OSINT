@@ -1,9 +1,0 @@
-Pritam_ssl:Kpp@0123
-shernaz_ssl:Dls@123
-dinesh_ssl:Din@7912
-Amit_ssl:Adr@0546
-gupta_ssl:Mga@546
-trupti_ssl:Regtp@43
-gandhi_ssl:Gds@123
-vinayak_ssl:Vmrr@345
-hemant_ssl:Shy@654

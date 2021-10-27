@@ -1,2 +1,0 @@
-snobi:std2020
-ayman:atd2020

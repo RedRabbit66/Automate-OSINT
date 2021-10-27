@@ -1,4 +1,0 @@
-payroll01:Kumi2019
-ssc:password
-kumi-jp:kumi2020
-user:K123456

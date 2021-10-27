@@ -1,9 +1,0 @@
-sanket:Pass@12345
-kishore:Arya*2563
-abhishekmittal:Mittal@123
-ankitsharma:Sharma*12345
-neha:seth*2563
-akashshukla:Pass@12345
-sageer:Pass@12345
-pankaj:Pass@12345
-sachinall:all*2563

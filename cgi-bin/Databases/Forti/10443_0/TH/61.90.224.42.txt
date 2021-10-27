@@ -1,2 +1,0 @@
-vpn1:Vpn@2020
-nui:ihere

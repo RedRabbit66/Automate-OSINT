@@ -1,3 +1,0 @@
-jshulman1:Experimentation19$
-mswindells:MS2013ms
-bjenkins:Recirc

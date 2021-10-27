@@ -1,5 +1,0 @@
-admin01:admin01_Password1!
-kawashima:B00020
-miyase:B73408
-fukuike:J04330
-t-kakimoto:P69896

@@ -1,4 +1,0 @@
-account:account
-NL._:_
-mjo:best@1234
-src:best@1234

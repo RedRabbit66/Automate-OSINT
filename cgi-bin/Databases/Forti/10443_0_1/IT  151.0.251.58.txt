@@ -1,2 +1,0 @@
-g.natta:Halldis2017
-p.baratta:Password1

@@ -1,8 +1,0 @@
-maekawa:SSL-VPN-Group
-annoshita:SSL-VPN-Group
-shiokawa:SSL-VPN-Group
-saijo:SSL-VPN-Group
-h-takahashi:SSL-VPN-Group
-r.tanaka:SSL-VPN-Group
-muraki:SSL-VPN-Group
-y-oka:SSL-VPN-Group

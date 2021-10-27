@@ -1,3 +1,0 @@
-user01:Password1
-kyouei:0316
-user08:Password1

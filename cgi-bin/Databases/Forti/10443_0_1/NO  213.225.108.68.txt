@@ -1,2 +1,0 @@
-energos-vpn1:energos-vpn1
-Energos-sondre:EnergosSM.19

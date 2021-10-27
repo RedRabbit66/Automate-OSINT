@@ -1,2 +1,0 @@
-entiovi:entiovi@2020
-sltpacs:pacs

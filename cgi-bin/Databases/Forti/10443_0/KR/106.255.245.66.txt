@@ -1,2 +1,0 @@
-humancare:humancare
-admin:smartdrone123

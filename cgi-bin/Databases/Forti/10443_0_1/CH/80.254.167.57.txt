@@ -1,7 +1,0 @@
-fabio.schori:G_VPN_ReLL_NE_Pikett
-daniel.possa:G_VPN_GDELB_Wasserversorgung
-activelan:mir3hei6bei
-U015190:U015190
-sandro.burgener:sslvpn-technik
-costronic:Upa6Keh5
-jean-claude.grichting:jean-claude.grichting

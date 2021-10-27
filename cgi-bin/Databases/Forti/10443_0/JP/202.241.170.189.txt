@@ -1,6 +1,0 @@
-user09:techno
-user11:techno
-user04:techno
-user08:techno.sslv-users
-user06:techno
-user03:techno

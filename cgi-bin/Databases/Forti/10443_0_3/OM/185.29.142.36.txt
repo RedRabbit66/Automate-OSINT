@@ -1,5 +1,0 @@
-hema:User#2020
-Vijay:User#2020
-ghulam:User@2020
-Chatrapal:Metco#1234
-Hamed:User#2019

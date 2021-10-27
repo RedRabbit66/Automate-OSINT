@@ -1,6 +1,0 @@
-563095:123456789
-full-access:root
-MSE:Mse00000
-sophon.kmit:kmitgroup!@
-taee.mycare:Abc123456
-899022:123456789

@@ -1,4 +1,0 @@
-pcs:password
-Kumagawa:kumi-565
-payroll01:Kumi2019
-user:K123456

@@ -1,2 +1,0 @@
-administ:AdmIst
-isotrol:AdmISO.20

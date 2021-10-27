@@ -1,7 +1,0 @@
-just:123@just
-wessadviser:wess@123
-engenharia.paulo:2020@process
-oliveira.douglas:2102@calango
-engenharia.andre:2020@process
-santos.andre:@mandita1807
-nunes.wilton:31058304

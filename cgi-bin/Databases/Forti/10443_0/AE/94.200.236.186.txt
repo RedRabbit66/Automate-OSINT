@@ -1,2 +1,0 @@
-sojan:HID@Vpn!1
-softwareVPN:softwareVPN567

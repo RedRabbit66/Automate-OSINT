@@ -1,5 +1,0 @@
-arisawa:LCP-VPN
-eguchi:LCP-VPN
-horishita:LCP-VPN
-yano:LCP-VPN
-ogimura:LCP-VPN

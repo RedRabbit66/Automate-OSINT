@@ -1,3 +1,0 @@
-costos:Espumar2020
-mpanameno:Krystalsql*
-informatica:250285*VPNADMIN

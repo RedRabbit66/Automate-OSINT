@@ -1,6 +1,0 @@
-jose.augusto:Corp*54$30
-jean.silva:Corp*54$10
-cristina.borges:Corp*54$20
-graziela.vitorelli:CoMl*25$84
-rafael.gutierrez:Corp*54$50
-luis.oliveira:plt#1003

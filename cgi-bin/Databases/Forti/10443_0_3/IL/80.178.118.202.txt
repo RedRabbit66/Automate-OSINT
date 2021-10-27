@@ -1,4 +1,0 @@
-Onestore:0303
-SOHO:5080
-Boaz:6489
-Chaled:4646

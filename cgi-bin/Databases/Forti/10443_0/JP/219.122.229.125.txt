@@ -1,4 +1,0 @@
-murata07831Vpn:SSL-VPN UGroup-admin
-eijitaka:SSL-VPN UGroup-admin
-mm10547:SSL-VPN UGroup3-honbu
-^M:yGqOAk

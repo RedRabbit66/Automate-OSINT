@@ -1,2 +1,0 @@
-AP_USER:tmit@tmap
-SUP_USER:sup@1234

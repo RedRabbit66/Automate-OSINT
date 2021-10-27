@@ -1,2 +1,0 @@
-maikson.nucleo:Ncl30@2020MDA
-ivan.schneider.fw:@dv_20SchMZ20

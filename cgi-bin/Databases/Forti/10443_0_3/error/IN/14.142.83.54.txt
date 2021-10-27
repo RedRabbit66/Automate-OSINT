@@ -1,9 +1,0 @@
-sgc.vishal:Sv@12345
-sgc.tushar:St@12345
-jagdish.shetty:Js@12345
-ramadasan:Rl@12345
-dheeraj:laxmi@123
-pradeep.das:Pd@12345
-kabra:bkk@123
-cyril.fernandes:Cf@12345
-gopal:loil@123

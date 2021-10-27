@@ -1,8 +1,0 @@
-ws4:VPN_Grp
-ws63:VPN_Grp
-ws58:VPN_Grp
-ws26:VPN_Grp
-ws60:VPN_Grp
-ws76:VPN_Grp
-ws23:VPN_Grp
-ws36:VPN_Grp

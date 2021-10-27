@@ -1,5 +1,0 @@
-remoto1:remoto1
-remoto6:remoto6
-remoto5:remoto5
-remoto2:remoto2
-remoto3:remoto3

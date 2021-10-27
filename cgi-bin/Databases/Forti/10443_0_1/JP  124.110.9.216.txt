@@ -1,7 +1,0 @@
-y-kubota:k19530928y
-y-komatsu:y19950425k
-n-misawa:hanaoka1
-t-kaneko:t19640703k
-j-kiyomoto:j19870311k
-k-okugawa:k19630627o
-h-matsumoto:m19780710h

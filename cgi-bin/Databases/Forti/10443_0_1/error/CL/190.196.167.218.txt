@@ -1,9 +1,0 @@
-vpngeneral61:pia2020
-vpngeneral11:pia2020
-vpngeneral19:pia2020USER_VPN_ACCESO
-vpngeneral32:pia2020
-veletas5:veletas2020
-vpngeneral2:pia2020
-vpngeneral6:pia2020
-vpngeneral1:pia2020
-vpngeneral28:pia2020

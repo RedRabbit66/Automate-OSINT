@@ -1,7 +1,0 @@
-havanbinh:123456
-trinhthuylien:Jqa@123
-nguyenthiyen:Jqa@123JQA_VPN GROUP
-doankimhue:Jqa@123
-jqa-vpn1:Jqa@fw01
-damthuanhai:Jqa@123
-nguyendinhthe:Jqa@123

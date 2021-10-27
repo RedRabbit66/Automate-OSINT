@@ -1,2 +1,0 @@
-adm_posko1:Admin_Posko1
-_:172.20.0.240

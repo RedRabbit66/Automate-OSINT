@@ -1,4 +1,0 @@
-yeniler2:yeniler2
-okan.karasipahi:42@111
-mustafa.ozer:42@111
-izzet.celik:42@111

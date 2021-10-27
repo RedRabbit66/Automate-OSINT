@@ -1,2 +1,0 @@
-vpn.tdps1:tdps@2019
-vpn.tdps2:truyendanphatsong2@2020

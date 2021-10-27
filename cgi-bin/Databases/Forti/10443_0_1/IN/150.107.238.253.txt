@@ -1,2 +1,0 @@
-rdp2:rdp2
-pdp2:pdp2

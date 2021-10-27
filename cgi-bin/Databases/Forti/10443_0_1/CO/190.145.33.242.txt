@@ -1,5 +1,0 @@
-sap:Gruas2019
-patio:Gruas2017
-AIC:Aic2019
-renta:Gruas2017
-llimas:Gruas2021

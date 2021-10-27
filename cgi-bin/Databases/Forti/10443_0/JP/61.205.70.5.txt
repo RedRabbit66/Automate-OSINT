@@ -1,5 +1,0 @@
-LIBNaka02:LIB002naka
-LIBNaka01:LIB001naka
-koujinkai01:koujinkaiktbk
-koujinkai05:koujinkaiktbk
-keiyu04:keiyuktbk

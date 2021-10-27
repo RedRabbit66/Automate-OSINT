@@ -1,9 +1,0 @@
-supachet.ja:supachet.ja
-thanawat.si:thanawat.si
-kraiengkrai.in:kraiengkrai.in
-wichet.mu:wichet.mu
-pimploy.su:pimploy.su
-aungkanang.ma:aungkanang.ma
-jutawan.sr:jutawan.sr
-natthinee.pu:natthinee.pu
-natthamon.wo:natthamon.wo

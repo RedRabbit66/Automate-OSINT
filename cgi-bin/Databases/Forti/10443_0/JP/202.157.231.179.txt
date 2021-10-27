@@ -1,2 +1,0 @@
-chubu002:remote-fjm
-chubu001:chubu001!

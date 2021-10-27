@@ -1,4 +1,0 @@
-edifice08:edifice08
-edifice03:edifice03
-edifice01:edifice01
-edifice07:edifice07

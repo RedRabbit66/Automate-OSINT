@@ -1,2 +1,0 @@
-richard:12345678
-ERP01:erpbltc01

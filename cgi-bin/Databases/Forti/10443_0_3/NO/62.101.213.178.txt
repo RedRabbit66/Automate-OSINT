@@ -1,4 +1,0 @@
-stig:15.5Dslep$
-Dslep$:SSL_VPN_GRP
-kurt:15.5Dslep$
-j:rgen

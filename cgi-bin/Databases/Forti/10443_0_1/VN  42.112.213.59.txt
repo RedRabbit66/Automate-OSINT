@@ -1,2 +1,0 @@
-it.bigc.bi02:User@bi02
-it.bigc.bi01:User@bi01

@@ -1,3 +1,0 @@
-test:Nimbus$123
-p.karmakar:Passw0rdr
-k.sethi:nimbus@123

@@ -1,3 +1,0 @@
-mp.henon:MAVI
-g.giraud:geraldine
-n.henon:haras

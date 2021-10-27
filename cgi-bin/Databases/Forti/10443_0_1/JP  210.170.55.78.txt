@@ -1,3 +1,0 @@
-user01:lightstand
-user08:lightstand
-user10:lightstand

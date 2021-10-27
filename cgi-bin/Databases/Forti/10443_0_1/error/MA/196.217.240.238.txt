@@ -1,4 +1,0 @@
-megacom:Meg@com/20
-nommega:cltvpnmega1011
-megapub:Meg@pub/20
-megafinance:Meg@fin/19

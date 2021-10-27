@@ -1,2 +1,0 @@
-uchida-mente:uchidamente
-test-user:test
