@@ -80,7 +80,7 @@
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Get API Key from config.json
 2. Clone the repo
    ```sh
    git clone https://github.com/RedRabbit66/Automate-OSINT.git
