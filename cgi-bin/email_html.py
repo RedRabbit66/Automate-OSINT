@@ -7,17 +7,16 @@ __maintainer__ = "Llorenç Garcia and David Marquet"
 __status__ = "Production"
 
 
-import sys
-import os
-import json
-import requests
-import hashlib
-from googleapiclient.discovery import build
-from subprocess import PIPE, Popen
 import csv
-import subprocess
 import hashlib
+import json
+import os
+import subprocess
+import sys
+from subprocess import PIPE, Popen
 
+import requests
+from googleapiclient.discovery import build
 
 email_pattern = '(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)'
 domain_pattern = '^((?!-))(xn--)?[a-z0-9][a-z0-9-_]{0,61}[a-z0-9]{0,1}\.(xn--)?([a-z0-9\-]{1,61}|[a-z0-9-]{1,30}\.[a-z]{2,})$'
@@ -54,10 +53,6 @@ def parseConfig():
         sys.exit()
 
     return conf
-
-
-__author__ = '@llure29 (Llorenç Garcia)'
-
 
 def newest(path):
     files = os.listdir(path)
@@ -274,6 +269,7 @@ def sitesUsedByTarget(email):
 
 
 def get_breachdirectory_html(email):
+    global json_response
     url = "https://breachdirectory.p.rapidapi.com/"
 
     querystring = {"func": "auto", "term": email}
@@ -545,6 +541,7 @@ def psbdmp_search_html(target):
 
 
 def get_darknet_leak(email):
+    global req
     table = """<section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center">

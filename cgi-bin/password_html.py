@@ -339,6 +339,7 @@ def leakedPasswordChecker(password):
 
 
 def get_darknet_leak(password):
+    global req
     table = """<section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center">

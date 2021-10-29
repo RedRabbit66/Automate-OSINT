@@ -280,6 +280,7 @@ def psbdmp_search_html(target):
 
 
 def get_darknet_leak(username):
+    global req
     table = """<section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center">

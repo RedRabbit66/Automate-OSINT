@@ -38,6 +38,7 @@ url_dump="https://psbdmp.ws/api/v3/dump/$paste?key=$psbdmp_API"
 
 #Download=Qq4SeWeS
 
+# shellcheck disable=SC2034
 paste_json=`sudo curl $url_dump --silent -o pastes/$paste.json`
 
 paste_content=`readJson pastes/$paste.json content`# || exit 1;

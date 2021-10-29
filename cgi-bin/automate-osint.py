@@ -7,27 +7,28 @@ __maintainer__ = "Llorenç Garcia and David Marquet"
 __status__ = "Production"
 
 
-import sys
+import argparse
+import hashlib
 import json
 import re
-import hashlib
-import argparse
+import sys
+
 from xhtml2pdf import pisa
-import username_module
-import username_html
-import email_module
-import email_html
-import wallet_module
-import wallet_html
-import password_module
-import password_html
-import term_module
-import term_html
-import domain_module
+
 import domain_html
-import ip_module
+import domain_module
+import email_html
+import email_module
 import ip_html
-import hashlib
+import ip_module
+import password_html
+import password_module
+import term_html
+import term_module
+import username_html
+import username_module
+import wallet_html
+import wallet_module
 
 email_pattern = '(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)'
 domain_pattern = '^((?!-))(xn--)?[a-z0-9][a-z0-9-_]{0,61}[a-z0-9]{0,1}\.(xn--)?([a-z0-9\-]{1,61}|[a-z0-9-]{1,30}\.[a-z]{2,})$'

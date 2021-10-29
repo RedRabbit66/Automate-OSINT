@@ -13,7 +13,7 @@ import time
 #import matplotlib.pyplot as plt
 import networkx as nx
 import sys
-from colors import bcolors
+#from colors import bcolors
 
 
 def parse_config():
@@ -55,7 +55,7 @@ def elast(index, doc_type, body):
 
         last_id = max(ids)
 
-        es.index(index=index, doc_type=doc_type, id=last_id + 1, body=body)
+        es.index(index=index, doc_type=doc_type, id=last_id + 1)
     except Exception as e:
         try:
             es.index(index=index, doc_type=doc_type, id=1, body=body)
@@ -72,9 +72,8 @@ def json_output(name, filename, data):
 
 
 def finding(finding):
-    print(bcolors.OKGREEN + "---------------------------------------------------------" + bcolors.ENDC +
-          finding + bcolors.OKGREEN + "---------------------------------------------------------" + bcolors.ENDC)
-
+    #print(bcolors.OKGREEN + "---------------------------------------------------------" + bcolors.ENDC + finding + bcolors.OKGREEN + "---------------------------------------------------------" + bcolors.ENDC)
+    print("TESTING")
 
 def save_graph(G, name):
     directory = "graph/"

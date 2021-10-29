@@ -170,6 +170,7 @@ def psbdmp_search(target):
 
 def get_darknet_leak(password):
     # Tor proxy
+    global req
     from_m = "Initial"
     proxy = "127.0.0.1:9150"
     raw_node = []

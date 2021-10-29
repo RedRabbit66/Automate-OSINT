@@ -7,17 +7,16 @@ __maintainer__ = "Llorenç Garcia and David Marquet"
 __status__ = "Production"
 
 
-import sys
-import os
-import json
-import requests
-import hashlib
-from googleapiclient.discovery import build
-from subprocess import PIPE, Popen
 import csv
-import subprocess
 import hashlib
+import json
+import os
+import subprocess
+import sys
+from subprocess import PIPE, Popen
 
+import requests
+from googleapiclient.discovery import build
 
 email_pattern = '(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)'
 domain_pattern = '^((?!-))(xn--)?[a-z0-9][a-z0-9-_]{0,61}[a-z0-9]{0,1}\.(xn--)?([a-z0-9\-]{1,61}|[a-z0-9-]{1,30}\.[a-z]{2,})$'
@@ -129,6 +128,7 @@ def get_gravatar_info(email):
 
 
 def get_breachdirectory(email):
+    global json_response
     url = "https://breachdirectory.p.rapidapi.com/"
 
     querystring = {"func": "auto", "term": email}
@@ -263,6 +263,7 @@ def leaksDBs(email):
 
 def get_darknet_leak(email):
     # Tor proxy
+    global req
     from_m = "Initial"
     proxy = "127.0.0.1:9150"
     raw_node = []

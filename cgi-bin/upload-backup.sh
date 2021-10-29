@@ -18,6 +18,7 @@ if [ "$dark" == "email" ] ; then
 	  </body>
 	</html>
 	"
+fi
 
 if [ "$dark" == "domain" ] ; then
 	echo -e "
@@ -30,6 +31,8 @@ if [ "$dark" == "domain" ] ; then
   </body>
 </html>
 "
+fi
+
 if [ "$dark" == "username" ] ; then
 
 	echo -e "
@@ -42,5 +45,4 @@ if [ "$dark" == "username" ] ; then
   </body>
 </html>
 "
-
-
+fi

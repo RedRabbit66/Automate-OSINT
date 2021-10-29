@@ -6,20 +6,16 @@
 #activate_this = '/Applications/XAMPP/xamppfiles/cgi-bin/venv/bin/activate'
 #execfile(activate_this, dict(__file__=activate_this))
 
-import cgi
 import cgitb
-import os
-import sys
-import subprocess
 import json
 
 try:
     from urllib.parse import urlencode
 except ImportError:
-    from urlparse import urlencode
+    from urllib.parse import urlencode
 
 #from urllib.parse import urlencode
-from urllib.request import Request, urlopen
+from urllib.request import urlopen
 
 cgitb.enable()
 

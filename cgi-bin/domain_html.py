@@ -8,13 +8,12 @@ __status__ = "Production"
 
 
 import json
-import requests
-import sys
 import socket
+import sys
 import time
-from virus_total_apis import PublicApi as VirusTotalPublicApi
-import requests
 
+import requests
+from virus_total_apis import PublicApi as VirusTotalPublicApi
 
 email_pattern = '(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)'
 domain_pattern = '^((?!-))(xn--)?[a-z0-9][a-z0-9-_]{0,61}[a-z0-9]{0,1}\.(xn--)?([a-z0-9\-]{1,61}|[a-z0-9-]{1,30}\.[a-z]{2,})$'
@@ -463,6 +462,7 @@ def domainReputationHTML(domain):
 
 
 def get_darknet_leak(domain):
+    global req
     table = """<section class="ftco-section">
 	<div class="container">
 		<div class="row justify-content-center">
