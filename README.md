@@ -75,7 +75,7 @@
 
 - pip
   ```sh
-  pip install -r cgi-bin/requirements.txt
+  pip install --upgrade pip
   ```
 
 ### Installation
