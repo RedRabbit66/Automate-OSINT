@@ -302,30 +302,28 @@ def locateIPHTML(ip):
         latitude = 0
     try:
         # Printar tot al mapamundi
-        fig = plt.figure(figsize=(14, 10))
-        ax = fig.add_axes([0.1, 0.1, 0.8, 0.8])
+        #fig = plt.figure(figsize=(14, 10))
+        #ax = fig.add_axes([0.1, 0.1, 0.8, 0.8])
 
-        m = Basemap(projection='merc', llcrnrlat=-80, urcrnrlat=80,
-                    llcrnrlon=-180, urcrnrlon=180, lat_ts=20, resolution='c')
-        m.drawcoastlines()
+        #m = Basemap(projection='merc', llcrnrlat=-80, urcrnrlat=80,llcrnrlon=-180, urcrnrlon=180, lat_ts=20, resolution='c')
+        # m.drawcoastlines()
 
-        m.fillcontinents(color='tan', lake_color='lightblue')
-        m.drawmapboundary(fill_color='lightblue')
+        #m.fillcontinents(color='tan', lake_color='lightblue')
+        # m.drawmapboundary(fill_color='lightblue')
 
-        x, y = m(longitude, latitude)
-        plt.text(x, y, name, fontsize=12, fontweight='bold',
-                 ha='left', va='top', color='k')
-        m.scatter(x, y, marker='o', color='r', zorder=5)
+        #x, y = m(longitude, latitude)
+        #plt.text(x, y, name, fontsize=12, fontweight='bold', ha='left', va='top', color='k')
+        #m.scatter(x, y, marker='o', color='r', zorder=5)
 
         # Title
-        ax.set_title("IP: " + ip)
+        #ax.set_title("IP: " + ip)
 
         # Guardem la imatge en format png amb el temps actual com a nom
         now = datetime.now()
         current_time = now.strftime("%H:%M:%S")
         image_path_html = "../mapas/" + current_time + ".png"
         image_path = "../htdocs/mapas/" + current_time + ".png"
-        plt.savefig(image_path)
+        # plt.savefig(image_path)
 
         text = """<section class="ftco-section">
 			<div class="container">
