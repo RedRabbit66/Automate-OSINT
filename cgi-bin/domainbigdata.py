@@ -1,6 +1,6 @@
 ###############################################################################
 # Author: Lionel PRAT - Original author: Roberto Sponchioni - <rsponchioni@yahoo.it> @Ptr32Void
-#Modified: 12/10/2017
+# Modified: 12/10/2017
 # Modified source code: https://github.com/Ptr32Void/OSTrICa/blob/master/ostrica/Plugins/DomainBigData/__init__.py
 ###############################################################################
 # HEAD OF ORIGIN SOURCE CODE:

@@ -1,5 +1,11 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+__author__ = "Llorenç Garcia"
+__copyright__ = "Copyright 2007, The Cogent Project"
+__credits__ = ["David Marquet"]
+__license__ = "GPL-3.0"
+__version__ = "1.0.0"
+__maintainer__ = "Llorenç Garcia and David Marquet"
+__status__ = "Production"
+
 
 #from mpl_toolkits.basemap import Basemap
 import sys
@@ -658,7 +664,8 @@ def insertInteligencia():
 
 
 def insertMap():
-    text = """<img src="{0}" alt="Mapa mundi traçat" class="center">""".format(image_path_html)
+    text = """<img src="{0}" alt="Mapa mundi traçat" class="center">""".format(
+        image_path_html)
     return text
 
 
@@ -1462,28 +1469,28 @@ for mta_address in only_ips:
 #ax = fig.add_axes([0.1, 0.1, 0.8, 0.8])
 
 #m = Basemap(projection='merc', llcrnrlat=-80, urcrnrlat=80,llcrnrlon=-180, urcrnrlon=180, lat_ts=20, resolution='c')
-#m.drawcoastlines()
+# m.drawcoastlines()
 
 title = ""
 for i in range(len(city_names)):
     title = title + " --> " + city_names[i]
-    #if i < (len(city_names)-1):
+    # if i < (len(city_names)-1):
 
-        # Dibuixem linia entre ciutat i ciutat
-        #m.drawgreatcircle(longituds[i], latituds[i], longituds[i+1], latituds[i+1], linewidth=2, color='b')
-        #m.drawcoastlines()
-        #m.fillcontinents(color='tan', lake_color='lightblue')
-        #m.drawmapboundary(fill_color='lightblue')
-        # draw parallels
-        # m.drawparallels(np.arange(10,90,20),labels=[1,1,0,1])
-        # draw meridians
-        # m.drawmeridians(np.arange(-180,180,30),labels=[1,1,0,1])
+    # Dibuixem linia entre ciutat i ciutat
+    #m.drawgreatcircle(longituds[i], latituds[i], longituds[i+1], latituds[i+1], linewidth=2, color='b')
+    # m.drawcoastlines()
+    #m.fillcontinents(color='tan', lake_color='lightblue')
+    # m.drawmapboundary(fill_color='lightblue')
+    # draw parallels
+    # m.drawparallels(np.arange(10,90,20),labels=[1,1,0,1])
+    # draw meridians
+    # m.drawmeridians(np.arange(-180,180,30),labels=[1,1,0,1])
 
-        #x, y = m(longituds[i+1], latituds[i+1])
-        #plt.text(x, y, city_names[i+1], fontsize=12,fontweight='bold', ha='left', va='top', color='k')
+    #x, y = m(longituds[i+1], latituds[i+1])
+    #plt.text(x, y, city_names[i+1], fontsize=12,fontweight='bold', ha='left', va='top', color='k')
 
-        #x, y = m(longituds[i], latituds[i])
-        #plt.text(x, y, city_names[i], fontsize=12,fontweight='bold', ha='left', va='top', color='k')
+    #x, y = m(longituds[i], latituds[i])
+    #plt.text(x, y, city_names[i], fontsize=12,fontweight='bold', ha='left', va='top', color='k')
 
 # Assignem titol
 #ax.set_title("Ruta del correu" + title)
@@ -1493,7 +1500,7 @@ for i in range(len(city_names)):
 #current_time = now.strftime("%H:%M:%S")
 #image_path_html = "mapas/" + current_time + ".png"
 #image_path = "../htdocs/mapas/" + current_time + ".png"
-#plt.savefig(image_path)
+# plt.savefig(image_path)
 
 
 def isRegistered(domain):
@@ -1504,6 +1511,7 @@ def isRegistered(domain):
     else:
         print("Esta registrat: " + domain)
         return bool(w.domain_name)
+
 
 def getCreationDate(domain):
     if isRegistered(domain):

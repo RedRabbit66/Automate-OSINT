@@ -1,3 +1,12 @@
+__author__ = "Llorenç Garcia"
+__copyright__ = "Copyright 2007, The Cogent Project"
+__credits__ = ["David Marquet"]
+__license__ = "GPL-3.0"
+__version__ = "1.0.0"
+__maintainer__ = "Llorenç Garcia and David Marquet"
+__status__ = "Production"
+
+
 import sys
 import json
 import re
@@ -22,9 +31,6 @@ import hashlib
 
 email_pattern = '(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)'
 domain_pattern = '^((?!-))(xn--)?[a-z0-9][a-z0-9-_]{0,61}[a-z0-9]{0,1}\.(xn--)?([a-z0-9\-]{1,61}|[a-z0-9-]{1,30}\.[a-z]{2,})$'
-
-
-__author__ = '@llure29 (Llorenç Garcia)'
 
 
 def parseConfig():

@@ -2,11 +2,8 @@
 
 #echo Content-Type: text/html
 echo -e "Content-Type: text/html; charset=UTF-8\r\n"
-
 read dark
-
 option=`echo $dark | awk -F'=' '{print $2}' | sed 's/\r$//'`
-
 
 if [[ $dark == *"email"* || $dark == *"domain"* || $dark == *"username"* || $dark == *"ip"* || $dark == *"password"* || $dark == *"wallet"* || $dark == *"term"* ]]; then
     echo -e "

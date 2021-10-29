@@ -1,5 +1,11 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+__author__ = "Llorenç Garcia"
+__copyright__ = "Copyright 2007, The Cogent Project"
+__credits__ = ["David Marquet"]
+__license__ = "GPL-3.0"
+__version__ = "1.0.0"
+__maintainer__ = "Llorenç Garcia and David Marquet"
+__status__ = "Production"
+
 
 from subprocess import PIPE, Popen
 import hashlib

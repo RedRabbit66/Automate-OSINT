@@ -1,11 +1,8 @@
 #!/bin/bash
+
 echo Content-Type: text/html
-
 read dark
-
 darkk=`echo $dark | awk -F'=' '{print $2}' | sed 's/\r$//'`
-
-
 echo -e "
 <html>
   <head>
